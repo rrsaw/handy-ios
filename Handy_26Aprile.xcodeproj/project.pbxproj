@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		45F05F401EB23BF8000F44C6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F05F3F1EB23BF8000F44C6 /* Extensions.swift */; };
+		45F89F731EB770BC0023D170 /* LoginCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F89F721EB770BC0023D170 /* LoginCell.swift */; };
 		45FB564F1EB11C8B00899C92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FB564E1EB11C8B00899C92 /* AppDelegate.swift */; };
 		45FB56511EB11C8B00899C92 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FB56501EB11C8B00899C92 /* ViewController.swift */; };
 		45FB56541EB11C8B00899C92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45FB56521EB11C8B00899C92 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		45F05F3F1EB23BF8000F44C6 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		45F89F721EB770BC0023D170 /* LoginCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCell.swift; sourceTree = "<group>"; };
 		45FB564B1EB11C8B00899C92 /* Handy_26Aprile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Handy_26Aprile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45FB564E1EB11C8B00899C92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45FB56501EB11C8B00899C92 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 				45FB567C1EB126EB00899C92 /* PageCell.swift */,
 				45FB56801EB152C500899C92 /* Page.swift */,
 				45F05F3F1EB23BF8000F44C6 /* Extensions.swift */,
+				45F89F721EB770BC0023D170 /* LoginCell.swift */,
 			);
 			path = Handy_26Aprile;
 			sourceTree = "<group>";
@@ -273,6 +276,7 @@
 				45FB564F1EB11C8B00899C92 /* AppDelegate.swift in Sources */,
 				45FB567D1EB126EB00899C92 /* PageCell.swift in Sources */,
 				45FB56811EB152C500899C92 /* Page.swift in Sources */,
+				45F89F731EB770BC0023D170 /* LoginCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
