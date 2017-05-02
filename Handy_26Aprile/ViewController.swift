@@ -139,8 +139,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             self.view.layoutIfNeeded()
         }, completion: nil)
         
-
-        
     }
     
     fileprivate func registerCells()  {
