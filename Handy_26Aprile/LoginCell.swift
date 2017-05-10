@@ -20,7 +20,9 @@ class LoginCell: UICollectionViewCell {
         let textField = LeftPaddedTextField()
         textField.placeholder = "Enter email"
         textField.layer.borderColor = UIColor.lightGray.cgColor
+        textField.layer.backgroundColor = UIColor.lightGray.cgColor
         textField.layer.borderWidth = 1
+        textField.layer.cornerRadius = 25
         textField.keyboardType = .emailAddress
         return textField
     }()
@@ -29,9 +31,18 @@ class LoginCell: UICollectionViewCell {
         let textField = LeftPaddedTextField()
         textField.placeholder = "Enter password"
         textField.layer.borderColor = UIColor.lightGray.cgColor
+        textField.layer.backgroundColor = UIColor.lightGray.cgColor
         textField.layer.borderWidth = 1
         textField.isSecureTextEntry = true
+        textField.layer.cornerRadius = 25
         return textField
+    }()
+    
+    let forgotPasswordButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Forgot your password?", for: .normal)
+        button.setTitleColor(.lightGray, for: .normal)
+        return button
     }()
     
     let loginButton: UIButton = {
@@ -39,6 +50,34 @@ class LoginCell: UICollectionViewCell {
         button.backgroundColor = .orange
         button.setTitle("Log in", for: .normal)
         button.setTitleColor(.white, for: .normal)
+        button.layer.cornerRadius = 25
+        button.layer.shadowColor = UIColor.orange.cgColor
+        button.layer.shadowOffset = CGSize(width: 0, height: 8.0)
+        button.layer.shadowOpacity = 0.3
+        button.layer.shadowRadius = 13
+        return button
+    }()
+    
+    let facebookButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.backgroundColor = .blue
+        button.setTitle("FB", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.layer.cornerRadius = 25
+        button.layer.shadowColor = UIColor.blue.cgColor
+        button.layer.shadowOffset = CGSize(width: 0, height: 8.0)
+        button.layer.shadowOpacity = 0.3
+        button.layer.shadowRadius = 13
+        return button
+    }()
+    
+    let createAccountButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Do not have an account? \n Create Account", for: .normal)
+        button.titleLabel?.numberOfLines = 2
+        button.setTitleColor(.lightGray, for: .normal)
+        button.layer.borderColor = UIColor.lightGray.cgColor
+        button.layer.borderWidth = 1
         return button
     }()
     
@@ -48,7 +87,10 @@ class LoginCell: UICollectionViewCell {
         addSubview(logoImageView)
         addSubview(emailTextField)
         addSubview(passwordTextField)
+        addSubview(forgotPasswordButton)
         addSubview(loginButton)
+        addSubview(facebookButton)
+        addSubview(createAccountButton)
         
         _ = logoImageView.anchor(centerYAnchor, left: nil, bottom: nil, right: nil, topConstant: -230, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 100, heightConstant: 100)
         logoImageView.centerXAnchor.constraint(equalTo: centerXAnchor).isActive = true
@@ -57,7 +99,13 @@ class LoginCell: UICollectionViewCell {
         
         _ = passwordTextField.anchor(emailTextField.bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 16, leftConstant: 32, bottomConstant: 0, rightConstant: 32, widthConstant: 0, heightConstant: 50)
         
-        _ = loginButton.anchor(passwordTextField.bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 16, leftConstant: 32, bottomConstant: 0, rightConstant: 32, widthConstant: 0, heightConstant: 50)
+         _ = forgotPasswordButton.anchor(passwordTextField.bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 16, leftConstant: 50, bottomConstant: 0, rightConstant: 50, widthConstant: 0, heightConstant: 50)
+        
+        _ = loginButton.anchor(forgotPasswordButton.bottomAnchor, left: leftAnchor, bottom: nil, right: rightAnchor, topConstant: 25, leftConstant: 32, bottomConstant: 0, rightConstant: 100, widthConstant: 0, heightConstant: 50)
+        
+        _ = facebookButton.anchor(forgotPasswordButton.bottomAnchor, left: loginButton.rightAnchor, bottom: nil, right: nil, topConstant: 25, leftConstant: 15, bottomConstant: 0, rightConstant: 0, widthConstant: 50, heightConstant: 50)
+        
+        _ = createAccountButton.anchor(nil, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 32, bottomConstant: 70, rightConstant: 32, widthConstant: 0, heightConstant: 0)
         
         
     

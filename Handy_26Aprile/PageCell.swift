@@ -4,7 +4,7 @@
 //
 //  Created by Federico Cattaneo on 26/04/2017.
 //  Copyright © 2017 Federico Cattaneo. All rights reserved.
-//
+
 import UIKit
 
 class PageCell: UICollectionViewCell {
