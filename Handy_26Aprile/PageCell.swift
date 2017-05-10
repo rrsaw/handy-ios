@@ -5,7 +5,6 @@
 //  Created by Federico Cattaneo on 26/04/2017.
 //  Copyright © 2017 Federico Cattaneo. All rights reserved.
 //
-
 import UIKit
 
 class PageCell: UICollectionViewCell {
@@ -21,7 +20,7 @@ class PageCell: UICollectionViewCell {
             
             let color = UIColor(white: 0.2, alpha: 1)
             
-            let attributedText = NSMutableAttributedString(string: page.title, attributes: [NSFontAttributeName : UIFont.systemFont(ofSize: 20, weight: UIFontWeightMedium), NSForegroundColorAttributeName: color])
+            let attributedText = NSMutableAttributedString(string: page.title, attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 20, weight: UIFontWeightMedium), NSForegroundColorAttributeName: color])
             
             attributedText.append(NSAttributedString(string: "\n\n\(page.message)", attributes: [NSFontAttributeName: UIFont.systemFont(ofSize: 14), NSForegroundColorAttributeName: color]))
             
@@ -31,9 +30,7 @@ class PageCell: UICollectionViewCell {
             let length = attributedText.string.characters.count
             attributedText.addAttribute(NSParagraphStyleAttributeName, value: paragraphStyle, range: NSRange(location: 0, length: length))
             
-//            textView.text = page.title + "\n\n" + page.message
             textView.attributedText = attributedText
-            
         }
     }
     
@@ -46,25 +43,23 @@ class PageCell: UICollectionViewCell {
     let imageView: UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFill
-        iv.backgroundColor = UIColor.yellow
+        iv.backgroundColor = .yellow
         iv.image = UIImage(named: "page1")
         iv.clipsToBounds = true
         return iv
     }()
     
-    
     let textView: UITextView = {
         let tv = UITextView()
         tv.text = "SAMPLE TEXT FOR NOW"
         tv.isEditable = false
-        tv.contentInset = UIEdgeInsets(top: 24, left: 0, bottom: 0, right: 0) //spaziatura testo
+        tv.contentInset = UIEdgeInsets(top: 24, left: 0, bottom: 0, right: 0)
         return tv
     }()
     
     let lineSeparatorView: UIView = {
         let view = UIView()
         view.backgroundColor = UIColor(white: 0.9, alpha: 1)
-        view.backgroundColor = UIColor(red: 255, green: 23, blue: 68, alpha: 1)
         return view
     }()
     
@@ -81,10 +76,16 @@ class PageCell: UICollectionViewCell {
         
         lineSeparatorView.anchorToTop(nil, left: leftAnchor, bottom: textView.topAnchor, right: rightAnchor)
         lineSeparatorView.heightAnchor.constraint(equalToConstant: 1).isActive = true
-        
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
 }
+
+
+
+
+
+
