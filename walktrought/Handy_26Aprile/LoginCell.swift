@@ -78,8 +78,23 @@ class LoginCell: UICollectionViewCell {
         button.setTitleColor(.lightGray, for: .normal)
         button.layer.borderColor = UIColor.lightGray.cgColor
         button.layer.borderWidth = 1
+        button.contentHorizontalAlignment = .center
+        button.addTarget(self, action: #selector(showMainNavigation), for: .touchUpInside)
+
         return button
     }()
+    
+    func showMainNavigation() {
+        let layout = UICollectionViewFlowLayout()
+        let dummySettingsViewController = MainNavigationController(collectionViewLayout : layout)
+        let transition = CATransition()
+        transition.duration = 0.3
+        transition.type = kCATransitionPush
+        transition.subtype = kCATransitionFromRight
+        window!.layer.add(transition, forKey: kCATransition)
+        self.present(dummySettingsViewController, animated:false, completion:nil)
+        
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)

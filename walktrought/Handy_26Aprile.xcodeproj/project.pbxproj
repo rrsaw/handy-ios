@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45A1FCDE1EC70B45008CEF45 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A1FCDD1EC70B45008CEF45 /* MainNavigationController.swift */; };
+		45A1FCE01EC71CBF008CEF45 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A1FCDF1EC71CBF008CEF45 /* LoginController.swift */; };
 		45F05F401EB23BF8000F44C6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F05F3F1EB23BF8000F44C6 /* Extensions.swift */; };
 		45F89F731EB770BC0023D170 /* LoginCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F89F721EB770BC0023D170 /* LoginCell.swift */; };
 		45FB564F1EB11C8B00899C92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FB564E1EB11C8B00899C92 /* AppDelegate.swift */; };
-		45FB56511EB11C8B00899C92 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FB56501EB11C8B00899C92 /* ViewController.swift */; };
 		45FB56541EB11C8B00899C92 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45FB56521EB11C8B00899C92 /* Main.storyboard */; };
 		45FB56561EB11C8B00899C92 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45FB56551EB11C8B00899C92 /* Assets.xcassets */; };
 		45FB56591EB11C8B00899C92 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45FB56571EB11C8B00899C92 /* LaunchScreen.storyboard */; };
@@ -38,11 +39,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		45A1FCDD1EC70B45008CEF45 /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		45A1FCDF1EC71CBF008CEF45 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		45F05F3F1EB23BF8000F44C6 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		45F89F721EB770BC0023D170 /* LoginCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCell.swift; sourceTree = "<group>"; };
 		45FB564B1EB11C8B00899C92 /* Handy_26Aprile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Handy_26Aprile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45FB564E1EB11C8B00899C92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		45FB56501EB11C8B00899C92 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		45FB56531EB11C8B00899C92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		45FB56551EB11C8B00899C92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45FB56581EB11C8B00899C92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -106,7 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				45FB564E1EB11C8B00899C92 /* AppDelegate.swift */,
-				45FB56501EB11C8B00899C92 /* ViewController.swift */,
+				45A1FCDF1EC71CBF008CEF45 /* LoginController.swift */,
 				45FB56521EB11C8B00899C92 /* Main.storyboard */,
 				45FB56551EB11C8B00899C92 /* Assets.xcassets */,
 				45FB56571EB11C8B00899C92 /* LaunchScreen.storyboard */,
@@ -115,6 +117,7 @@
 				45FB56801EB152C500899C92 /* Page.swift */,
 				45F05F3F1EB23BF8000F44C6 /* Extensions.swift */,
 				45F89F721EB770BC0023D170 /* LoginCell.swift */,
+				45A1FCDD1EC70B45008CEF45 /* MainNavigationController.swift */,
 			);
 			path = Handy_26Aprile;
 			sourceTree = "<group>";
@@ -272,9 +275,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				45F05F401EB23BF8000F44C6 /* Extensions.swift in Sources */,
-				45FB56511EB11C8B00899C92 /* ViewController.swift in Sources */,
 				45FB564F1EB11C8B00899C92 /* AppDelegate.swift in Sources */,
 				45FB567D1EB126EB00899C92 /* PageCell.swift in Sources */,
+				45A1FCDE1EC70B45008CEF45 /* MainNavigationController.swift in Sources */,
+				45A1FCE01EC71CBF008CEF45 /* LoginController.swift in Sources */,
 				45FB56811EB152C500899C92 /* Page.swift in Sources */,
 				45F89F731EB770BC0023D170 /* LoginCell.swift in Sources */,
 			);

@@ -5,6 +5,7 @@
 //  Created by Federico Cattaneo on 26/04/2017.
 //  Copyright © 2017 Federico Cattaneo. All rights reserved.
 
+
 import UIKit
 
 class PageCell: UICollectionViewCell {
@@ -16,7 +17,12 @@ class PageCell: UICollectionViewCell {
                 return
             }
             
-            imageView.image = UIImage(named: page.imageName)
+            var imageName = page.imageName
+            if UIDevice.current.orientation.isLandscape {
+                imageName += "_landscape"
+            }
+            
+            imageView.image = UIImage(named: imageName)
             
             let color = UIColor(white: 0.2, alpha: 1)
             
