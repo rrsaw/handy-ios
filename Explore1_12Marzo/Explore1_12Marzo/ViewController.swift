@@ -30,7 +30,8 @@ class ExploreController: UICollectionViewController, UICollectionViewDelegateFlo
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: HEIGHT*20)
+        return CGSize(width: view.frame.width, height: HEIGHT*27)
+
     }
     
 }

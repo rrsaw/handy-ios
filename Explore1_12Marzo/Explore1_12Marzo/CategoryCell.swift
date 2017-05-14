@@ -25,7 +25,7 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
         layout.scrollDirection = .horizontal // Scroll orizzontale
         let collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         
-        collectionView.backgroundColor = UIColor.clear
+        collectionView.backgroundColor = UIColor.rgb(255, 248, 250)
         collectionView.translatesAutoresizingMaskIntoConstraints = false // Non ho ben capito a cosa serva sinceramente ora scrivo a gadda
         return collectionView
     }()
@@ -63,11 +63,11 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDataSource, UICollecti
     
     // Imposto la grandezza delle view orizzontali
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: WIDTH*35, height: frame.height)
+        return CGSize(width: WIDTH*40, height: (frame.height / 100) * 90)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
-        return UIEdgeInsetsMake(5, 14, 0, 14) // Muove l'intera cella
+        return UIEdgeInsetsMake(0, 20, 0, 0) // Muove l'intera cella
 //        return UIEdgeInsetsMake(<#T##top: CGFloat##CGFloat#>, <#T##left: CGFloat##CGFloat#>, <#T##bottom: CGFloat##CGFloat#>, <#T##right: CGFloat##CGFloat#>)
     }
     
@@ -95,15 +95,33 @@ class AppCell: UICollectionViewCell {
     }()
 
     let nameLabel: UILabel = {
-        
-    }
+        let label = UILabel()
+        label.text = "Gardening"
+        label.font = UIFont.systemFont(ofSize: 18)
+        label.numberOfLines = 1
+        label.textColor = UIColor.white
+        return label
+    }()
     
     func setupViews() {
         layer.cornerRadius = WIDTH*2.5
         
+        
         addSubview(imageView)
+        addSubview(nameLabel)
+        
+        
         backgroundColor = UIColor.rgb(148, 197, 112)
-        imageView.frame =  CGRect(x: 0, y: 0, width: frame.width, height: frame.width)
+        
+        // Posiziono la ImageView
+        imageView.frame =  CGRect(x: 0, y: 0, width: 70, height: 75)
+        imageView.center = CGPoint(x: frame.width/2, y: 70)
+        
+        //Posiziono la Label
+        nameLabel.frame = CGRect(x: frame.height - 15, y: 0, width: frame.width, height: 25) // div // watch testi lunghi out
+        nameLabel.center = CGPoint(x: frame.width/2, y: frame.height/2 + 54)
+        nameLabel.textAlignment = .center
+
     }
 
 }
