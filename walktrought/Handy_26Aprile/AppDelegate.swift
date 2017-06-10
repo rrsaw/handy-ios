@@ -17,12 +17,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+//        window = UIWindow(frame: UIScreen.main.bounds)
+//        window?.makeKeyAndVisible()
+//        
+//        window?.rootViewController = MainNavigationController()
+//
+//        let navigationBarAppearace = UINavigationBar.appearance()
+//        navigationBarAppearace.barTintColor = .orange
+        
+//        self.window = UIWindow(frame: UIScreen.main.bounds)
+//        let nav1 = UINavigationController()
+//        let layout = UICollectionViewFlowLayout()
+//        let ViewController = ExploreController(collectionViewLayout : layout)
+////        let mainView = ExploreController()
+//        nav1.viewControllers = [ViewController]
+//        self.window!.rootViewController = nav1
+//        self.window?.makeKeyAndVisible()
+        
         window = UIWindow(frame: UIScreen.main.bounds)
-        window?.makeKeyAndVisible()
-        
-        window?.rootViewController = MainNavigationController()
-        
-        
+        self.window?.makeKeyAndVisible()
+        self.window!.rootViewController = MainNavigationController()
         
         return true
     }

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		146F897E1EE838AD00F00836 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146F897D1EE838AD00F00836 /* Constant.swift */; };
+		146F89821EE8583300F00836 /* ExploreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146F89811EE8583300F00836 /* ExploreCell.swift */; };
+		1472720B1EEAA8D800725B3F /* StartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1472720A1EEAA8D800725B3F /* StartController.swift */; };
+		14B996FD1EE75294003A8D91 /* ExploreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B996FC1EE75293003A8D91 /* ExploreController.swift */; };
 		45A1FCDE1EC70B45008CEF45 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A1FCDD1EC70B45008CEF45 /* MainNavigationController.swift */; };
 		45A1FCE01EC71CBF008CEF45 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A1FCDF1EC71CBF008CEF45 /* LoginController.swift */; };
 		45F05F401EB23BF8000F44C6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F05F3F1EB23BF8000F44C6 /* Extensions.swift */; };
@@ -19,6 +23,9 @@
 		45FB566F1EB11C8B00899C92 /* Handy_26AprileUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FB566E1EB11C8B00899C92 /* Handy_26AprileUITests.swift */; };
 		45FB567D1EB126EB00899C92 /* PageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FB567C1EB126EB00899C92 /* PageCell.swift */; };
 		45FB56811EB152C500899C92 /* Page.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FB56801EB152C500899C92 /* Page.swift */; };
+		792CED393B0D422C3B451A92 /* Pods_Handy_26AprileUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C1D70C02B8D5ED3DE9A1B91C /* Pods_Handy_26AprileUITests.framework */; };
+		A5161C2D68200C185D785177 /* Pods_Handy_26AprileTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D99F7B6D9DA7F2512DA37D0B /* Pods_Handy_26AprileTests.framework */; };
+		B31DA74754E844EBF81AE817 /* Pods_Handy_26Aprile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9CFF9DBD1E5895D07E064CBB /* Pods_Handy_26Aprile.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +46,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		146F897D1EE838AD00F00836 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		146F89811EE8583300F00836 /* ExploreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreCell.swift; sourceTree = "<group>"; };
+		1472720A1EEAA8D800725B3F /* StartController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartController.swift; sourceTree = "<group>"; };
+		14B996FC1EE75293003A8D91 /* ExploreController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreController.swift; sourceTree = "<group>"; };
 		45A1FCDD1EC70B45008CEF45 /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		45A1FCDF1EC71CBF008CEF45 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		45F05F3F1EB23BF8000F44C6 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -57,6 +68,15 @@
 		45FB56701EB11C8B00899C92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45FB567C1EB126EB00899C92 /* PageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
 		45FB56801EB152C500899C92 /* Page.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Page.swift; sourceTree = "<group>"; };
+		4D2FB85B0F1CD60BDFCEB8A3 /* Pods-Handy_26Aprile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Handy_26Aprile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Handy_26Aprile/Pods-Handy_26Aprile.debug.xcconfig"; sourceTree = "<group>"; };
+		621D6BD366F62C3FB0608DD4 /* Pods-Handy_26AprileUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Handy_26AprileUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Handy_26AprileUITests/Pods-Handy_26AprileUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		86F085F5EB820055027502AF /* Pods-Handy_26AprileTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Handy_26AprileTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Handy_26AprileTests/Pods-Handy_26AprileTests.release.xcconfig"; sourceTree = "<group>"; };
+		9CFF9DBD1E5895D07E064CBB /* Pods_Handy_26Aprile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Handy_26Aprile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4C97DE1FDC4A8DC03F0D2D9 /* Pods-Handy_26AprileTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Handy_26AprileTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Handy_26AprileTests/Pods-Handy_26AprileTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B5813AE30ADEC4322CA7B732 /* Pods-Handy_26Aprile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Handy_26Aprile.release.xcconfig"; path = "Pods/Target Support Files/Pods-Handy_26Aprile/Pods-Handy_26Aprile.release.xcconfig"; sourceTree = "<group>"; };
+		C1D70C02B8D5ED3DE9A1B91C /* Pods_Handy_26AprileUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Handy_26AprileUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D99F7B6D9DA7F2512DA37D0B /* Pods_Handy_26AprileTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Handy_26AprileTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F662F5CFFE84C6C4085BB962 /* Pods-Handy_26AprileUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Handy_26AprileUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Handy_26AprileUITests/Pods-Handy_26AprileUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B31DA74754E844EBF81AE817 /* Pods_Handy_26Aprile.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5161C2D68200C185D785177 /* Pods_Handy_26AprileTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +100,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				792CED393B0D422C3B451A92 /* Pods_Handy_26AprileUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +114,8 @@
 				45FB56621EB11C8B00899C92 /* Handy_26AprileTests */,
 				45FB566D1EB11C8B00899C92 /* Handy_26AprileUITests */,
 				45FB564C1EB11C8B00899C92 /* Products */,
+				63CAA9ADB3961C99D852E0D4 /* Pods */,
+				F0D316AC541CEFDAA9532EBE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +134,7 @@
 			children = (
 				45FB564E1EB11C8B00899C92 /* AppDelegate.swift */,
 				45A1FCDF1EC71CBF008CEF45 /* LoginController.swift */,
+				146F897D1EE838AD00F00836 /* Constant.swift */,
 				45FB56521EB11C8B00899C92 /* Main.storyboard */,
 				45FB56551EB11C8B00899C92 /* Assets.xcassets */,
 				45FB56571EB11C8B00899C92 /* LaunchScreen.storyboard */,
@@ -116,7 +142,10 @@
 				45FB567C1EB126EB00899C92 /* PageCell.swift */,
 				45FB56801EB152C500899C92 /* Page.swift */,
 				45F05F3F1EB23BF8000F44C6 /* Extensions.swift */,
+				1472720A1EEAA8D800725B3F /* StartController.swift */,
 				45F89F721EB770BC0023D170 /* LoginCell.swift */,
+				14B996FC1EE75293003A8D91 /* ExploreController.swift */,
+				146F89811EE8583300F00836 /* ExploreCell.swift */,
 				45A1FCDD1EC70B45008CEF45 /* MainNavigationController.swift */,
 			);
 			path = Handy_26Aprile;
@@ -140,6 +169,29 @@
 			path = Handy_26AprileUITests;
 			sourceTree = "<group>";
 		};
+		63CAA9ADB3961C99D852E0D4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4D2FB85B0F1CD60BDFCEB8A3 /* Pods-Handy_26Aprile.debug.xcconfig */,
+				B5813AE30ADEC4322CA7B732 /* Pods-Handy_26Aprile.release.xcconfig */,
+				A4C97DE1FDC4A8DC03F0D2D9 /* Pods-Handy_26AprileTests.debug.xcconfig */,
+				86F085F5EB820055027502AF /* Pods-Handy_26AprileTests.release.xcconfig */,
+				621D6BD366F62C3FB0608DD4 /* Pods-Handy_26AprileUITests.debug.xcconfig */,
+				F662F5CFFE84C6C4085BB962 /* Pods-Handy_26AprileUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		F0D316AC541CEFDAA9532EBE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9CFF9DBD1E5895D07E064CBB /* Pods_Handy_26Aprile.framework */,
+				D99F7B6D9DA7F2512DA37D0B /* Pods_Handy_26AprileTests.framework */,
+				C1D70C02B8D5ED3DE9A1B91C /* Pods_Handy_26AprileUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -147,9 +199,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 45FB56731EB11C8B00899C92 /* Build configuration list for PBXNativeTarget "Handy_26Aprile" */;
 			buildPhases = (
+				5CAA0A5B37E60714A241E23B /* [CP] Check Pods Manifest.lock */,
 				45FB56471EB11C8B00899C92 /* Sources */,
 				45FB56481EB11C8B00899C92 /* Frameworks */,
 				45FB56491EB11C8B00899C92 /* Resources */,
+				315E28BF1F78A7A625EEA58B /* [CP] Embed Pods Frameworks */,
+				15F968A7A11F16DF77549AF0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -164,9 +219,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 45FB56761EB11C8B00899C92 /* Build configuration list for PBXNativeTarget "Handy_26AprileTests" */;
 			buildPhases = (
+				A9360E4DE25A373F88472CB8 /* [CP] Check Pods Manifest.lock */,
 				45FB565B1EB11C8B00899C92 /* Sources */,
 				45FB565C1EB11C8B00899C92 /* Frameworks */,
 				45FB565D1EB11C8B00899C92 /* Resources */,
+				3C0EFCD6B48EB45448384294 /* [CP] Embed Pods Frameworks */,
+				F65D4F3434077253180FC475 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -182,9 +240,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 45FB56791EB11C8B00899C92 /* Build configuration list for PBXNativeTarget "Handy_26AprileUITests" */;
 			buildPhases = (
+				497208993F7A0F53AEB3A3E0 /* [CP] Check Pods Manifest.lock */,
 				45FB56661EB11C8B00899C92 /* Sources */,
 				45FB56671EB11C8B00899C92 /* Frameworks */,
 				45FB56681EB11C8B00899C92 /* Resources */,
+				54683B402BBF3FE36D61E68D /* [CP] Embed Pods Frameworks */,
+				A2853F3C5ED7B38286AC4503 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -208,6 +269,7 @@
 				TargetAttributes = {
 					45FB564A1EB11C8B00899C92 = {
 						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					45FB565E1EB11C8B00899C92 = {
@@ -269,6 +331,144 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		15F968A7A11F16DF77549AF0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Handy_26Aprile/Pods-Handy_26Aprile-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		315E28BF1F78A7A625EEA58B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Handy_26Aprile/Pods-Handy_26Aprile-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3C0EFCD6B48EB45448384294 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Handy_26AprileTests/Pods-Handy_26AprileTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		497208993F7A0F53AEB3A3E0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		54683B402BBF3FE36D61E68D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Handy_26AprileUITests/Pods-Handy_26AprileUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5CAA0A5B37E60714A241E23B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A2853F3C5ED7B38286AC4503 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Handy_26AprileUITests/Pods-Handy_26AprileUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A9360E4DE25A373F88472CB8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F65D4F3434077253180FC475 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Handy_26AprileTests/Pods-Handy_26AprileTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		45FB56471EB11C8B00899C92 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -276,9 +476,13 @@
 			files = (
 				45F05F401EB23BF8000F44C6 /* Extensions.swift in Sources */,
 				45FB564F1EB11C8B00899C92 /* AppDelegate.swift in Sources */,
+				146F897E1EE838AD00F00836 /* Constant.swift in Sources */,
 				45FB567D1EB126EB00899C92 /* PageCell.swift in Sources */,
 				45A1FCDE1EC70B45008CEF45 /* MainNavigationController.swift in Sources */,
+				146F89821EE8583300F00836 /* ExploreCell.swift in Sources */,
+				1472720B1EEAA8D800725B3F /* StartController.swift in Sources */,
 				45A1FCE01EC71CBF008CEF45 /* LoginController.swift in Sources */,
+				14B996FD1EE75294003A8D91 /* ExploreController.swift in Sources */,
 				45FB56811EB152C500899C92 /* Page.swift in Sources */,
 				45F89F731EB770BC0023D170 /* LoginCell.swift in Sources */,
 			);
@@ -430,8 +634,10 @@
 		};
 		45FB56741EB11C8B00899C92 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D2FB85B0F1CD60BDFCEB8A3 /* Pods-Handy_26Aprile.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Handy_26Aprile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "federico.Handy-26Aprile";
@@ -442,8 +648,10 @@
 		};
 		45FB56751EB11C8B00899C92 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5813AE30ADEC4322CA7B732 /* Pods-Handy_26Aprile.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Handy_26Aprile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "federico.Handy-26Aprile";
@@ -454,6 +662,7 @@
 		};
 		45FB56771EB11C8B00899C92 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A4C97DE1FDC4A8DC03F0D2D9 /* Pods-Handy_26AprileTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -468,6 +677,7 @@
 		};
 		45FB56781EB11C8B00899C92 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86F085F5EB820055027502AF /* Pods-Handy_26AprileTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -482,6 +692,7 @@
 		};
 		45FB567A1EB11C8B00899C92 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 621D6BD366F62C3FB0608DD4 /* Pods-Handy_26AprileUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = Handy_26AprileUITests/Info.plist;
@@ -495,6 +706,7 @@
 		};
 		45FB567B1EB11C8B00899C92 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F662F5CFFE84C6C4085BB962 /* Pods-Handy_26AprileUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = Handy_26AprileUITests/Info.plist;

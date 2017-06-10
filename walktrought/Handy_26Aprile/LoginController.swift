@@ -25,6 +25,7 @@ class LoginController: UIViewController, UICollectionViewDataSource, UICollectio
     let cellId = "cellId"
     let loginCellId = "loginCellId"
     
+    
     let pages: [Page] = {
         let firstPage = Page(title: "Share a great listen", message: "It's free to send your books to the people in your life. Every recipient's first book is on us.", imageName: "page1")
         
@@ -51,10 +52,36 @@ class LoginController: UIViewController, UICollectionViewDataSource, UICollectio
         return button
     }()
     
+    
     func skip() {
         // we only need to lines to do this
         pageControl.currentPage = pages.count - 1
         nextPage()
+    }
+    
+//    func gotoExplore() {
+////        let layout = UICollectionViewFlowLayout()
+////        let dummySettingsViewController = ExploreController(collectionViewLayout : layout)
+////        self.present(MainNavigationController(), animated: true, completion: nil)
+//        mainNavigationController.homeController = HomeController()
+//        viewControllers = [homeController]
+//        self.dismiss(animated: true, completion: nil)
+////         navigationController?.pushViewController(dummySettingsViewController, animated: true)
+//        
+//    }
+    
+    func gotoExplore() {
+        //we’ll perhaps implement the home controller a little later
+        let rootViewController = UIApplication.shared.keyWindow?.rootViewController
+        guard let mainNavigationController = rootViewController as? MainNavigationController else { return }
+        
+        let layout = UICollectionViewFlowLayout()
+        let viewController = ExploreController(collectionViewLayout : layout)
+        mainNavigationController.viewControllers = [viewController]
+        
+        //UserDefaults.standard.setIsLoggedIn(value: true)
+        
+        dismiss(animated: true, completion: nil)
     }
     
     lazy var nextButton: UIButton = {
@@ -91,6 +118,8 @@ class LoginController: UIViewController, UICollectionViewDataSource, UICollectio
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.title = "Handy"
         
         observeKeyboardNotifications()
         
@@ -176,7 +205,8 @@ class LoginController: UIViewController, UICollectionViewDataSource, UICollectio
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if indexPath.item == pages.count {
-            let loginCell = collectionView.dequeueReusableCell(withReuseIdentifier: loginCellId, for: indexPath)
+            let loginCell = collectionView.dequeueReusableCell(withReuseIdentifier: loginCellId, for: indexPath) as! LoginCell
+            loginCell.loginButton.addTarget(self, action: #selector(gotoExplore), for: .touchUpInside)
             return loginCell
         }
         
@@ -207,15 +237,3 @@ class LoginController: UIViewController, UICollectionViewDataSource, UICollectio
     }
     
 }
-
-
-
-
-
-
-
-
-
-
-
-

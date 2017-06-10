@@ -20,7 +20,7 @@ class LoginCell: UICollectionViewCell {
         let textField = LeftPaddedTextField()
         textField.placeholder = "Enter email"
         textField.layer.borderColor = UIColor.lightGray.cgColor
-        textField.layer.backgroundColor = UIColor.lightGray.cgColor
+        textField.layer.backgroundColor = UIColor.white.cgColor
         textField.layer.borderWidth = 1
         textField.layer.cornerRadius = 25
         textField.keyboardType = .emailAddress
@@ -31,7 +31,7 @@ class LoginCell: UICollectionViewCell {
         let textField = LeftPaddedTextField()
         textField.placeholder = "Enter password"
         textField.layer.borderColor = UIColor.lightGray.cgColor
-        textField.layer.backgroundColor = UIColor.lightGray.cgColor
+        textField.layer.backgroundColor = UIColor.white.cgColor
         textField.layer.borderWidth = 1
         textField.isSecureTextEntry = true
         textField.layer.cornerRadius = 25
@@ -42,19 +42,6 @@ class LoginCell: UICollectionViewCell {
         let button = UIButton(type: .system)
         button.setTitle("Forgot your password?", for: .normal)
         button.setTitleColor(.lightGray, for: .normal)
-        return button
-    }()
-    
-    let loginButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.backgroundColor = .orange
-        button.setTitle("Log in", for: .normal)
-        button.setTitleColor(.white, for: .normal)
-        button.layer.cornerRadius = 25
-        button.layer.shadowColor = UIColor.orange.cgColor
-        button.layer.shadowOffset = CGSize(width: 0, height: 8.0)
-        button.layer.shadowOpacity = 0.3
-        button.layer.shadowRadius = 13
         return button
     }()
     
@@ -84,6 +71,8 @@ class LoginCell: UICollectionViewCell {
         return button
     }()
     
+    let loginButton = Constant.GlobalConstants.loginButton
+    
 //    func showMainNavigation() {
 //        let layout = UICollectionViewFlowLayout()
 //        let dummySettingsViewController = MainNavigationController(collectionViewLayout : layout)
@@ -98,6 +87,7 @@ class LoginCell: UICollectionViewCell {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
         
         addSubview(logoImageView)
         addSubview(emailTextField)

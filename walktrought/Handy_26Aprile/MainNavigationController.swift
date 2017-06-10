@@ -20,6 +20,15 @@ class MainNavigationController: UINavigationController {
         } else {
             perform(#selector(showLoginController), with: nil, afterDelay: 0.01)
         }
+        
+//        self.view.window!.rootViewController?.dismissViewControllerAnimated(false, completion: nil)
+        
+//        self.navigationController?.popViewController(animated: true)
+//        self.presentViewController(ExploreController, animated:true, completion:nil)
+//        let exploreController = ExploreController()
+//        viewControllers = [exploreController]
+        
+        
     }
     
     fileprivate func isLoggedIn() -> Bool {
@@ -28,9 +37,13 @@ class MainNavigationController: UINavigationController {
     
     func showLoginController() {
         let loginController = LoginController()
-        present(loginController, animated: true, completion: {
-            //perhaps we'll do something here later
-        })
+        present(loginController, animated: true, completion: nil )
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+//        view.backgroundColor = .blue
+        
     }
 }
 
