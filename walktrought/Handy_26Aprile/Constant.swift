@@ -31,3 +31,12 @@ class Constant: NSObject {
 
     }
 }
+
+extension UIColor {
+    class func wwhite() -> UIColor {
+        return white.withAlphaComponent(0.8)
+    }
+    class func semiTransparent() -> UIColor {
+        return white.withAlphaComponent(0.5)
+    }
+}

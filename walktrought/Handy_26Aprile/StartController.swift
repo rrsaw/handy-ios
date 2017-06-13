@@ -29,6 +29,7 @@ class StartController: UIViewController {
     func showLoginController() {
         let loginController = LoginController()
         present(loginController, animated: true, completion: nil)
+        
     }
 
 }

@@ -65,8 +65,6 @@ class ExploreController: UICollectionViewController, UICollectionViewDelegateFlo
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
 }
 
 

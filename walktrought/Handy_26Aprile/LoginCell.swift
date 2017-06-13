@@ -1,14 +1,9 @@
-//
-//  LoginCell.swift
-//  Handy_26Aprile
-//
-//  Created by Federico Cattaneo on 01/05/2017.
-//  Copyright © 2017 Federico Cattaneo. All rights reserved.
-//
+
 
 import UIKit
 
-class LoginCell: UICollectionViewCell {
+class LoginCell: UICollectionViewCell, UITextFieldDelegate {
+    
     
     let logoImageView: UIImageView = {
         let image = UIImage(named: "logo")
@@ -17,26 +12,28 @@ class LoginCell: UICollectionViewCell {
     }()
     
     let emailTextField: LeftPaddedTextField = {
-        let textField = LeftPaddedTextField()
-        textField.placeholder = "Enter email"
-        textField.layer.borderColor = UIColor.lightGray.cgColor
-        textField.layer.backgroundColor = UIColor.white.cgColor
-        textField.layer.borderWidth = 1
-        textField.layer.cornerRadius = 25
-        textField.keyboardType = .emailAddress
-        return textField
+        let textFieldM = LeftPaddedTextField()
+        textFieldM.placeholder = "Enter email"
+        textFieldM.layer.borderColor = UIColor.lightGray.cgColor
+        textFieldM.layer.backgroundColor = UIColor.white.cgColor
+        textFieldM.layer.borderWidth = 1
+        textFieldM.layer.cornerRadius = 25
+        textFieldM.keyboardType = .emailAddress
+        return textFieldM
     }()
     
     let passwordTextField: LeftPaddedTextField = {
-        let textField = LeftPaddedTextField()
-        textField.placeholder = "Enter password"
-        textField.layer.borderColor = UIColor.lightGray.cgColor
-        textField.layer.backgroundColor = UIColor.white.cgColor
-        textField.layer.borderWidth = 1
-        textField.isSecureTextEntry = true
-        textField.layer.cornerRadius = 25
-        return textField
+        let textFieldP = LeftPaddedTextField()
+        textFieldP.placeholder = "Enter password"
+        textFieldP.layer.borderColor = UIColor.lightGray.cgColor
+        textFieldP.layer.backgroundColor = UIColor.white.cgColor
+        textFieldP.layer.borderWidth = 1
+        textFieldP.isSecureTextEntry = true
+        textFieldP.layer.cornerRadius = 25
+        return textFieldP
     }()
+    
+    
     
     let forgotPasswordButton: UIButton = {
         let button = UIButton(type: .system)
@@ -82,7 +79,6 @@ class LoginCell: UICollectionViewCell {
 //        transition.subtype = kCATransitionFromRight
 //        window!.layer.add(transition, forKey: kCATransition)
 //        self.present(dummySettingsViewController, animated:false, completion:nil)
-//        
 //    }
     
     override init(frame: CGRect) {

@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import Alamofire
+var loginCell = LoginCell()
 
 class LoginController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    
+    let loginUrl = "http://handy-db.dev/api/v1/login"
     
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -21,6 +25,8 @@ class LoginController: UIViewController, UICollectionViewDataSource, UICollectio
         cv.isPagingEnabled = true
         return cv
     }()
+    
+    
     
     let cellId = "cellId"
     let loginCellId = "loginCellId"
@@ -53,6 +59,8 @@ class LoginController: UIViewController, UICollectionViewDataSource, UICollectio
     }()
     
     
+    
+    
     func skip() {
         // we only need to lines to do this
         pageControl.currentPage = pages.count - 1
@@ -70,7 +78,12 @@ class LoginController: UIViewController, UICollectionViewDataSource, UICollectio
 //        
 //    }
     
+   
+    
     func gotoExplore() {
+        
+         
+        
         //we’ll perhaps implement the home controller a little later
         let rootViewController = UIApplication.shared.keyWindow?.rootViewController
         guard let mainNavigationController = rootViewController as? MainNavigationController else { return }
@@ -82,6 +95,33 @@ class LoginController: UIViewController, UICollectionViewDataSource, UICollectio
         //UserDefaults.standard.setIsLoggedIn(value: true)
         
         dismiss(animated: true, completion: nil)
+        
+        
+//        // I Parametri da inviare
+//        let mails = loginCell.emailTextField.text
+//        var password = loginCell.passwordTextField.text
+//        
+//        let parameters: Parameters = [
+//            "email" : mails!,
+//            "password" : password!
+//        ]
+//        // Gestisco la richiesta
+//        
+//        print(mails)
+//        print(password)
+//        print(parameters)
+//
+//        Alamofire.request("http://handy-db.dev/api/v1/login", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+//        
+//        // Gestisco la risposta
+//        Alamofire.request("http://handy-db.dev/api/v1/login", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON(completionHandler: { response in
+//            print(response)
+//        })
+
+
+        
+    
+        
     }
     
     lazy var nextButton: UIButton = {
@@ -127,6 +167,7 @@ class LoginController: UIViewController, UICollectionViewDataSource, UICollectio
         view.addSubview(pageControl)
         view.addSubview(skipButton)
         view.addSubview(nextButton)
+        
         
         pageControlBottomAnchor = pageControl.anchor(nil, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 40)[1]
         

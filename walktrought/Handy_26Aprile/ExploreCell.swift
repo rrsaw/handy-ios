@@ -15,28 +15,29 @@ class ExploreCell: UICollectionViewCell {
     }
     
     let thumbnailImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.backgroundColor = .blue
+        let imageView = UIImageView(image: #imageLiteral(resourceName: "objects"))
+        imageView.backgroundColor = .semiTransparent()
         imageView.layer.cornerRadius = 20
         return imageView
     }()
     
-    let titleItem: UITextView = {
-        let textView = UITextView()
+    let titleItem: UILabel = {
+        let textView = UILabel()
         textView.backgroundColor = .green
         textView.text = "Macbook"
+        textView.font = UIFont(name: "VarelaRound-Regular", size: 35)
         return textView
     }()
     
-    let distanceItem: UITextView = {
-        let textView = UITextView()
+    let distanceItem: UILabel = {
+        let textView = UILabel()
         textView.backgroundColor = .red
         textView.text = "Cusano"
         return textView
     }()
     
-    let priceItem: UITextView = {
-        let textView = UITextView()
+    let priceItem: UILabel = {
+        let textView = UILabel()
         textView.backgroundColor = UIColor.yellow
         textView.text = "100€"
         return textView
@@ -48,8 +49,8 @@ class ExploreCell: UICollectionViewCell {
         return imageView
     }()
     
-    let profileText: UITextView = {
-        let textView = UITextView()
+    let profileText: UILabel = {
+        let textView = UILabel()
         textView.backgroundColor = UIColor.yellow
         textView.text = "Maurizio Lucci"
         return textView
