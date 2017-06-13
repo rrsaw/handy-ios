@@ -19,7 +19,6 @@ class ExploreController: UICollectionViewController, UICollectionViewDelegateFlo
 //        } else {
 //            perform(#selector(showLoginController), with: nil, afterDelay: 0.01)
 //        }
-
         
         navigationItem.title = "Explore"
         
@@ -54,7 +53,7 @@ class ExploreController: UICollectionViewController, UICollectionViewDelegateFlo
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: 150)
+        return CGSize(width: view.frame.width, height: 140)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {

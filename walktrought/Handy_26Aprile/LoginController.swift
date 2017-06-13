@@ -97,30 +97,26 @@ class LoginController: UIViewController, UICollectionViewDataSource, UICollectio
         dismiss(animated: true, completion: nil)
         
         
-//        // I Parametri da inviare
-//        let mails = loginCell.emailTextField.text
-//        var password = loginCell.passwordTextField.text
-//        
-//        let parameters: Parameters = [
-//            "email" : mails!,
-//            "password" : password!
-//        ]
-//        // Gestisco la richiesta
-//        
-//        print(mails)
-//        print(password)
-//        print(parameters)
-//
-//        Alamofire.request("http://handy-db.dev/api/v1/login", method: .post, parameters: parameters, encoding: JSONEncoding.default)
-//        
-//        // Gestisco la risposta
-//        Alamofire.request("http://handy-db.dev/api/v1/login", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON(completionHandler: { response in
-//            print(response)
-//        })
-
-
+        // I Parametri da inviare
+        let mails = loginCell.emailTextField.text
+        var password = loginCell.passwordTextField.text
         
-    
+        let parameters: Parameters = [
+            "email" : mails!,
+            "password" : password!
+        ]
+        // Gestisco la richiesta
+        
+        print(mails)
+        print(password)
+        print(parameters)
+
+        Alamofire.request("http://handy-db.dev/api/v1/login", method: .post, parameters: parameters, encoding: JSONEncoding.default)
+        
+        // Gestisco la risposta
+        Alamofire.request("http://handy-db.dev/api/v1/login", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON(completionHandler: { response in
+            print(response)
+        })
         
     }
     
