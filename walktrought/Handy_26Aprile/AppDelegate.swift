@@ -35,8 +35,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //        self.window?.makeKeyAndVisible()
         
         window = UIWindow(frame: UIScreen.main.bounds)
+        
+//        var nav1 = UINavigationController()
+//        let layout = UICollectionViewFlowLayout()
+//        let viewController = ExploreController(collectionViewLayout : layout)
+//        nav1.viewControllers = [viewController]
+//        
+//        var nav2 = UINavigationController()
+//        let second = LoginController(nibName: nil, bundle: nil)
+//        nav1.viewControllers = [second]
+//        
+//        let tabs = UITabBarController()
+//        tabs.viewControllers = [nav1, nav2]
+        
+//        self.window!.rootViewController = tabs;
+        
+        self.window!.rootViewController = TabbarController()
+        
         self.window?.makeKeyAndVisible()
-        self.window!.rootViewController = MainNavigationController()
+        
         
         return true
     }

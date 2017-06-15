@@ -25,6 +25,7 @@ class ExploreController: UICollectionViewController, UICollectionViewDelegateFlo
         collectionView?.backgroundColor = .white
         
         collectionView?.register(ExploreCell.self, forCellWithReuseIdentifier: "cellId")
+        navigationController?.navigationBar.isTranslucent = true
         
     }
     

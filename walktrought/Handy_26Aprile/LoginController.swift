@@ -80,17 +80,15 @@ class LoginController: UIViewController, UICollectionViewDataSource, UICollectio
     
    
     
-    func gotoExplore() {
-        
-         
+        func gotoExplore() {
         
         //we’ll perhaps implement the home controller a little later
-        let rootViewController = UIApplication.shared.keyWindow?.rootViewController
-        guard let mainNavigationController = rootViewController as? MainNavigationController else { return }
-        
-        let layout = UICollectionViewFlowLayout()
-        let viewController = ExploreController(collectionViewLayout : layout)
-        mainNavigationController.viewControllers = [viewController]
+//        let rootViewController = UIApplication.shared.keyWindow?.rootViewController
+//        guard let mainNavigationController = rootViewController as? MainNavigationController else { return }
+//        
+//        let layout = UICollectionViewFlowLayout()
+//        let viewController = ExploreController(collectionViewLayout : layout)
+//        mainNavigationController.viewControllers = [viewController]
         
         //UserDefaults.standard.setIsLoggedIn(value: true)
         
