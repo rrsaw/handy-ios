@@ -11,12 +11,11 @@
 		146F89821EE8583300F00836 /* ExploreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146F89811EE8583300F00836 /* ExploreCell.swift */; };
 		1472720B1EEAA8D800725B3F /* StartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1472720A1EEAA8D800725B3F /* StartController.swift */; };
 		14B996FD1EE75294003A8D91 /* ExploreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B996FC1EE75293003A8D91 /* ExploreController.swift */; };
-		45944C931EEFDD330047041F /* VarelaRoundregular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45944C921EEFDD330047041F /* VarelaRoundregular.ttf */; };
-		45944C991EEFDF680047041F /* DINPro-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 45944C941EEFDF680047041F /* DINPro-Black.otf */; };
-		45944C9A1EEFDF680047041F /* DINPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 45944C951EEFDF680047041F /* DINPro-Bold.otf */; };
-		45944C9B1EEFDF680047041F /* DINPro-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 45944C961EEFDF680047041F /* DINPro-Light.otf */; };
-		45944C9C1EEFDF680047041F /* DINPro-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 45944C971EEFDF680047041F /* DINPro-Medium.otf */; };
-		45944C9D1EEFDF680047041F /* DINPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 45944C981EEFDF680047041F /* DINPro-Regular.otf */; };
+		45736E7E1EF2A21B0072DB63 /* DINPro-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 45736E791EF2A21B0072DB63 /* DINPro-Black.otf */; };
+		45736E7F1EF2A21B0072DB63 /* DINPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 45736E7A1EF2A21B0072DB63 /* DINPro-Bold.otf */; };
+		45736E801EF2A21B0072DB63 /* DINPro-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 45736E7B1EF2A21B0072DB63 /* DINPro-Light.otf */; };
+		45736E811EF2A21B0072DB63 /* DINPro-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 45736E7C1EF2A21B0072DB63 /* DINPro-Medium.otf */; };
+		45736E821EF2A21B0072DB63 /* DINPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 45736E7D1EF2A21B0072DB63 /* DINPro-Regular.otf */; };
 		45A1FCDE1EC70B45008CEF45 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A1FCDD1EC70B45008CEF45 /* MainNavigationController.swift */; };
 		45A1FCE01EC71CBF008CEF45 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A1FCDF1EC71CBF008CEF45 /* LoginController.swift */; };
 		45F05F401EB23BF8000F44C6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F05F3F1EB23BF8000F44C6 /* Extensions.swift */; };
@@ -56,12 +55,11 @@
 		146F89811EE8583300F00836 /* ExploreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreCell.swift; sourceTree = "<group>"; };
 		1472720A1EEAA8D800725B3F /* StartController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartController.swift; sourceTree = "<group>"; };
 		14B996FC1EE75293003A8D91 /* ExploreController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreController.swift; sourceTree = "<group>"; };
-		45944C921EEFDD330047041F /* VarelaRoundregular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = VarelaRoundregular.ttf; path = "../../../../../RightFont/Font Library/Google/Varela Round/VarelaRoundregular.ttf"; sourceTree = "<group>"; };
-		45944C941EEFDF680047041F /* DINPro-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DINPro-Black.otf"; path = "../../../../../Downloads/[FF] DIN Pro/DINPro-Black.otf"; sourceTree = "<group>"; };
-		45944C951EEFDF680047041F /* DINPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DINPro-Bold.otf"; path = "../../../../../Downloads/[FF] DIN Pro/DINPro-Bold.otf"; sourceTree = "<group>"; };
-		45944C961EEFDF680047041F /* DINPro-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DINPro-Light.otf"; path = "../../../../../Downloads/[FF] DIN Pro/DINPro-Light.otf"; sourceTree = "<group>"; };
-		45944C971EEFDF680047041F /* DINPro-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DINPro-Medium.otf"; path = "../../../../../Downloads/[FF] DIN Pro/DINPro-Medium.otf"; sourceTree = "<group>"; };
-		45944C981EEFDF680047041F /* DINPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DINPro-Regular.otf"; path = "../../../../../Downloads/[FF] DIN Pro/DINPro-Regular.otf"; sourceTree = "<group>"; };
+		45736E791EF2A21B0072DB63 /* DINPro-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DINPro-Black.otf"; path = "Resources/DINPro-Black.otf"; sourceTree = "<group>"; };
+		45736E7A1EF2A21B0072DB63 /* DINPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DINPro-Bold.otf"; path = "Resources/DINPro-Bold.otf"; sourceTree = "<group>"; };
+		45736E7B1EF2A21B0072DB63 /* DINPro-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DINPro-Light.otf"; path = "Resources/DINPro-Light.otf"; sourceTree = "<group>"; };
+		45736E7C1EF2A21B0072DB63 /* DINPro-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DINPro-Medium.otf"; path = "Resources/DINPro-Medium.otf"; sourceTree = "<group>"; };
+		45736E7D1EF2A21B0072DB63 /* DINPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DINPro-Regular.otf"; path = "Resources/DINPro-Regular.otf"; sourceTree = "<group>"; };
 		45A1FCDD1EC70B45008CEF45 /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		45A1FCDF1EC71CBF008CEF45 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		45F05F3F1EB23BF8000F44C6 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
@@ -119,15 +117,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		45944C901EEFDA770047041F /* Resources */ = {
+		45736E781EF2A1FC0072DB63 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				45944C941EEFDF680047041F /* DINPro-Black.otf */,
-				45944C951EEFDF680047041F /* DINPro-Bold.otf */,
-				45944C961EEFDF680047041F /* DINPro-Light.otf */,
-				45944C971EEFDF680047041F /* DINPro-Medium.otf */,
-				45944C981EEFDF680047041F /* DINPro-Regular.otf */,
-				45944C921EEFDD330047041F /* VarelaRoundregular.ttf */,
+				45736E791EF2A21B0072DB63 /* DINPro-Black.otf */,
+				45736E7A1EF2A21B0072DB63 /* DINPro-Bold.otf */,
+				45736E7B1EF2A21B0072DB63 /* DINPro-Light.otf */,
+				45736E7C1EF2A21B0072DB63 /* DINPro-Medium.otf */,
+				45736E7D1EF2A21B0072DB63 /* DINPro-Regular.otf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -141,7 +138,6 @@
 				45FB564C1EB11C8B00899C92 /* Products */,
 				F0D316AC541CEFDAA9532EBE /* Frameworks */,
 				63CAA9ADB3961C99D852E0D4 /* Pods */,
-				45944C901EEFDA770047041F /* Resources */,
 			);
 			sourceTree = "<group>";
 		};
@@ -158,6 +154,7 @@
 		45FB564D1EB11C8B00899C92 /* Handy_26Aprile */ = {
 			isa = PBXGroup;
 			children = (
+				45736E781EF2A1FC0072DB63 /* Resources */,
 				45FB564E1EB11C8B00899C92 /* AppDelegate.swift */,
 				45A1FCDF1EC71CBF008CEF45 /* LoginController.swift */,
 				146F897D1EE838AD00F00836 /* Constant.swift */,
@@ -335,15 +332,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45736E7F1EF2A21B0072DB63 /* DINPro-Bold.otf in Resources */,
 				45FB56591EB11C8B00899C92 /* LaunchScreen.storyboard in Resources */,
 				45FB56561EB11C8B00899C92 /* Assets.xcassets in Resources */,
-				45944C9C1EEFDF680047041F /* DINPro-Medium.otf in Resources */,
-				45944C9D1EEFDF680047041F /* DINPro-Regular.otf in Resources */,
-				45944C991EEFDF680047041F /* DINPro-Black.otf in Resources */,
 				45FB56541EB11C8B00899C92 /* Main.storyboard in Resources */,
-				45944C9B1EEFDF680047041F /* DINPro-Light.otf in Resources */,
-				45944C9A1EEFDF680047041F /* DINPro-Bold.otf in Resources */,
-				45944C931EEFDD330047041F /* VarelaRoundregular.ttf in Resources */,
+				45736E811EF2A21B0072DB63 /* DINPro-Medium.otf in Resources */,
+				45736E801EF2A21B0072DB63 /* DINPro-Light.otf in Resources */,
+				45736E7E1EF2A21B0072DB63 /* DINPro-Black.otf in Resources */,
+				45736E821EF2A21B0072DB63 /* DINPro-Regular.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

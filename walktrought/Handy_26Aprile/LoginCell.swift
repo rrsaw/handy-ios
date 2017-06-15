@@ -14,8 +14,8 @@ class LoginCell: UICollectionViewCell, UITextFieldDelegate {
     let emailTextField: LeftPaddedTextField = {
         let textFieldM = LeftPaddedTextField()
         textFieldM.placeholder = "Enter email"
-        textFieldM.layer.borderColor = UIColor.lightGray.cgColor
-        textFieldM.layer.backgroundColor = UIColor.white.cgColor
+        textFieldM.layer.borderColor = UIColor.rgb(212, 220, 225).cgColor
+        textFieldM.layer.backgroundColor = UIColor.rgb(247, 248, 250).cgColor
         textFieldM.layer.borderWidth = 1
         textFieldM.layer.cornerRadius = 25
         textFieldM.keyboardType = .emailAddress
@@ -25,8 +25,8 @@ class LoginCell: UICollectionViewCell, UITextFieldDelegate {
     let passwordTextField: LeftPaddedTextField = {
         let textFieldP = LeftPaddedTextField()
         textFieldP.placeholder = "Enter password"
-        textFieldP.layer.borderColor = UIColor.lightGray.cgColor
-        textFieldP.layer.backgroundColor = UIColor.white.cgColor
+        textFieldP.layer.borderColor = UIColor.rgb(212, 220, 225).cgColor
+        textFieldP.layer.backgroundColor = UIColor.rgb(247, 248, 250).cgColor
         textFieldP.layer.borderWidth = 1
         textFieldP.isSecureTextEntry = true
         textFieldP.layer.cornerRadius = 25
