@@ -314,6 +314,7 @@
 					45FB564A1EB11C8B00899C92 = {
 						CreatedOnToolsVersion = 8.3.2;
 						LastSwiftMigration = 0830;
+						DevelopmentTeam = EU5DXXS7TQ;
 						ProvisioningStyle = Automatic;
 					};
 					45FB565E1EB11C8B00899C92 = {
@@ -694,6 +695,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
+				DEVELOPMENT_TEAM = EU5DXXS7TQ;
 				INFOPLIST_FILE = Handy_26Aprile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "federico.Handy-26Aprile";
@@ -708,6 +710,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ENABLE_BITCODE = NO;
+				DEVELOPMENT_TEAM = EU5DXXS7TQ;
 				INFOPLIST_FILE = Handy_26Aprile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "federico.Handy-26Aprile";
