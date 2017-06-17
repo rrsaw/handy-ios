@@ -27,6 +27,13 @@ class ExploreController: UICollectionViewController, UICollectionViewDelegateFlo
         collectionView?.register(ExploreCell.self, forCellWithReuseIdentifier: "cellId")
         navigationController?.navigationBar.isTranslucent = true
         
+        let exploreItems: [Explore] = {
+            let firstPage = Explore(title: "Share a great listen", distance: "Cusano Milanino", price: "10.0", profile: "Maurizio Lucci", imageName: "page1")
+            
+            return [firstPage]
+        }()
+
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -44,13 +51,18 @@ class ExploreController: UICollectionViewController, UICollectionViewDelegateFlo
         
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+//        return exploreItems.count
+        return 6
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        if indexPath.item == exploreItems.count {
+//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath)
+//            return cell
+//        }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath)
-        
         return cell
+
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

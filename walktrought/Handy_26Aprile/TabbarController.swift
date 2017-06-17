@@ -15,24 +15,22 @@ class TabbarController: UITabBarController{
         view.backgroundColor = .white
         
         
-//        let exploreController = ExploreController()
         let layout = UICollectionViewFlowLayout()
         let exploreController = ExploreController(collectionViewLayout : layout)
         let thirdNavigationController = UINavigationController(rootViewController: exploreController)
         thirdNavigationController.title = "Explore"
-        thirdNavigationController.tabBarItem.image = UIImage(named: "items")
+//        thirdNavigationController.tabBarItem.image = UIImage(named: "items")
         
-//        let mapsController = ExploreController()
         let mapsController = ExploreController(collectionViewLayout : layout)
         let navigationController = UINavigationController(rootViewController: mapsController)
         navigationController.title = "Items"
-        navigationController.tabBarItem.image = UIImage(named: "mapsIcon")
+//        navigationController.tabBarItem.image = UIImage(named: "mapsIcon")
         
         //        let profileController = ExploreController()
         let profileController = ExploreController(collectionViewLayout : layout)
         let secondNavigationController = UINavigationController(rootViewController: profileController)
         secondNavigationController.title = "Profile"
-        secondNavigationController.tabBarItem.image = UIImage(named: "user")
+//        secondNavigationController.tabBarItem.image = UIImage(named: "user")
         
         viewControllers = [thirdNavigationController, navigationController, secondNavigationController]
         

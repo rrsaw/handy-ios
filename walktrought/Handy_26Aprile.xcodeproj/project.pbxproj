@@ -12,6 +12,7 @@
 		1472720B1EEAA8D800725B3F /* StartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1472720A1EEAA8D800725B3F /* StartController.swift */; };
 		14B996FD1EE75294003A8D91 /* ExploreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B996FC1EE75293003A8D91 /* ExploreController.swift */; };
 		14E686941EF2A4B2009180A4 /* TabbarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E686931EF2A4B2009180A4 /* TabbarController.swift */; };
+		14E686961EF2C9E0009180A4 /* Explore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E686951EF2C9DF009180A4 /* Explore.swift */; };
 		45736E7E1EF2A21B0072DB63 /* DINPro-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 45736E791EF2A21B0072DB63 /* DINPro-Black.otf */; };
 		45736E7F1EF2A21B0072DB63 /* DINPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 45736E7A1EF2A21B0072DB63 /* DINPro-Bold.otf */; };
 		45736E801EF2A21B0072DB63 /* DINPro-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 45736E7B1EF2A21B0072DB63 /* DINPro-Light.otf */; };
@@ -57,6 +58,7 @@
 		1472720A1EEAA8D800725B3F /* StartController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartController.swift; sourceTree = "<group>"; };
 		14B996FC1EE75293003A8D91 /* ExploreController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreController.swift; sourceTree = "<group>"; };
 		14E686931EF2A4B2009180A4 /* TabbarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabbarController.swift; sourceTree = "<group>"; };
+		14E686951EF2C9DF009180A4 /* Explore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Explore.swift; sourceTree = "<group>"; };
 		45736E791EF2A21B0072DB63 /* DINPro-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DINPro-Black.otf"; path = "Resources/DINPro-Black.otf"; sourceTree = "<group>"; };
 		45736E7A1EF2A21B0072DB63 /* DINPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DINPro-Bold.otf"; path = "Resources/DINPro-Bold.otf"; sourceTree = "<group>"; };
 		45736E7B1EF2A21B0072DB63 /* DINPro-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DINPro-Light.otf"; path = "Resources/DINPro-Light.otf"; sourceTree = "<group>"; };
@@ -158,8 +160,9 @@
 			children = (
 				45736E781EF2A1FC0072DB63 /* Resources */,
 				45FB564E1EB11C8B00899C92 /* AppDelegate.swift */,
-				45A1FCDF1EC71CBF008CEF45 /* LoginController.swift */,
 				146F897D1EE838AD00F00836 /* Constant.swift */,
+				45A1FCDF1EC71CBF008CEF45 /* LoginController.swift */,
+				45F89F721EB770BC0023D170 /* LoginCell.swift */,
 				45FB56521EB11C8B00899C92 /* Main.storyboard */,
 				45FB56551EB11C8B00899C92 /* Assets.xcassets */,
 				45FB56571EB11C8B00899C92 /* LaunchScreen.storyboard */,
@@ -168,10 +171,10 @@
 				45FB56801EB152C500899C92 /* Page.swift */,
 				45F05F3F1EB23BF8000F44C6 /* Extensions.swift */,
 				1472720A1EEAA8D800725B3F /* StartController.swift */,
-				45F89F721EB770BC0023D170 /* LoginCell.swift */,
 				14B996FC1EE75293003A8D91 /* ExploreController.swift */,
 				14E686931EF2A4B2009180A4 /* TabbarController.swift */,
 				146F89811EE8583300F00836 /* ExploreCell.swift */,
+				14E686951EF2C9DF009180A4 /* Explore.swift */,
 				45A1FCDD1EC70B45008CEF45 /* MainNavigationController.swift */,
 			);
 			path = Handy_26Aprile;
@@ -510,6 +513,7 @@
 				45FB564F1EB11C8B00899C92 /* AppDelegate.swift in Sources */,
 				146F897E1EE838AD00F00836 /* Constant.swift in Sources */,
 				45FB567D1EB126EB00899C92 /* PageCell.swift in Sources */,
+				14E686961EF2C9E0009180A4 /* Explore.swift in Sources */,
 				45A1FCDE1EC70B45008CEF45 /* MainNavigationController.swift in Sources */,
 				146F89821EE8583300F00836 /* ExploreCell.swift in Sources */,
 				1472720B1EEAA8D800725B3F /* StartController.swift in Sources */,

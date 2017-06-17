@@ -8,11 +8,86 @@
 
 import UIKit
 import Alamofire
-var loginCell = LoginCell()
+//var loginCell = LoginCell()
 
-class LoginController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+class LoginController: UIViewController, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UITextFieldDelegate {
     
-    let loginUrl = "http://handy-db.dev/api/v1/login"
+    let cellId = "cellId"
+    let loginCellId = "loginCellId"
+    
+    let logoImageView: UIImageView = {
+        let image = UIImage(named: "logo")
+        let imageView = UIImageView(image: image)
+        return imageView
+    }()
+    
+    let forgotPasswordButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Forgot your password?", for: .normal)
+        button.setTitleColor(.lightGray, for: .normal)
+        return button
+    }()
+    
+    let facebookButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.backgroundColor = .blue
+        button.setTitle("FB", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.layer.cornerRadius = 25
+        button.layer.shadowColor = UIColor.blue.cgColor
+        button.layer.shadowOffset = CGSize(width: 0, height: 8.0)
+        button.layer.shadowOpacity = 0.3
+        button.layer.shadowRadius = 13
+        return button
+    }()
+    
+    let createAccountButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.setTitle("Do not have an account? \n Create Account", for: .normal)
+        button.titleLabel?.numberOfLines = 2
+        button.setTitleColor(.lightGray, for: .normal)
+        button.layer.borderColor = UIColor.lightGray.cgColor
+        button.layer.borderWidth = 1
+        button.contentHorizontalAlignment = .center
+        //        button.addTarget(self, action: #selector(showMainNavigation), for: .touchUpInside)
+        return button
+    }()
+    
+    let loginButton: UIButton = {
+        let button = UIButton(type: .system)
+        button.backgroundColor = .orange
+        button.setTitle("Log in", for: .normal)
+        button.setTitleColor(.white, for: .normal)
+        button.layer.cornerRadius = 25
+        button.layer.shadowColor = UIColor.orange.cgColor
+        button.layer.shadowOffset = CGSize(width: 0, height: 8.0)
+        button.layer.shadowOpacity = 0.3
+        button.layer.shadowRadius = 13
+        button.addTarget(self, action: #selector(pressButton), for: .touchUpInside)
+        return button
+    }()
+    
+    let emailTextField: LeftPaddedTextField = {
+        let textFieldM = LeftPaddedTextField()
+        textFieldM.placeholder = "Enter email"
+        textFieldM.layer.borderColor = UIColor.rgb(212, 220, 225).cgColor
+        textFieldM.layer.backgroundColor = UIColor.rgb(247, 248, 250).cgColor
+        textFieldM.layer.borderWidth = 1
+        textFieldM.layer.cornerRadius = 25
+        textFieldM.keyboardType = .emailAddress
+        return textFieldM
+    }()
+    
+    let passwordTextField: LeftPaddedTextField = {
+        let textFieldP = LeftPaddedTextField()
+        textFieldP.placeholder = "Enter password"
+        textFieldP.layer.borderColor = UIColor.rgb(212, 220, 225).cgColor
+        textFieldP.layer.backgroundColor = UIColor.rgb(247, 248, 250).cgColor
+        textFieldP.layer.borderWidth = 1
+        textFieldP.isSecureTextEntry = true
+        textFieldP.layer.cornerRadius = 25
+        return textFieldP
+    }()
     
     lazy var collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -20,26 +95,9 @@ class LoginController: UIViewController, UICollectionViewDataSource, UICollectio
         layout.minimumLineSpacing = 0
         let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
         cv.backgroundColor = .white
-        cv.dataSource = self
         cv.delegate = self
         cv.isPagingEnabled = true
         return cv
-    }()
-    
-    
-    
-    let cellId = "cellId"
-    let loginCellId = "loginCellId"
-    
-    
-    let pages: [Page] = {
-        let firstPage = Page(title: "Share a great listen", message: "It's free to send your books to the people in your life. Every recipient's first book is on us.", imageName: "page1")
-        
-        let secondPage = Page(title: "Send from your library", message: "Tap the More menu next to any book. Choose \"Send this Book\"", imageName: "page2")
-        
-        let thirdPage = Page(title: "Send from the player", message: "Tap the More menu in the upper corner. Choose \"Send this Book\"", imageName: "page3")
-        
-        return [firstPage, secondPage, thirdPage]
     }()
     
     lazy var pageControl: UIPageControl = {
@@ -58,66 +116,6 @@ class LoginController: UIViewController, UICollectionViewDataSource, UICollectio
         return button
     }()
     
-    
-    
-    
-    func skip() {
-        // we only need to lines to do this
-        pageControl.currentPage = pages.count - 1
-        nextPage()
-    }
-    
-//    func gotoExplore() {
-////        let layout = UICollectionViewFlowLayout()
-////        let dummySettingsViewController = ExploreController(collectionViewLayout : layout)
-////        self.present(MainNavigationController(), animated: true, completion: nil)
-//        mainNavigationController.homeController = HomeController()
-//        viewControllers = [homeController]
-//        self.dismiss(animated: true, completion: nil)
-////         navigationController?.pushViewController(dummySettingsViewController, animated: true)
-//        
-//    }
-    
-   
-    
-        func gotoExplore() {
-        
-        //we’ll perhaps implement the home controller a little later
-//        let rootViewController = UIApplication.shared.keyWindow?.rootViewController
-//        guard let mainNavigationController = rootViewController as? MainNavigationController else { return }
-//        
-//        let layout = UICollectionViewFlowLayout()
-//        let viewController = ExploreController(collectionViewLayout : layout)
-//        mainNavigationController.viewControllers = [viewController]
-        
-        //UserDefaults.standard.setIsLoggedIn(value: true)
-        
-        dismiss(animated: true, completion: nil)
-        
-        
-        // I Parametri da inviare
-        let mails = loginCell.emailTextField.text
-        var password = loginCell.passwordTextField.text
-        
-        let parameters: Parameters = [
-            "email" : mails!,
-            "password" : password!
-        ]
-        // Gestisco la richiesta
-        
-        print(mails)
-        print(password)
-        print(parameters)
-
-        Alamofire.request("http://handy-db.dev/api/v1/login", method: .post, parameters: parameters, encoding: JSONEncoding.default)
-        
-        // Gestisco la risposta
-        Alamofire.request("http://handy-db.dev/api/v1/login", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON(completionHandler: { response in
-            print(response)
-        })
-        
-    }
-    
     lazy var nextButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Next", for: .normal)
@@ -125,6 +123,57 @@ class LoginController: UIViewController, UICollectionViewDataSource, UICollectio
         button.addTarget(self, action: #selector(nextPage), for: .touchUpInside)
         return button
     }()
+    
+    let pages: [Page] = {
+        let firstPage = Page(title: "Share a great listen", message: "It's free to send your books to the people in your life. Every recipient's first book is on us.", imageName: "page1")
+        
+        let secondPage = Page(title: "Send from your library", message: "Tap the More menu next to any book. Choose \"Send this Book\"", imageName: "page2")
+        
+        let thirdPage = Page(title: "Send from the player", message: "Tap the More menu in the upper corner. Choose \"Send this Book\"", imageName: "page3")
+        
+        return [firstPage, secondPage, thirdPage]
+    }()
+
+    
+    func skip() {
+        // we only need to lines to do this
+        pageControl.currentPage = pages.count - 1
+        nextPage()
+    }
+    
+    func gotoExplore(sender: UIButton) {
+        let mails = emailTextField
+        let password = passwordTextField
+        
+        let parameters: Parameters = [
+            "email" : mails,
+            "password" : password
+        ]
+        // Gestisco la richiesta
+        print(parameters)
+        
+//        print("WWWWWWWWWW \(mails)")
+//        
+//        let parameters: Parameters = [
+//            "email" : mails,
+//            "password" : password
+//        ]
+//        // Gestisco la richiesta
+//        print(parameters)
+//        
+//        // Gestisco la risposta
+//        Alamofire.request("http://handy-db.dev/api/v1/login", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON(completionHandler: { response in
+//            
+//            if let json = response.result.value as? [String: Any] {
+//                self.dismiss(animated: true, completion: nil)
+//            } else{
+//                print("scemocoglione non fotti con il MOB")
+//            }
+//        })
+        
+    }
+    
+   
     
     func nextPage() {
         //we are on the last page
@@ -141,7 +190,7 @@ class LoginController: UIViewController, UICollectionViewDataSource, UICollectio
             }, completion: nil)
         }
         
-        let indexPath = IndexPath(item: pageControl.currentPage + 1, section: 0)
+        let indexPath = IndexPath(item: pageControl.currentPage + 3, section: 0)
         collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
         pageControl.currentPage += 1
     }
@@ -149,6 +198,7 @@ class LoginController: UIViewController, UICollectionViewDataSource, UICollectio
     var pageControlBottomAnchor: NSLayoutConstraint?
     var skipButtonTopAnchor: NSLayoutConstraint?
     var nextButtonTopAnchor: NSLayoutConstraint?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -161,6 +211,13 @@ class LoginController: UIViewController, UICollectionViewDataSource, UICollectio
         view.addSubview(pageControl)
         view.addSubview(skipButton)
         view.addSubview(nextButton)
+        view.addSubview(logoImageView)
+        view.addSubview(emailTextField)
+        view.addSubview(passwordTextField)
+        view.addSubview(forgotPasswordButton)
+        view.addSubview(loginButton)
+        view.addSubview(facebookButton)
+        view.addSubview(createAccountButton)
         
         
         pageControlBottomAnchor = pageControl.anchor(nil, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 40)[1]
@@ -168,6 +225,21 @@ class LoginController: UIViewController, UICollectionViewDataSource, UICollectio
         skipButtonTopAnchor = skipButton.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: 16, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 60, heightConstant: 50).first
         
         nextButtonTopAnchor = nextButton.anchor(view.topAnchor, left: nil, bottom: nil, right: view.rightAnchor, topConstant: 16, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 60, heightConstant: 50).first
+        
+        _ = logoImageView.anchor(view.centerYAnchor, left: nil, bottom: nil, right: nil, topConstant: -230, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 100, heightConstant: 100)
+        logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        
+        _ = emailTextField.anchor(logoImageView.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 32, leftConstant: 32, bottomConstant: 0, rightConstant: 32, widthConstant: 0, heightConstant: 50)
+        
+        _ = passwordTextField.anchor(emailTextField.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 16, leftConstant: 32, bottomConstant: 0, rightConstant: 32, widthConstant: 0, heightConstant: 50)
+        
+        _ = forgotPasswordButton.anchor(passwordTextField.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 16, leftConstant: 50, bottomConstant: 0, rightConstant: 50, widthConstant: 0, heightConstant: 50)
+        
+        _ = loginButton.anchor(forgotPasswordButton.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 25, leftConstant: 32, bottomConstant: 0, rightConstant: 100, widthConstant: 0, heightConstant: 50)
+        
+        _ = facebookButton.anchor(forgotPasswordButton.bottomAnchor, left: loginButton.rightAnchor, bottom: nil, right: nil, topConstant: 25, leftConstant: 15, bottomConstant: 0, rightConstant: 0, widthConstant: 50, heightConstant: 50)
+        
+        _ = createAccountButton.anchor(nil, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 32, bottomConstant: 70, rightConstant: 32, widthConstant: 0, heightConstant: 0)
         
         //use autolayout instead
         collectionView.anchorToTop(view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor)
@@ -230,18 +302,22 @@ class LoginController: UIViewController, UICollectionViewDataSource, UICollectio
     
     fileprivate func registerCells() {
         collectionView.register(PageCell.self, forCellWithReuseIdentifier: cellId)
-        collectionView.register(LoginCell.self, forCellWithReuseIdentifier: loginCellId)
+//        collectionView.register(LoginCell.self, forCellWithReuseIdentifier: loginCellId)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return pages.count + 1
     }
     
+//    func collectionView(_ collectionView: UICollectionView, canFocusItemAt indexPath: IndexPath) -> Bool {
+
+//    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        
         if indexPath.item == pages.count {
-            let loginCell = collectionView.dequeueReusableCell(withReuseIdentifier: loginCellId, for: indexPath) as! LoginCell
-            loginCell.loginButton.addTarget(self, action: #selector(gotoExplore), for: .touchUpInside)
+            let loginCell = collectionView.dequeueReusableCell(withReuseIdentifier: loginCellId, for: indexPath)
+            print("la cella è \(indexPath.item)")
+//            return true
             return loginCell
         }
         
@@ -250,7 +326,38 @@ class LoginController: UIViewController, UICollectionViewDataSource, UICollectio
         let page = pages[(indexPath as NSIndexPath).item]
         cell.page = page
         
+//        return true
         return cell
+        
+    }
+    
+    func pressButton(sender: UIButton){
+        
+        print("WWWWWWWWWW \(pageControl.currentPage)")
+        
+//         I Parametri da inviare
+        let mails = emailTextField.text!
+        let password = passwordTextField.text!
+//        print("WWWWWWWWWW \(mails)")
+        
+        let parameters: Parameters = [
+            "email" : mails,
+            "password" : password
+        ]
+        // Gestisco la richiesta
+        print(parameters)
+        
+        // Gestisco la risposta
+        Alamofire.request("http://handy-db.dev/api/v1/login", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON(completionHandler: { response in
+            
+            if let json = response.result.value as? [String: Any] {
+                self.dismiss(animated: true, completion: nil)
+            } else{
+                print("scemocoglione non fotti con il MOB")
+            }
+            
+        })
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -268,7 +375,17 @@ class LoginController: UIViewController, UICollectionViewDataSource, UICollectio
             self.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
             self.collectionView.reloadData()
         }
-        
     }
     
+}
+
+class LeftPaddedTextField: UITextField {
+    // Aggiunta padding nel texfield
+    override func textRect(forBounds bounds: CGRect) -> CGRect {
+        return CGRect(x: bounds.origin.x + 10, y: bounds.origin.y, width: bounds.width + 10, height: bounds.height)
+    }
+    
+    override func editingRect(forBounds bounds: CGRect) -> CGRect {
+        return CGRect(x: bounds.origin.x + 10, y: bounds.origin.y, width: bounds.width + 10, height: bounds.height)
+    }
 }
