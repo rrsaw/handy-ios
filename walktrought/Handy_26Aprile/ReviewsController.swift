@@ -192,13 +192,34 @@ class ReviewsController: UIViewController, UICollectionViewDelegate, UICollectio
         
         // parte sotto la collection view orizzontale (stelle, reviews, share)
         
-        let reviewsCountLabel = UILabel()
-        reviewsCountLabel.text = "28 reviews"
-        reviewsCountLabel.font = UIFont(name: "VarelaRound", size: 14)
-        reviewsCountLabel.font = UIFont.systemFont(ofSize: 14)
-        reviewsCountLabel.textColor = .black
-        reviewsCountLabel.frame = CGRect(x: 135, y: 470, width: 100, height: 20)
-        reviewsCountLabel.textAlignment = .center
+//        let reviewsCountLabel = UILabel()
+//        reviewsCountLabel.text = "28 reviews"
+//        reviewsCountLabel.font = UIFont(name: "VarelaRound", size: 14)
+//        reviewsCountLabel.font = UIFont.systemFont(ofSize: 14)
+//        reviewsCountLabel.textColor = .black
+//        reviewsCountLabel.frame = CGRect(x: 135, y: 470, width: 100, height: 20)
+//        reviewsCountLabel.textAlignment = .center
+        
+        let settingsButton = UIButton()
+        settingsButton.setTitle("Settings", for: .normal)
+        settingsButton.setTitleColor(.black, for: .normal)
+        settingsButton.frame = CGRect(x: 10, y: 470, width: 100, height: 20)
+        //        settingsButton.addTarget(self, action: Selector(("buttonTouched:")), for: UIControlEvents.touchUpInside)
+        self.view.addSubview(settingsButton)
+        
+        let detailsButton = UIButton()
+        detailsButton.setTitle("Details", for: .normal)
+        detailsButton.setTitleColor(.black, for: .normal)
+        detailsButton.frame = CGRect(x: 135, y: 470, width: 100, height: 20)
+        //        detailsButton.addTarget(self, action: Selector(("buttonTouched:")), for: UIControlEvents.touchUpInside)
+        self.view.addSubview(detailsButton)
+        
+        let reviewsButton = UIButton()
+        reviewsButton.setTitle("Reviews", for: .normal)
+        reviewsButton.setTitleColor(.black, for: .normal)
+        reviewsButton.frame = CGRect(x: 220, y: 470, width: 100, height: 20)
+        //        reviewsButton.addTarget(self, action: Selector(("buttonTouched:")), for: UIControlEvents.touchUpInside)
+        self.view.addSubview(reviewsButton)
         
         
         
@@ -215,7 +236,9 @@ class ReviewsController: UIViewController, UICollectionViewDelegate, UICollectio
         self.view.addSubview(lentLabel)
         self.view.addSubview(itemsNumbersLabel)
         self.view.addSubview(itemsLabel)
-        self.view.addSubview(reviewsCountLabel)
+        self.view.addSubview(settingsButton)
+        self.view.addSubview(detailsButton)
+        self.view.addSubview(reviewsButton)
         self.view.addSubview(navProfileTitleLabel)
         self.view.addSubview(backPageButton)
         self.view.addSubview(collectionViewA)

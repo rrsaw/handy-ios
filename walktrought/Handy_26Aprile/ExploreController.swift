@@ -1,30 +1,17 @@
-//
-//  ExploreController.swift
-//  Handy_26Aprile
-//
-//  Created by Maurizio Lucci on 06/06/17.
-//  Copyright © 2017 Federico Cattaneo. All rights reserved.
-//
 
 import UIKit
-import Alamofire
 
 class ExploreController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
-    
-    var images:[String] = []
-    var videos:[String] = []
-    var lableTitles:[String] = []
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        if isLoggedIn() {
-//            //assume user is logged in
-//            //            let homeController = HomeController()
-//            //            viewControllers = [homeController]
-//        } else {
-//            perform(#selector(showLoginController), with: nil, afterDelay: 0.01)
-//        }
+        //        if isLoggedIn() {
+        //            //assume user is logged in
+        //            //            let homeController = HomeController()
+        //            //            viewControllers = [homeController]
+        //        } else {
+        //            perform(#selector(showLoginController), with: nil, afterDelay: 0.01)
+        //        }
         
         navigationItem.title = "Explore"
         
@@ -33,12 +20,12 @@ class ExploreController: UICollectionViewController, UICollectionViewDelegateFlo
         collectionView?.register(ExploreCell.self, forCellWithReuseIdentifier: "cellId")
         navigationController?.navigationBar.isTranslucent = true
         
-//        let exploreItems: [Explore] = {
-//            let firstPage = Explore(title: "Share a great listen", distance: "Cusano Milanino", price: "10.0", profile: "Maurizio Lucci", imageName: "page1")
-//            
-//            return [firstPage]
-//        }()
-
+        let exploreItems: [Explore] = {
+            let firstPage = Explore(title: "Share a great listen", distance: "Cusano Milanino", price: "10.0", profile: "Maurizio Lucci", imageName: "page1")
+            
+            return [firstPage]
+        }()
+        
         
     }
     
@@ -46,29 +33,29 @@ class ExploreController: UICollectionViewController, UICollectionViewDelegateFlo
         super.viewWillAppear(false)
     }
     
-//    fileprivate func isLoggedIn() -> Bool {
-//        return false
-//    }
+    //    fileprivate func isLoggedIn() -> Bool {
+    //        return false
+    //    }
     
     func showLoginController() {
         let loginController = LoginController()
         present(loginController, animated: true, completion: nil)
     }
-        
+    
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-//        return exploreItems.count
+        //        return exploreItems.count
         return 6
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        if indexPath.item == exploreItems.count {
-//            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath)
-//            return cell
-//        }
+        //        if indexPath.item == exploreItems.count {
+        //            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath)
+        //            return cell
+        //        }
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath)
         return cell
-
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -97,4 +84,3 @@ extension UIView {
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat:format, options: NSLayoutFormatOptions(), metrics: nil, views: viewsDictionary))
     }
 }
-
