@@ -348,7 +348,7 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
         print(parameters)
         
         // Gestisco la risposta
-        Alamofire.request("http://handy-db.dev/api/v1/login", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON(completionHandler: { response in
+        Alamofire.request("http://handyshare.me/api/v1/login", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON(completionHandler: { response in
             
             if let json = response.result.value as? [String: Any] {
                 self.dismiss(animated: true, completion: nil)

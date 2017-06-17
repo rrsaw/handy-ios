@@ -21,13 +21,14 @@ class TabbarController: UITabBarController{
         thirdNavigationController.title = "Explore"
 //        thirdNavigationController.tabBarItem.image = UIImage(named: "items")
         
+//        let mapsController = ExploreController(collectionViewLayout : layout)
         let mapsController = ExploreController(collectionViewLayout : layout)
         let navigationController = UINavigationController(rootViewController: mapsController)
         navigationController.title = "Items"
 //        navigationController.tabBarItem.image = UIImage(named: "mapsIcon")
         
         //        let profileController = ExploreController()
-        let profileController = ExploreController(collectionViewLayout : layout)
+        let profileController = ReviewsController()
         let secondNavigationController = UINavigationController(rootViewController: profileController)
         secondNavigationController.title = "Profile"
 //        secondNavigationController.tabBarItem.image = UIImage(named: "user")

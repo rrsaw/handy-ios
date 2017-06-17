@@ -7,8 +7,14 @@
 //
 
 import UIKit
+import Alamofire
 
 class ExploreController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+    
+    var images:[String] = []
+    var videos:[String] = []
+    var lableTitles:[String] = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,11 +33,11 @@ class ExploreController: UICollectionViewController, UICollectionViewDelegateFlo
         collectionView?.register(ExploreCell.self, forCellWithReuseIdentifier: "cellId")
         navigationController?.navigationBar.isTranslucent = true
         
-        let exploreItems: [Explore] = {
-            let firstPage = Explore(title: "Share a great listen", distance: "Cusano Milanino", price: "10.0", profile: "Maurizio Lucci", imageName: "page1")
-            
-            return [firstPage]
-        }()
+//        let exploreItems: [Explore] = {
+//            let firstPage = Explore(title: "Share a great listen", distance: "Cusano Milanino", price: "10.0", profile: "Maurizio Lucci", imageName: "page1")
+//            
+//            return [firstPage]
+//        }()
 
         
     }
