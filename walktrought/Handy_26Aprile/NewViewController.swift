@@ -15,8 +15,7 @@ class NewViewController: ReviewsController {
     
     func changeView()
     {
-        let vc = ReviewsController()
-        self.present(vc, animated: true, completion: nil)
+        self.dismiss(animated: true, completion: nil)
     }
     
     override func viewDidLoad() {

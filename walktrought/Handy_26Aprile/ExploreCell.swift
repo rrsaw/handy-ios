@@ -60,13 +60,6 @@ class ExploreCell: UICollectionViewCell {
         return uilabel
     }()
     
-    let profileThumbnailImageView: UIImageView = {
-        let imageView = UIImageView()
-        imageView.backgroundColor = UIColor.blue
-        imageView.layer.cornerRadius = WIDTH*3
-        return imageView
-    }()
-    
     let profileText: UILabel = {
         let uilabel = UILabel()
         uilabel.text = "Maurizio Lucci"
@@ -88,7 +81,6 @@ class ExploreCell: UICollectionViewCell {
         addSubview(priceImageView)
         addSubview(priceItem)
         addSubview(separatorView)
-        addSubview(profileThumbnailImageView)
         addSubview(profileText)
 
         _ = thumbnailImageView.anchor(nil, left: leftAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 20, bottomConstant: 0, rightConstant: 15, widthConstant: WIDTH*27, heightConstant: HEIGHT*15)
@@ -98,8 +90,7 @@ class ExploreCell: UICollectionViewCell {
         _ = distanceItem.anchor(titleItem.bottomAnchor, left: distanceImageView.rightAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 10, bottomConstant: 0, rightConstant: 0, widthConstant: WIDTH*20, heightConstant: 25)
         _ = priceImageView.anchor(titleItem.bottomAnchor, left: distanceItem.rightAnchor, bottom: nil, right: priceItem.leftAnchor, topConstant: 0, leftConstant: 15, bottomConstant: 0, rightConstant: 10, widthConstant: WIDTH*5, heightConstant: 25)
         _ = priceItem.anchor(titleItem.bottomAnchor, left: priceImageView.rightAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: WIDTH*25, heightConstant: 25)
-        _ = profileThumbnailImageView.anchor(priceItem.bottomAnchor, left: thumbnailImageView.rightAnchor, bottom: nil, right: nil, topConstant: 10, leftConstant: 15, bottomConstant: 0, rightConstant: 0, widthConstant: WIDTH*6, heightConstant: WIDTH*6)
-        _ = profileText.anchor(priceItem.bottomAnchor, left: profileThumbnailImageView.rightAnchor, bottom: nil, right: nil, topConstant: 10, leftConstant: 5, bottomConstant: 0, rightConstant: 0, widthConstant: WIDTH*40, heightConstant: WIDTH*6)
+        _ = profileText.anchor(priceItem.bottomAnchor, left: thumbnailImageView.rightAnchor, bottom: nil, right: nil, topConstant: 10, leftConstant: 5, bottomConstant: 0, rightConstant: 0, widthConstant: WIDTH*40, heightConstant: WIDTH*6)
         
         
 //        addConstraintsWithFormat(format: "H:|-16-[v0]-16-|", views: thumbnailImageView)

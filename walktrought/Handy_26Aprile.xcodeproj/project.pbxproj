@@ -9,7 +9,10 @@
 /* Begin PBXBuildFile section */
 		146F897E1EE838AD00F00836 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146F897D1EE838AD00F00836 /* Constant.swift */; };
 		146F89821EE8583300F00836 /* ExploreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146F89811EE8583300F00836 /* ExploreCell.swift */; };
-		1472720B1EEAA8D800725B3F /* StartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1472720A1EEAA8D800725B3F /* StartController.swift */; };
+		1472720B1EEAA8D800725B3F /* Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1472720A1EEAA8D800725B3F /* Mapping.swift */; };
+		14A2BCF21EF685DD00976A0D /* LoanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A2BCF11EF685DD00976A0D /* LoanCell.swift */; };
+		14A2BCF41EF6867A00976A0D /* LoanController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A2BCF31EF6867A00976A0D /* LoanController.swift */; };
+		14A2BCF61EF688A300976A0D /* LoanCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A2BCF51EF688A300976A0D /* LoanCollection.swift */; };
 		14B996FD1EE75294003A8D91 /* ExploreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B996FC1EE75293003A8D91 /* ExploreController.swift */; };
 		14C74C8C1EF54272005D83D1 /* Reviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C74C881EF54272005D83D1 /* Reviews.swift */; };
 		14C74C8D1EF54272005D83D1 /* NewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C74C891EF54272005D83D1 /* NewViewController.swift */; };
@@ -60,7 +63,10 @@
 /* Begin PBXFileReference section */
 		146F897D1EE838AD00F00836 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		146F89811EE8583300F00836 /* ExploreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreCell.swift; sourceTree = "<group>"; };
-		1472720A1EEAA8D800725B3F /* StartController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartController.swift; sourceTree = "<group>"; };
+		1472720A1EEAA8D800725B3F /* Mapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mapping.swift; sourceTree = "<group>"; };
+		14A2BCF11EF685DD00976A0D /* LoanCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoanCell.swift; sourceTree = "<group>"; };
+		14A2BCF31EF6867A00976A0D /* LoanController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoanController.swift; sourceTree = "<group>"; };
+		14A2BCF51EF688A300976A0D /* LoanCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoanCollection.swift; sourceTree = "<group>"; };
 		14B996FC1EE75293003A8D91 /* ExploreController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreController.swift; sourceTree = "<group>"; };
 		14C74C881EF54272005D83D1 /* Reviews.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reviews.swift; sourceTree = "<group>"; };
 		14C74C891EF54272005D83D1 /* NewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewViewController.swift; sourceTree = "<group>"; };
@@ -185,10 +191,13 @@
 				45FB567C1EB126EB00899C92 /* PageCell.swift */,
 				45FB56801EB152C500899C92 /* Page.swift */,
 				45F05F3F1EB23BF8000F44C6 /* Extensions.swift */,
-				1472720A1EEAA8D800725B3F /* StartController.swift */,
+				1472720A1EEAA8D800725B3F /* Mapping.swift */,
 				14B996FC1EE75293003A8D91 /* ExploreController.swift */,
 				14E686931EF2A4B2009180A4 /* TabbarController.swift */,
 				146F89811EE8583300F00836 /* ExploreCell.swift */,
+				14A2BCF11EF685DD00976A0D /* LoanCell.swift */,
+				14A2BCF51EF688A300976A0D /* LoanCollection.swift */,
+				14A2BCF31EF6867A00976A0D /* LoanController.swift */,
 				14E686951EF2C9DF009180A4 /* Explore.swift */,
 				45A1FCDD1EC70B45008CEF45 /* MainNavigationController.swift */,
 			);
@@ -313,8 +322,8 @@
 				TargetAttributes = {
 					45FB564A1EB11C8B00899C92 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 4KQ6PWXH29;
 						LastSwiftMigration = 0830;
-						DevelopmentTeam = EU5DXXS7TQ;
 						ProvisioningStyle = Automatic;
 					};
 					45FB565E1EB11C8B00899C92 = {
@@ -525,6 +534,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14A2BCF41EF6867A00976A0D /* LoanController.swift in Sources */,
+				14A2BCF61EF688A300976A0D /* LoanCollection.swift in Sources */,
 				45F05F401EB23BF8000F44C6 /* Extensions.swift in Sources */,
 				14C74C8F1EF54272005D83D1 /* ReviewsCell.swift in Sources */,
 				14E686941EF2A4B2009180A4 /* TabbarController.swift in Sources */,
@@ -534,7 +545,8 @@
 				14E686961EF2C9E0009180A4 /* Explore.swift in Sources */,
 				45A1FCDE1EC70B45008CEF45 /* MainNavigationController.swift in Sources */,
 				146F89821EE8583300F00836 /* ExploreCell.swift in Sources */,
-				1472720B1EEAA8D800725B3F /* StartController.swift in Sources */,
+				14A2BCF21EF685DD00976A0D /* LoanCell.swift in Sources */,
+				1472720B1EEAA8D800725B3F /* Mapping.swift in Sources */,
 				45A1FCE01EC71CBF008CEF45 /* LoginController.swift in Sources */,
 				14B996FD1EE75294003A8D91 /* ExploreController.swift in Sources */,
 				14C74C8E1EF54272005D83D1 /* ReviewsController.swift in Sources */,
@@ -694,8 +706,8 @@
 			baseConfigurationReference = 4D2FB85B0F1CD60BDFCEB8A3 /* Pods-Handy_26Aprile.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4KQ6PWXH29;
 				ENABLE_BITCODE = NO;
-				DEVELOPMENT_TEAM = EU5DXXS7TQ;
 				INFOPLIST_FILE = Handy_26Aprile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "federico.Handy-26Aprile";
@@ -709,8 +721,8 @@
 			baseConfigurationReference = B5813AE30ADEC4322CA7B732 /* Pods-Handy_26Aprile.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4KQ6PWXH29;
 				ENABLE_BITCODE = NO;
-				DEVELOPMENT_TEAM = EU5DXXS7TQ;
 				INFOPLIST_FILE = Handy_26Aprile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "federico.Handy-26Aprile";

@@ -1,61 +1,82 @@
 
 import UIKit
+import Alamofire
+import Kingfisher
 
-class ExploreController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+var exploreCell = ExploreCell()
+
+class ExploreController: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    fileprivate var jsonData: Array<Dictionary<String, AnyObject>> = []
+    let tableData: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        let collection = UICollectionView(frame: CGRect(x: 0, y: 0,width: WIDTH*100, height: HEIGHT*100), collectionViewLayout: layout)
+        collection.backgroundColor = .white
+        return collection
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //        if isLoggedIn() {
-        //            //assume user is logged in
-        //            //            let homeController = HomeController()
-        //            //            viewControllers = [homeController]
-        //        } else {
-        //            perform(#selector(showLoginController), with: nil, afterDelay: 0.01)
-        //        }
-        
+//        view.backgroundColor = .white
+//        collectionView?.register(ExploreCell.self, forCellWithReuseIdentifier: "cellId")
         navigationItem.title = "Explore"
-        
-        collectionView?.backgroundColor = .white
-        
-        collectionView?.register(ExploreCell.self, forCellWithReuseIdentifier: "cellId")
         navigationController?.navigationBar.isTranslucent = true
         
-        let exploreItems: [Explore] = {
-            let firstPage = Explore(title: "Share a great listen", distance: "Cusano Milanino", price: "10.0", profile: "Maurizio Lucci", imageName: "page1")
+        tableData.delegate = self
+        tableData.dataSource = self
+        tableData.register(ExploreCell.self, forCellWithReuseIdentifier: "cellId")
+        
+        self.view.addSubview(tableData)
+        
+        Alamofire.request("http://handyshare.me/api/v1/items").responseJSON { response in
             
-            return [firstPage]
-        }()
-        
-        
+            if let JSON = response.result.value {
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                print("invece questo è \(JSON)")
+                self.jsonData = JSON as! Array<Dictionary<String, AnyObject>>
+                self.tableData.reloadData()
+                
+            }
+            
+        }
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        super.viewWillAppear(false)
-    }
-    
-    //    fileprivate func isLoggedIn() -> Bool {
-    //        return false
-    //    }
-    
-    func showLoginController() {
-        let loginController = LoginController()
-        present(loginController, animated: true, completion: nil)
-    }
-    
-    
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        //        return exploreItems.count
-        return 6
-    }
-    
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        //        if indexPath.item == exploreItems.count {
-        //            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath)
-        //            return cell
-        //        }
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath)
-        return cell
+        super.viewWillAppear(true)
         
+    }
+    
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+       return jsonData.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+//        if indexPath.item == jsonData.count {
+//            
+//        }
+        
+        let name = self.jsonData[indexPath.row]["user"]!["name"] as? String
+        let surname = self.jsonData[indexPath.row]["user"]!["surname"] as? String
+        let completeName = "\(name!) \(surname!)"
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! ExploreCell
+        cell.titleItem.text = self.jsonData[indexPath.row]["name"] as? String
+        cell.distanceItem.text = self.jsonData[indexPath.row]["distance"] as? String
+        cell.priceItem.text = self.jsonData[indexPath.row]["price"] as? String
+        cell.distanceItem.text = self.jsonData[indexPath.row]["address"]?["city"] as? String
+        cell.profileText.text = completeName
+        let imageName = (self.jsonData[indexPath.row]["image"]?["name"] as? String)!
+        let urlString = "http://handyshare.me/images/items/\(imageName)"
+        
+        let url = URL(string: urlString)
+        
+        cell.thumbnailImageView.kf.setImage(with: url, placeholder: nil, options: nil, progressBlock: nil, completionHandler: { completation in
+            cell.layoutSubviews()
+        })
+
+        return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

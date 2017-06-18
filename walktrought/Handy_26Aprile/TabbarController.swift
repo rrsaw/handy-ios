@@ -16,13 +16,13 @@ class TabbarController: UITabBarController{
         
         
         let layout = UICollectionViewFlowLayout()
-        let exploreController = ExploreController(collectionViewLayout : layout)
+        let exploreController = ExploreController()
         let thirdNavigationController = UINavigationController(rootViewController: exploreController)
         thirdNavigationController.title = "Explore"
 //        thirdNavigationController.tabBarItem.image = UIImage(named: "items")
         
 //        let mapsController = ExploreController(collectionViewLayout : layout)
-        let mapsController = ExploreController(collectionViewLayout : layout)
+        let mapsController = ExploreController()
         let navigationController = UINavigationController(rootViewController: mapsController)
         navigationController.title = "Items"
 //        navigationController.tabBarItem.image = UIImage(named: "mapsIcon")
