@@ -30,11 +30,11 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
     
     let facebookButton: UIButton = {
         let button = UIButton(type: .system)
-        button.backgroundColor = .blue
+        button.backgroundColor = UIColor.rgb(50, 69, 184)
         button.setTitle("FB", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.layer.cornerRadius = 25
-        button.layer.shadowColor = UIColor.blue.cgColor
+        button.layer.shadowColor = UIColor.rgb(50, 69, 184).cgColor
         button.layer.shadowOffset = CGSize(width: 0, height: 8.0)
         button.layer.shadowOpacity = 0.3
         button.layer.shadowRadius = 13
@@ -55,11 +55,11 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
     
     let loginButton: UIButton = {
         let button = UIButton(type: .system)
-        button.backgroundColor = .orange
+        button.backgroundColor = UIColor.rgb(59, 201, 219)
         button.setTitle("Log in", for: .normal)
         button.setTitleColor(.white, for: .normal)
         button.layer.cornerRadius = 25
-        button.layer.shadowColor = UIColor.orange.cgColor
+        button.layer.shadowColor = UIColor.rgb(59, 201, 219).cgColor
         button.layer.shadowOffset = CGSize(width: 0, height: 8.0)
         button.layer.shadowOpacity = 0.3
         button.layer.shadowRadius = 13

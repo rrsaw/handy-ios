@@ -14,6 +14,11 @@
 			<key>orderHint</key>
 			<integer>2</integer>
 		</dict>
+		<key>ObjectMapper.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>6</integer>
+		</dict>
 		<key>Pods-Handy_26Aprile.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -32,12 +37,27 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>2F0C0F810568D3E82219429D9D870F04</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>86ABE800FAFD32FFA8E630531FAC944D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>88E9EC28B8B46C3631E6B242B50F4442</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>C4944FEC314D1A66588651D006273ADE</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CD6C9FB6B052E1CF663F8A56041EA163</key>
 		<dict>
 			<key>primary</key>
 			<true/>

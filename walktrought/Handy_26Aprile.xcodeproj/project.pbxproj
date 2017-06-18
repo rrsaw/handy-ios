@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		146F897E1EE838AD00F00836 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146F897D1EE838AD00F00836 /* Constant.swift */; };
 		146F89821EE8583300F00836 /* ExploreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146F89811EE8583300F00836 /* ExploreCell.swift */; };
-		1472720B1EEAA8D800725B3F /* Mapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1472720A1EEAA8D800725B3F /* Mapping.swift */; };
 		14A2BCF21EF685DD00976A0D /* LoanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A2BCF11EF685DD00976A0D /* LoanCell.swift */; };
 		14A2BCF41EF6867A00976A0D /* LoanController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A2BCF31EF6867A00976A0D /* LoanController.swift */; };
 		14A2BCF61EF688A300976A0D /* LoanCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A2BCF51EF688A300976A0D /* LoanCollection.swift */; };
@@ -28,6 +27,9 @@
 		459F18BC1EF53F1F00784EC7 /* VarelaRoundregular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 459F18BB1EF53F1F00784EC7 /* VarelaRoundregular.ttf */; };
 		45A1FCDE1EC70B45008CEF45 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A1FCDD1EC70B45008CEF45 /* MainNavigationController.swift */; };
 		45A1FCE01EC71CBF008CEF45 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45A1FCDF1EC71CBF008CEF45 /* LoginController.swift */; };
+		45B44AC61EF6DE4A00D5661E /* DetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B44AC51EF6DE4A00D5661E /* DetailCell.swift */; };
+		45B44AC81EF6DE5700D5661E /* DetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B44AC71EF6DE5700D5661E /* DetailController.swift */; };
+		45B44ACB1EF6DE9000D5661E /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45B44ACA1EF6DE9000D5661E /* Detail.swift */; };
 		45F05F401EB23BF8000F44C6 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F05F3F1EB23BF8000F44C6 /* Extensions.swift */; };
 		45F89F731EB770BC0023D170 /* LoginCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45F89F721EB770BC0023D170 /* LoginCell.swift */; };
 		45FB564F1EB11C8B00899C92 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45FB564E1EB11C8B00899C92 /* AppDelegate.swift */; };
@@ -63,7 +65,6 @@
 /* Begin PBXFileReference section */
 		146F897D1EE838AD00F00836 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		146F89811EE8583300F00836 /* ExploreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreCell.swift; sourceTree = "<group>"; };
-		1472720A1EEAA8D800725B3F /* Mapping.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mapping.swift; sourceTree = "<group>"; };
 		14A2BCF11EF685DD00976A0D /* LoanCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoanCell.swift; sourceTree = "<group>"; };
 		14A2BCF31EF6867A00976A0D /* LoanController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoanController.swift; sourceTree = "<group>"; };
 		14A2BCF51EF688A300976A0D /* LoanCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoanCollection.swift; sourceTree = "<group>"; };
@@ -82,6 +83,9 @@
 		459F18BB1EF53F1F00784EC7 /* VarelaRoundregular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = VarelaRoundregular.ttf; path = Resources/VarelaRoundregular.ttf; sourceTree = "<group>"; };
 		45A1FCDD1EC70B45008CEF45 /* MainNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		45A1FCDF1EC71CBF008CEF45 /* LoginController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		45B44AC51EF6DE4A00D5661E /* DetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
+		45B44AC71EF6DE5700D5661E /* DetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
+		45B44ACA1EF6DE9000D5661E /* Detail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
 		45F05F3F1EB23BF8000F44C6 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		45F89F721EB770BC0023D170 /* LoginCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginCell.swift; sourceTree = "<group>"; };
 		45FB564B1EB11C8B00899C92 /* Handy_26Aprile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Handy_26Aprile.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,6 +154,51 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		45B44AC11EF6DD0900D5661E /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				45A1FCDD1EC70B45008CEF45 /* MainNavigationController.swift */,
+				45A1FCDF1EC71CBF008CEF45 /* LoginController.swift */,
+				14B996FC1EE75293003A8D91 /* ExploreController.swift */,
+				14E686931EF2A4B2009180A4 /* TabbarController.swift */,
+				14A2BCF51EF688A300976A0D /* LoanCollection.swift */,
+				14A2BCF31EF6867A00976A0D /* LoanController.swift */,
+				14C74C8A1EF54272005D83D1 /* ReviewsController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		45B44AC21EF6DD3800D5661E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				146F89811EE8583300F00836 /* ExploreCell.swift */,
+				45FB567C1EB126EB00899C92 /* PageCell.swift */,
+				14A2BCF11EF685DD00976A0D /* LoanCell.swift */,
+				14C74C8B1EF54272005D83D1 /* ReviewsCell.swift */,
+				45F89F721EB770BC0023D170 /* LoginCell.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		45B44AC31EF6DD4500D5661E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				45F05F3F1EB23BF8000F44C6 /* Extensions.swift */,
+				14E686951EF2C9DF009180A4 /* Explore.swift */,
+				146F897D1EE838AD00F00836 /* Constant.swift */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		45B44AC41EF6DD7E00D5661E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				14C74C881EF54272005D83D1 /* Reviews.swift */,
+				45FB56801EB152C500899C92 /* Page.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		45FB56421EB11C8B00899C92 = {
 			isa = PBXGroup;
 			children = (
@@ -175,31 +224,20 @@
 		45FB564D1EB11C8B00899C92 /* Handy_26Aprile */ = {
 			isa = PBXGroup;
 			children = (
-				45736E781EF2A1FC0072DB63 /* Resources */,
-				45FB564E1EB11C8B00899C92 /* AppDelegate.swift */,
-				14C74C881EF54272005D83D1 /* Reviews.swift */,
 				14C74C891EF54272005D83D1 /* NewViewController.swift */,
-				14C74C8A1EF54272005D83D1 /* ReviewsController.swift */,
-				14C74C8B1EF54272005D83D1 /* ReviewsCell.swift */,
-				146F897D1EE838AD00F00836 /* Constant.swift */,
-				45A1FCDF1EC71CBF008CEF45 /* LoginController.swift */,
-				45F89F721EB770BC0023D170 /* LoginCell.swift */,
+				45736E781EF2A1FC0072DB63 /* Resources */,
+				45B44AC11EF6DD0900D5661E /* Controllers */,
+				45B44AC41EF6DD7E00D5661E /* Models */,
+				45B44AC21EF6DD3800D5661E /* Views */,
 				45FB56521EB11C8B00899C92 /* Main.storyboard */,
 				45FB56551EB11C8B00899C92 /* Assets.xcassets */,
 				45FB56571EB11C8B00899C92 /* LaunchScreen.storyboard */,
+				45B44ACA1EF6DE9000D5661E /* Detail.swift */,
+				45B44AC51EF6DE4A00D5661E /* DetailCell.swift */,
+				45B44AC71EF6DE5700D5661E /* DetailController.swift */,
 				45FB565A1EB11C8B00899C92 /* Info.plist */,
-				45FB567C1EB126EB00899C92 /* PageCell.swift */,
-				45FB56801EB152C500899C92 /* Page.swift */,
-				45F05F3F1EB23BF8000F44C6 /* Extensions.swift */,
-				1472720A1EEAA8D800725B3F /* Mapping.swift */,
-				14B996FC1EE75293003A8D91 /* ExploreController.swift */,
-				14E686931EF2A4B2009180A4 /* TabbarController.swift */,
-				146F89811EE8583300F00836 /* ExploreCell.swift */,
-				14A2BCF11EF685DD00976A0D /* LoanCell.swift */,
-				14A2BCF51EF688A300976A0D /* LoanCollection.swift */,
-				14A2BCF31EF6867A00976A0D /* LoanController.swift */,
-				14E686951EF2C9DF009180A4 /* Explore.swift */,
-				45A1FCDD1EC70B45008CEF45 /* MainNavigationController.swift */,
+				45FB564E1EB11C8B00899C92 /* AppDelegate.swift */,
+				45B44AC31EF6DD4500D5661E /* Helpers */,
 			);
 			path = Handy_26Aprile;
 			sourceTree = "<group>";
@@ -535,6 +573,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				14A2BCF41EF6867A00976A0D /* LoanController.swift in Sources */,
+				45B44AC81EF6DE5700D5661E /* DetailController.swift in Sources */,
 				14A2BCF61EF688A300976A0D /* LoanCollection.swift in Sources */,
 				45F05F401EB23BF8000F44C6 /* Extensions.swift in Sources */,
 				14C74C8F1EF54272005D83D1 /* ReviewsCell.swift in Sources */,
@@ -544,15 +583,16 @@
 				45FB567D1EB126EB00899C92 /* PageCell.swift in Sources */,
 				14E686961EF2C9E0009180A4 /* Explore.swift in Sources */,
 				45A1FCDE1EC70B45008CEF45 /* MainNavigationController.swift in Sources */,
+				45B44AC61EF6DE4A00D5661E /* DetailCell.swift in Sources */,
 				146F89821EE8583300F00836 /* ExploreCell.swift in Sources */,
 				14A2BCF21EF685DD00976A0D /* LoanCell.swift in Sources */,
-				1472720B1EEAA8D800725B3F /* Mapping.swift in Sources */,
 				45A1FCE01EC71CBF008CEF45 /* LoginController.swift in Sources */,
 				14B996FD1EE75294003A8D91 /* ExploreController.swift in Sources */,
 				14C74C8E1EF54272005D83D1 /* ReviewsController.swift in Sources */,
 				45FB56811EB152C500899C92 /* Page.swift in Sources */,
 				14C74C8D1EF54272005D83D1 /* NewViewController.swift in Sources */,
 				45F89F731EB770BC0023D170 /* LoginCell.swift in Sources */,
+				45B44ACB1EF6DE9000D5661E /* Detail.swift in Sources */,
 				14C74C8C1EF54272005D83D1 /* Reviews.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

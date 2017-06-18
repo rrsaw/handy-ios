@@ -28,7 +28,8 @@ class TabbarController: UITabBarController{
 //        navigationController.tabBarItem.image = UIImage(named: "mapsIcon")
         
         //        let profileController = ExploreController()
-        let profileController = ReviewsController()
+//        let profileController = ReviewsController()
+        let profileController = DetailController()
         let secondNavigationController = UINavigationController(rootViewController: profileController)
         secondNavigationController.title = "Profile"
 //        secondNavigationController.tabBarItem.image = UIImage(named: "user")
