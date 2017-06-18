@@ -25,15 +25,18 @@ class ReviewsCell: UITableViewCell {
         
         self.userLabel = UILabel(frame: CGRect(x: cellWidth*2, y: cellHeight*5, width: cellWidth*50, height: cellHeight*50))
         self.userLabel.text = users[index]
-        self.userLabel.font = UIFont(name: "HelveticaNeue-Bold", size: 16)
-        self.userLabel.textColor = UIColor(red: 0, green: 164, blue: 238, alpha: 100)
+        self.userLabel.font = UIFont(name: "DINPro-Bold", size: 15)
+        self.userLabel.textColor = UIColor.rgb(0, 145, 234)
+
         
         
-        self.commentLabel = UITextView(frame: CGRect(x: cellWidth*1, y: cellHeight*55, width: cellWidth*100, height: cellHeight*180))
+        self.commentLabel = UITextView(frame: CGRect(x: cellWidth*1, y: cellHeight*55, width: cellWidth*100, height: cellHeight*160))
             
         self.commentLabel.text = comments[index]
-        self.commentLabel.font = UIFont(name: "HelveticaNeue-Light", size: 13)
-        self.commentLabel.textColor = .gray
+        self.commentLabel.font = UIFont(name: "DINPro-Regular", size: 14)
+//        self.commentLabel.backgroundColor = .red
+        self.commentLabel.textColor = UIColor.rgb(50, 62, 70)
+
         
         
         commentLabel.isEditable = false
@@ -44,5 +47,9 @@ class ReviewsCell: UITableViewCell {
         self.addSubview(commentLabel)
         
     }
+    
+
+    
+    
     
 }
