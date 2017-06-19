@@ -438,13 +438,47 @@ class DetailController: UIViewController, UICollectionViewDelegate, UICollection
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let x = NewViewController()
+        let x = FullImageController()
         x.index = indexPath.row
         self.present(x, animated: true, completion: nil)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return itemsPicture.count // Replace with count of your data for collectionViewA
+    }
+}
+
+extension DetailController: UITableViewDelegate, UITableViewDataSource {
+    
+    
+    
+    // number of rows in table view
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return users.count
+        
+    }
+    
+    
+    // create a cell for each table view row
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        // create a new cell if needed or reuse an old one
+        let cell = DetailCell(style: UITableViewCellStyle.default, reuseIdentifier: cellReuseIdentifierDetail)
+        cell.setComponents(index: indexPath.row)
+        return cell
+    }
+    
+    
+    // Override to support conditional rearranging of the table view.
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        // Return NO if you do not want the item to be re-orderable.
+        return true
+    }
+    
+    
+    // method to run when table view cell is tapped
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("You tapped cell number \(indexPath.row).")
     }
 }
 

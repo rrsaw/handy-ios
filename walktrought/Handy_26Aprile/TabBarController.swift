@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TabbarController: UITabBarController{
+class TabBarController: UITabBarController{
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -26,13 +26,13 @@ class TabbarController: UITabBarController{
         
         
 //        let mapsContro/Users/fc/Desktop/explore2.pngller = ExploreController(collectionViewLayout : layout)
-        let mapsController = ExploreController()
+        let mapsController = LoanController()
         let navigationController = UINavigationController(rootViewController: mapsController)
         navigationController.title = "Loans"
         navigationController.tabBarItem.image = UIImage(named: "loans")
         
         //        let profileController = ExploreController()
-//        let profileController = ReviewsController()
+//        let profileController = ProfileController()
         let profileController = DetailController()
         let secondNavigationController = UINavigationController(rootViewController: profileController)
         secondNavigationController.title = "Profile"

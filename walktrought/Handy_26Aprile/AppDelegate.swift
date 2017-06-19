@@ -50,7 +50,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
 //        self.window!.rootViewController = tabs;
         
-        self.window!.rootViewController = TabbarController()
+        self.window!.rootViewController = TabBarController()
         
         self.window?.makeKeyAndVisible()
         

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class NewViewController: ReviewsController {
+class FullImageController: ProfileController {
     
     var index : Int!
     var photoGallery : UIImageView!

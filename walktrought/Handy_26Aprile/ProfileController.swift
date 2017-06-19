@@ -16,7 +16,7 @@ let comments: [String] = ["Excellent seller, order came quickly. Excellent produ
 
 let itemsPicture: [UIImage] = [#imageLiteral(resourceName: "photocamera"), #imageLiteral(resourceName: "fotocamera"), #imageLiteral(resourceName: "photocamera"), #imageLiteral(resourceName: "fotocamera"), #imageLiteral(resourceName: "photocamera"), #imageLiteral(resourceName: "fotocamera"), #imageLiteral(resourceName: "photocamera"), #imageLiteral(resourceName: "fotocamera"), #imageLiteral(resourceName: "photocamera")]
 
-class ReviewsController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class ProfileController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
     let collectionViewA: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -310,7 +310,7 @@ class ReviewsController: UIViewController, UICollectionViewDelegate, UICollectio
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let x = NewViewController()
+        let x = FullImageController()
         x.index = indexPath.row
         self.present(x, animated: true, completion: nil)
     }
@@ -319,6 +319,42 @@ class ReviewsController: UIViewController, UICollectionViewDelegate, UICollectio
         return itemsPicture.count // Replace with count of your data for collectionViewA
     }
 }
+
+extension ProfileController: UITableViewDelegate, UITableViewDataSource {
+    
+    
+    
+    // number of rows in table view
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return users.count
+        
+    }
+    
+    
+    // create a cell for each table view row
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        // create a new cell if needed or reuse an old one
+        let cell = ReviewsCell(style: UITableViewCellStyle.default, reuseIdentifier: cellReuseIdentifier)
+        cell.setComponents(index: indexPath.row)
+        
+        return cell
+    }
+    
+    
+    // Override to support conditional rearranging of the table view.
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        // Return NO if you do not want the item to be re-orderable.
+        return true
+    }
+    
+    
+    // method to run when table view cell is tapped
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("You tapped cell number \(indexPath.row).")
+    }
+}
+
 
 
 
