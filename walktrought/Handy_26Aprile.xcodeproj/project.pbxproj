@@ -17,6 +17,7 @@
 		14C74C8E1EF54272005D83D1 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C74C8A1EF54272005D83D1 /* ProfileController.swift */; };
 		14C74C8F1EF54272005D83D1 /* ReviewsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C74C8B1EF54272005D83D1 /* ReviewsCell.swift */; };
 		14E686941EF2A4B2009180A4 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14E686931EF2A4B2009180A4 /* TabBarController.swift */; };
+		454AF37E1EF83463009D507E /* CreateAccountController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 454AF37D1EF83463009D507E /* CreateAccountController.swift */; };
 		45736E7E1EF2A21B0072DB63 /* DINPro-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 45736E791EF2A21B0072DB63 /* DINPro-Black.otf */; };
 		45736E7F1EF2A21B0072DB63 /* DINPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 45736E7A1EF2A21B0072DB63 /* DINPro-Bold.otf */; };
 		45736E801EF2A21B0072DB63 /* DINPro-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 45736E7B1EF2A21B0072DB63 /* DINPro-Light.otf */; };
@@ -69,6 +70,7 @@
 		14C74C8A1EF54272005D83D1 /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
 		14C74C8B1EF54272005D83D1 /* ReviewsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewsCell.swift; sourceTree = "<group>"; };
 		14E686931EF2A4B2009180A4 /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		454AF37D1EF83463009D507E /* CreateAccountController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountController.swift; sourceTree = "<group>"; };
 		45736E791EF2A21B0072DB63 /* DINPro-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DINPro-Black.otf"; path = "Resources/DINPro-Black.otf"; sourceTree = "<group>"; };
 		45736E7A1EF2A21B0072DB63 /* DINPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DINPro-Bold.otf"; path = "Resources/DINPro-Bold.otf"; sourceTree = "<group>"; };
 		45736E7B1EF2A21B0072DB63 /* DINPro-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "DINPro-Light.otf"; path = "Resources/DINPro-Light.otf"; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 				14A2BCF31EF6867A00976A0D /* LoanController.swift */,
 				14B996FC1EE75293003A8D91 /* ExploreController.swift */,
 				14E686931EF2A4B2009180A4 /* TabBarController.swift */,
+				454AF37D1EF83463009D507E /* CreateAccountController.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -576,6 +579,7 @@
 				45A1FCE01EC71CBF008CEF45 /* LoginController.swift in Sources */,
 				14B996FD1EE75294003A8D91 /* ExploreController.swift in Sources */,
 				14C74C8E1EF54272005D83D1 /* ProfileController.swift in Sources */,
+				454AF37E1EF83463009D507E /* CreateAccountController.swift in Sources */,
 				45FB56811EB152C500899C92 /* Page.swift in Sources */,
 				14C74C8D1EF54272005D83D1 /* FullImageController.swift in Sources */,
 			);

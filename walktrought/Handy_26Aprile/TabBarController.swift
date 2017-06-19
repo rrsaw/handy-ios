@@ -32,8 +32,8 @@ class TabBarController: UITabBarController{
         navigationController.tabBarItem.image = UIImage(named: "loans")
         
         //        let profileController = ExploreController()
-//        let profileController = ProfileController()
-        let profileController = DetailController()
+        let profileController = ProfileController()
+//        let profileController = DetailController()
         let secondNavigationController = UINavigationController(rootViewController: profileController)
         secondNavigationController.title = "Profile"
         secondNavigationController.tabBarItem.image = UIImage(named: "profile")
