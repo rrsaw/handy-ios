@@ -14,25 +14,14 @@ class MainNavigationController: UINavigationController {
         view.backgroundColor = .white
         
         if isLoggedIn() {
-            //assume user is logged in
             let homeController = HomeController()
             viewControllers = [homeController]
         } else {
             perform(#selector(showLoginController), with: nil, afterDelay: 0.01)
         }
-        
-//        self.view.window!.rootViewController?.dismissViewControllerAnimated(false, completion: nil)
-        
-//        self.navigationController?.popViewController(animated: true)
-//        self.presentViewController(ExploreController, animated:true, completion:nil)
-//        let exploreController = ExploreController()
-//        viewControllers = [exploreController]
-        
-        
     }
     
     fileprivate func isLoggedIn() -> Bool {
-//        return UserDefaults.standard.isLoggedIn()
         return Constant.defaults.bool(forKey: "isLoggedIn")
     }
     
@@ -43,8 +32,6 @@ class MainNavigationController: UINavigationController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
-//        view.backgroundColor = .blue
-        
     }
 }
 

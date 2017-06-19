@@ -21,7 +21,6 @@ class CreateAccountController: UICollectionViewController, UICollectionViewDeleg
         let iv = UIButton()
         iv.contentMode = .scaleAspectFill
         iv.layer.cornerRadius = 50
-        //        iv.image = UIImage(named: "avatar")
         iv.setImage(#imageLiteral(resourceName: "logo"), for: .normal)
         iv.clipsToBounds = true
         iv.translatesAutoresizingMaskIntoConstraints = false
@@ -39,16 +38,7 @@ class CreateAccountController: UICollectionViewController, UICollectionViewDeleg
     }()
     
     func profileImageHandler(_ sender: UIButton) {
-        //        picker.allowsEditing = true
-        //        picker.sourceType = .photoLibrary
-        //        picker.mediaTypes = UIImagePickerController.availableMediaTypes(for: .photoLibrary)!
-        ////        picker.modalPresentationStyle = .popover
-        //        present(picker, animated: true)
-        //
-        ////        let chosenImage = UIImagePickerControllerOriginalImage as? UIImage
-        ////        var  chosenImage = UIImage()
-        ////        chosenImage  = UIImagePickerControllerOriginalImage as! UIImage //2
-        ////        logoImageView.setImage(chosenImage, for: .normal)
+
         
         let myPickerController = UIImagePickerController()
         myPickerController.delegate = self;
@@ -60,12 +50,6 @@ class CreateAccountController: UICollectionViewController, UICollectionViewDeleg
     
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        
-        //        dismiss(animated:true, completion: nil) //5
-        //        var chosenImage = UIImage()
-        //        chosenImage = info[UIImagePickerControllerOriginalImage] as! UIImage //2
-        //        logoImageView.contentMode = .scaleAspectFit //3
-        //        logoImageView.setImage(chosenImage, for: .normal)
         
         selectedImageView.image = info[UIImagePickerControllerOriginalImage] as? UIImage
         selectedImageView.backgroundColor = UIColor.clear

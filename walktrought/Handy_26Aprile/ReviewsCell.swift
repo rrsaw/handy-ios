@@ -34,7 +34,6 @@ class ReviewsCell: UITableViewCell {
             
         self.commentLabel.text = comments[index]
         self.commentLabel.font = UIFont(name: "DINPro-Regular", size: 14)
-//        self.commentLabel.backgroundColor = .red
         self.commentLabel.textColor = UIColor.rgb(50, 62, 70)
 
         

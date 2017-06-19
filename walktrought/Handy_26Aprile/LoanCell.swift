@@ -32,7 +32,6 @@ class LoanCell: UITableViewCell {
         self.dateLoan.textColor = .gray
 
     
-//        addSubview(thumbnailImageView)
         self.addSubview(nameItem)
         self.addSubview(dateLoan)
 

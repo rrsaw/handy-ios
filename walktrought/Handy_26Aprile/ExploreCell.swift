@@ -100,11 +100,6 @@ class ExploreCell: UICollectionViewCell {
         
         _ = profileText.anchor(priceItem.bottomAnchor, left: thumbnailImageView.rightAnchor, bottom: nil, right: nil, topConstant: 10, leftConstant: 20, bottomConstant: 0, rightConstant: 0, widthConstant: WIDTH*40, heightConstant: WIDTH*6)
         
-        
-//        addConstraintsWithFormat(format: "H:|-16-[v0]-16-|", views: thumbnailImageView)
-//        addConstraintsWithFormat(format: "H:|-16-[v0(44)]", views: userProfileImageView)
-//        addConstraintsWithFormat(format: "H:|[v0]|", views: separatorView)
-//        addConstraintsWithFormat(format: "V:|-16-[v0]-[v1(1)]|", views: thumbnailImageView, separatorView)
     }
     
     required init?(coder aDecoder: NSCoder) {

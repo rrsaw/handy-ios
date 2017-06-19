@@ -38,24 +38,16 @@ class ProfileController: UIViewController, UICollectionViewDelegate, UICollectio
     let labTime = UILabel()
     let cellReuseIdentifier = "cell"
     var tableView: UITableView!
-    //    let cellId = "Item"
-    //    let reviewsCellId = "Reviews"
-    
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
-//        self.navigationController!.navigationBar.isTranslucent = false
         
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = UIColor.clear
 
-        
-        // Initialize the collection views, set the desired frames
         
         collectionViewA.register(UICollectionViewCell.self, forCellWithReuseIdentifier: collectionViewAIdentifier)
         
@@ -66,88 +58,58 @@ class ProfileController: UIViewController, UICollectionViewDelegate, UICollectio
         collectionViewA.isScrollEnabled = true
         collectionViewA.clipsToBounds = true
         
-        // Register the table view cell class and its reuse id
-        
         self.tableView = UITableView(frame: CGRect(x: 0, y: 450, width: self.view.frame.width, height: HEIGHT*30))
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
         
 
         self.tableView.backgroundColor = .white
-        // This view controller itself will provide the delegate methods and row data for the table view.
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = CGFloat(100)
         
         
-        
-        
-//        let backPageButton = UIButton()
-//        backPageButton.setImage(UIImage(named: "photocamera.jpg"), for: .normal)
-//        backPageButton.frame = CGRect(x: 0, y: 30, width: 24, height: 24)
-        
-        
-//        let navProfileTitleLabel = UILabel()
-//        navProfileTitleLabel.text = "Profile"
-//        navProfileTitleLabel.font = UIFont(name: "VarelaRound", size: 18)
-//        navProfileTitleLabel.font = UIFont.boldSystemFont(ofSize: 18)
-//        navProfileTitleLabel.textColor = .white
-//        navProfileTitleLabel.textAlignment = .center
-//        navProfileTitleLabel.frame = CGRect(x: 130, y: -20, width: 120, height: 120)
-        
-        // profile
-        
         let backgroundProfileImage = UIImageView()
         backgroundProfileImage.image = #imageLiteral(resourceName: "photocamera")
-//        backgroundProfileImage.frame = CGRect(x: 0, y: 0, width: 400, height: 260)
         
         let profileImageView = UIImageView()
         profileImageView.image = #imageLiteral(resourceName: "profileImg")
         profileImageView.layer.cornerRadius = 50.0
         profileImageView.clipsToBounds = true
         
-//        profileImageView.frame = CGRect(x: 140, y: 80, width: 90, height: 90)
         
         let userLabel = UILabel()
         userLabel.text = "Jeanette Russell"
         userLabel.font = UIFont(name: "DINPro-Bold", size: 18)
         userLabel.textColor = .white
         userLabel.textAlignment = .center
-//        userLabel.frame = CGRect(x: 120, y: 165, width: 140, height: 50)
         
         let placeLabel = UILabel()
         placeLabel.text = "Milano"
         placeLabel.font = UIFont(name: "VarelaRound-Regular", size: 18)
         placeLabel.textColor = .white
-//        placeLabel.frame = CGRect(x: 170, y: 200, width: 80, height: 20)
         
         
         let locMarkerButton = UIButton()
-        //        button.layer.borderColor = twitterBlue.cgColor
-        //        button.layer.borderWidth = 1
         locMarkerButton.setImage(#imageLiteral(resourceName: "location-pin"), for: .normal)
-//        locMarkerButton.frame = CGRect(x: 150, y: 200, width: 18, height: 18)
-        //        button.titleEdgeInsets = UIEdgeInsets
+
         
         
         let borrowedNumbersLabel = UILabel()
         borrowedNumbersLabel.text = "472"
         borrowedNumbersLabel.font = UIFont(name: "VarelaRound-Regular", size: 20)
         borrowedNumbersLabel.textColor = .black
-//        borrowedNumbersLabel.frame = CGRect(x: 50, y: 290, width: 80, height: 20)
         borrowedNumbersLabel.textAlignment = .center
         
         let borrowedLabel = UILabel()
         borrowedLabel.text = "Borrowed"
         borrowedLabel.font = UIFont(name: "VarelaRound-Regular", size: 18)
         borrowedLabel.textColor = UIColor.rgb(183, 196, 203)
-//        borrowedLabel.frame = CGRect(x: 50, y: 320, width: 80, height: 20)
         borrowedLabel.textAlignment = .center
         
         let lentNumbersLabel = UILabel()
         lentNumbersLabel.text = "119"
         lentNumbersLabel.font = UIFont(name: "VarelaRound-Regular", size: 20)
         lentNumbersLabel.textColor = .black
-//        lentNumbersLabel.frame = CGRect(x: 150, y: 290, width: 80, height: 20)
         lentNumbersLabel.textAlignment = .center
         self.view.addSubview(lentNumbersLabel)
         
@@ -155,50 +117,30 @@ class ProfileController: UIViewController, UICollectionViewDelegate, UICollectio
         lentLabel.text = "Lent"
         lentLabel.font = UIFont(name: "VarelaRound-Regular", size: 18)
         lentLabel.textColor = UIColor.rgb(183, 196, 203)
-//        lentLabel.frame = CGRect(x: 150, y: 320, width: 80, height: 20)
         lentLabel.textAlignment = .center
         
         let itemsNumbersLabel = UILabel()
         itemsNumbersLabel.text = "6"
         itemsNumbersLabel.font = UIFont(name: "VarelaRound-Regular", size: 20)
         itemsNumbersLabel.textColor = .black
-//        itemsNumbersLabel.frame = CGRect(x: 250, y: 290, width: 80, height: 20)
         itemsNumbersLabel.textAlignment = .center
         
         let itemsLabel = UILabel()
         itemsLabel.text = "Items"
         itemsLabel.font = UIFont(name: "VarelaRound-Regular", size: 18)
         itemsLabel.textColor = UIColor.rgb(183, 196, 203)
-//        itemsLabel.frame = CGRect(x: 250, y: 320, width: 80, height: 20)
         itemsLabel.textAlignment = .center
-        
-        // parte sotto la collection view orizzontale (stelle, reviews, share)
-        
-//        let reviewsCountLabel = UILabel()
-//        reviewsCountLabel.text = "28 reviews"
-//        reviewsCountLabel.font = UIFont(name: "VarelaRound", size: 14)
-//        reviewsCountLabel.font = UIFont.systemFont(ofSize: 14)
-//        reviewsCountLabel.textColor = .black
-//        reviewsCountLabel.frame = CGRect(x: 135, y: 470, width: 100, height: 20)
-//        reviewsCountLabel.textAlignment = .center
         
         let settingsButton = UIButton()
         settingsButton.setTitle("SETTINGS", for: .normal)
         settingsButton.setTitleColor(.black, for: .normal)
         settingsButton.titleLabel?.font = UIFont(name: "VarelaRound-Regular", size: 15)
-//        settingsButton.font = UIFont(name: "VarelaRound-Regular", size: 15)
 
-//        settingsButton.frame = CGRect(x: 10, y: 470, width: 100, height: 20)
-        //        settingsButton.addTarget(self, action: Selector(("buttonTouched:")), for: UIControlEvents.touchUpInside)
         
         let detailsButton = UIButton()
         detailsButton.setTitle("DETAILS", for: .normal)
         detailsButton.setTitleColor(.black, for: .normal)
         detailsButton.titleLabel?.font = UIFont(name: "VarelaRound-Regular", size: 15)
-        
-
-//        detailsButton.frame = CGRect(x: 135, y: 470, width: 100, height: 20)
-        //        detailsButton.addTarget(self, action: Selector(("buttonTouched:")), for: UIControlEvents.touchUpInside)
         
         let reviewsButton = UIButton()
         reviewsButton.setTitle("REVIEWS", for: .normal)
@@ -230,7 +172,6 @@ class ProfileController: UIViewController, UICollectionViewDelegate, UICollectio
                 let urlProfile = URL(string: urlStringProfile)
 
 
-                //                print("invece questo è \(name)")
                 userLabel.text = completeName
                 placeLabel.text = id_address as? String
                 profileImageView.kf.setImage(with: urlProfile, placeholder: nil, options: nil, progressBlock: nil, completionHandler: { completation in
@@ -240,10 +181,7 @@ class ProfileController: UIViewController, UICollectionViewDelegate, UICollectio
             }
             
         }
-//        reviewsButton.frame = CGRect(x: 220, y: 470, width: 100, height: 20)
-        //        reviewsButton.addTarget(self, action: Selector(("buttonTouched:")), for: UIControlEvents.touchUpInside)
-        
-//        self.view.addSubview(navProfileTitleLabel) // ??
+
         self.view.addSubview(backgroundProfileImage) // Immagine back del profilo
         self.view.addSubview(profileImageView) // Immagine profilo
         self.view.addSubview(userLabel) // Username
@@ -322,24 +260,12 @@ class ProfileController: UIViewController, UICollectionViewDelegate, UICollectio
 
         cellUno.layer.masksToBounds = false
         
-//        cellUno.layer.cornerRadius = cellUno.frame.size.height / 2
-//        cellUno.layer.borderWidth = 3.0
-        
         cellUno.clipsToBounds = false
-//        immagine.layer.cornerRadius = 25
 
         cellUno.addSubview(immagine)
         
 
         immagine.center = CGPoint(x: 0, y: 25)
-        
-        
-//        let singleTap = UITapGestureRecognizer(target: self, action: #selector(ViewController.tapDetected))
-//        singleTap.numberOfTapsRequired = 1 // you can change this value
-//        immagine.isUserInteractionEnabled = true
-//        immagine.addGestureRecognizer(singleTap)
-//        view.addGestureRecognizer(singleTap)
-        
         return cellUno
         
     }
@@ -363,17 +289,14 @@ extension ProfileController: UITableViewDelegate, UITableViewDataSource {
     
     
     
-    // number of rows in table view
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return users.count
         
     }
     
     
-    // create a cell for each table view row
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        // create a new cell if needed or reuse an old one
         let cell = ReviewsCell(style: UITableViewCellStyle.default, reuseIdentifier: cellReuseIdentifier)
         cell.setComponents(index: indexPath.row)
         
@@ -381,22 +304,12 @@ extension ProfileController: UITableViewDelegate, UITableViewDataSource {
     }
     
     
-    // Override to support conditional rearranging of the table view.
     func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return NO if you do not want the item to be re-orderable.
         return true
     }
     
     
-    // method to run when table view cell is tapped
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("You tapped cell number \(indexPath.row).")
     }
 }
-
-
-
-
-
-
-

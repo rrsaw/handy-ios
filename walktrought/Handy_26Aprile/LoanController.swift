@@ -212,7 +212,6 @@ extension LoanController: UITableViewDelegate, UITableViewDataSource{
         return cell
     }
     func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return NO if you do not want the item to be re-orderable.
         return true
     }
     

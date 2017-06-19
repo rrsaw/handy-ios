@@ -25,14 +25,11 @@ class TabBarController: UITabBarController{
         thirdNavigationController.tabBarItem.image = UIImage(named: "explore")
         
         
-//        let mapsContro/Users/fc/Desktop/explore2.pngller = ExploreController(collectionViewLayout : layout)
         let mapsController = LoanController()
         let navigationController = UINavigationController(rootViewController: mapsController)
         navigationController.title = "Loans"
         navigationController.tabBarItem.image = UIImage(named: "loans")
         
-        //        let profileController = ExploreController()
-//        let profileController = ProfileController()
         let profileController = ProfileController()
         let secondNavigationController = UINavigationController(rootViewController: profileController)
         secondNavigationController.title = "Profile"
@@ -41,21 +38,11 @@ class TabBarController: UITabBarController{
         viewControllers = [thirdNavigationController, navigationController, secondNavigationController]
         
         if isLoggedIn() {
-            //assume user is logged in
             let homeController = HomeController()
             viewControllers = [homeController]
         } else {
             perform(#selector(showLoginController), with: nil, afterDelay: 0.01)
         }
-        
-        //        self.view.window!.rootViewController?.dismissViewControllerAnimated(false, completion: nil)
-        
-        //        self.navigationController?.popViewController(animated: true)
-        //        self.presentViewController(ExploreController, animated:true, completion:nil)
-        //        let exploreController = ExploreController()
-        //        viewControllers = [exploreController]
-        
-        
     }
     
 
