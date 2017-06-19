@@ -82,8 +82,8 @@ class ExploreController: UIViewController, UICollectionViewDelegateFlowLayout, U
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         let testDetailViewController = DetailController()
-        
-        self.navigationController?.pushViewController(testDetailViewController, animated: true)
+        testDetailViewController.idItem = (self.jsonData.count - indexPath.row)
+        navigationController?.pushViewController(testDetailViewController, animated: true)
         
         print("You tapped cell number \(indexPath.row).")
         

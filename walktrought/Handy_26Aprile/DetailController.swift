@@ -18,6 +18,7 @@ let detailItemsPicture: [UIImage] = [#imageLiteral(resourceName: "photocamera"),
 
 class DetailController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
+    var idItem: Int = 0
     fileprivate var jsonData: Array<Dictionary<String, AnyObject>> = []
 
     
@@ -41,7 +42,6 @@ class DetailController: UIViewController, UICollectionViewDelegate, UICollection
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         
         self.view.backgroundColor = .white
 
@@ -85,7 +85,7 @@ class DetailController: UIViewController, UICollectionViewDelegate, UICollection
         priceLabel.textAlignment = .right
         
         let distanceLabel = UILabel()
-        distanceLabel.text = "Milano"
+        distanceLabel.text = "\(idItem)"
         distanceLabel.font = UIFont(name: "DINPro-Bold", size: 18)
         distanceLabel.textColor = UIColor.rgb(59, 201, 219)
         distanceLabel.textAlignment = .right
@@ -250,7 +250,34 @@ class DetailController: UIViewController, UICollectionViewDelegate, UICollection
         self.view.addSubview(endDateButton)
         self.view.addSubview(rentButton)
 
-        _ = itemLabel.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: 80, leftConstant: 20, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+
+
+
+
+
+
+
+//        self.view.addSubview(profileImageView) // Immagine profilo
+//        self.view.addSubview(userLabel) // Username
+//        self.view.addSubview(placeLabel) // Location
+//        self.view.addSubview(locMarkerButton) // Icona Location
+//        self.view.addSubview(borrowedNumbersLabel) // # borrowed
+//        self.view.addSubview(borrowedLabel) // borrowed
+//        self.view.addSubview(lentNumbersLabel) // # Lent
+//        self.view.addSubview(lentLabel) // Lent
+//        self.view.addSubview(itemsNumbersLabel) // # Items
+//        self.view.addSubview(itemsLabel) // Items
+//        self.view.addSubview(settingsButton)
+//        self.view.addSubview(detailsButton)
+//        self.view.addSubview(reviewsButton)
+//        self.view.addSubview(separatorView)
+//        self.view.addSubview(collectionViewA)
+//        self.view.addSubview(tableView)
+//        self.view.addSubview(placeLabel)
+        
+        
+        
+        _ = itemLabel.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: 40, leftConstant: 20, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
     
         _ = categoryItemLabel.anchor(itemLabel.bottomAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: 2, leftConstant: 20, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         
@@ -277,7 +304,81 @@ class DetailController: UIViewController, UICollectionViewDelegate, UICollection
         
         _ = rentButton.anchor(starsDetail.bottomAnchor, left: nil, bottom: nil, right: view.rightAnchor, topConstant: 25, leftConstant: 0, bottomConstant: 0, rightConstant: 20, widthConstant: WIDTH*25, heightConstant: HEIGHT*7)
         
+        
+//
+//        _ = profileImageView.anchor(view.topAnchor, left: nil, bottom: nil, right: nil, topConstant: 65, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: WIDTH*25, heightConstant: WIDTH*25)
+//        profileImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+//        
+//        _ = userLabel.anchor(profileImageView.bottomAnchor, left: nil, bottom: nil, right: nil, topConstant: 10, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+//        userLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+//        
+//        _ = placeLabel.anchor(userLabel.bottomAnchor, left: nil, bottom: nil, right: nil, topConstant: 5, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+//        placeLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+//        
+//        _ = locMarkerButton.anchor(userLabel.bottomAnchor, left: nil, bottom: nil, right: placeLabel.leftAnchor, topConstant: 5, leftConstant: 0, bottomConstant: 0, rightConstant: 3, widthConstant: 18, heightConstant: 18)
+        
+//        // LENT
+//        _ = lentNumbersLabel.anchor(backgroundProfileImage.bottomAnchor, left: nil, bottom: nil, right: nil, topConstant: 20, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+//        lentNumbersLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+//        _ = lentLabel.anchor(lentNumbersLabel.bottomAnchor, left: nil, bottom: nil, right: nil, topConstant: 10, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+//        lentLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+//        
+//        // BORROWED
+//        _ = borrowedNumbersLabel.anchor(backgroundProfileImage.bottomAnchor, left: view.leftAnchor, bottom: nil, right: lentNumbersLabel.leftAnchor, topConstant: 20, leftConstant: 0, bottomConstant: 0, rightConstant: 00, widthConstant: 0, heightConstant: 0)
+//        _ = borrowedLabel.anchor(lentNumbersLabel.bottomAnchor, left: view.leftAnchor, bottom: nil, right: lentLabel.leftAnchor, topConstant: 10, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+//        
+//        // ITEMS
+//        _ = itemsNumbersLabel.anchor(backgroundProfileImage.bottomAnchor, left: lentNumbersLabel.rightAnchor, bottom: nil, right: view.rightAnchor, topConstant: 20, leftConstant: 0, bottomConstant: 0, rightConstant: 00, widthConstant: 0, heightConstant: 0)
+//        _ = itemsLabel.anchor(lentNumbersLabel.bottomAnchor, left: lentLabel.rightAnchor, bottom: nil, right: view.rightAnchor, topConstant: 10, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+        
+//        _ = collectionViewA.anchor(lentLabel.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 20, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: WIDTH*100, heightConstant: HEIGHT*15)
+        
+//        _ = settingsButton.anchor(collectionViewA.bottomAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: 10, leftConstant: WIDTH*7, bottomConstant: 0, rightConstant: 20, widthConstant: 0, heightConstant: 0)
+//        
+//        _ = detailsButton.anchor(collectionViewA.bottomAnchor, left: settingsButton.rightAnchor, bottom: nil, right: nil, topConstant: 10, leftConstant: 20, bottomConstant: 0, rightConstant: 20, widthConstant: 0, heightConstant: 0)
+//        
+//        _ = reviewsButton.anchor(collectionViewA.bottomAnchor, left: detailsButton.rightAnchor, bottom: nil, right: nil, topConstant: 10, leftConstant: 20, bottomConstant: 0, rightConstant: 20, widthConstant: 0, heightConstant: 0)
+//        
+//        _ = separatorView.anchor(reviewsButton.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 10, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 1)
+        
+        Alamofire.request("http://handyshare.me/api/v1/items/\(idItem)").responseJSON { response in
+            if let JSON = response.result.value {
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                self.jsonData = JSON as! Array<Dictionary<String, AnyObject>>
+                itemLabel.text = self.jsonData[0]["name"] as? String
+                categoryItemLabel.text = self.jsonData[0]["category"]?["name"] as? String
+                priceLabel.text = "€ \(String(describing: self.jsonData[0]["price"]!))"
+                distanceLabel.text = self.jsonData[0]["address"]?["city"] as? String
+                let imageName = (self.jsonData[0]["image"]?["name"] as? String)!
+                let urlString = "http://handyshare.me/images/items/\(imageName)"
+                let url = URL(string: urlString)
+                let dateFormatter = DateFormatter()
+                let start = self.jsonData[0]["start_date"]
+                let end = self.jsonData[0]["end_date"]
+                dateFormatter.dateFormat = "yyyy-MM-dd"
+                let start_format = dateFormatter.date(from: start as! String)
+                let end_format = dateFormatter.date(from: end as! String)
+                dateFormatter.dateFormat = "dd MMM"
+                let start_date = dateFormatter.string(from: start_format!)
+                let end_date = dateFormatter.string(from: end_format!)
+                startDateButton.setTitle(start_date, for: .normal)
+                endDateButton.setTitle(end_date, for: .normal)
+                
+                
+                
+                backgroundProfileImage.kf.setImage(with: url, placeholder: nil, options: nil, progressBlock: nil, completionHandler: nil)
+                
+            }
+        }
+        
+        
     }
+    
+
+    
+
+    
+    
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
     {
@@ -291,8 +392,6 @@ class DetailController: UIViewController, UICollectionViewDelegate, UICollection
         
         cellUno.clipsToBounds = false
         cellUno.addSubview(immagine)
-        
-        
         
         immagine.center = CGPoint(x: 0, y: 25)
         

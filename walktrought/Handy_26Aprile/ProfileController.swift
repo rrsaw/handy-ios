@@ -75,6 +75,7 @@ class ProfileController: UIViewController, UICollectionViewDelegate, UICollectio
         profileImageView.image = #imageLiteral(resourceName: "profileImg")
         profileImageView.layer.cornerRadius = 50.0
         profileImageView.clipsToBounds = true
+        profileImageView.backgroundColor = .white
         
         
         let userLabel = UILabel()

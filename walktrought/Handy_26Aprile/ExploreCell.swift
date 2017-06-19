@@ -45,6 +45,16 @@ class ExploreCell: UICollectionViewCell {
         return uilabel
     }()
     
+    let idItem: UILabel = {
+        let uilabel = UILabel()
+        uilabel.text = "Cusano"
+        uilabel.font = UIFont(name: "DINPro-Bold", size: 16)
+        uilabel.textColor = UIColor.rgb(183, 196, 203)
+        uilabel.isHidden = true
+        
+        return uilabel
+    }()
+    
     let priceImageView: UIImageView = {
         let imageView = UIImageView(image: #imageLiteral(resourceName: "euro"))
         imageView.backgroundColor = .semiTransparent()
