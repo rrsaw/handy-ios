@@ -22,6 +22,8 @@ class LoanController: UIViewController, UICollectionViewDelegate, UICollectionVi
     fileprivate var jsonDataCollection: Array<Dictionary<String, AnyObject>> = []
     let cellReuseIdentifier = "cell"
     
+    
+    
     let publishedButton: UIButton = {
         let publishedButton = UIButton()
         publishedButton.setTitle("PUBLISHED", for: .normal)
@@ -69,7 +71,9 @@ class LoanController: UIViewController, UICollectionViewDelegate, UICollectionVi
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = CGFloat(30)
-        
+        self.navigationItem.title = "Loans"
+
+
         self.view.addSubview(tableView)
         self.view.addSubview(publishedButton)
         self.view.addSubview(currentButton)
@@ -93,25 +97,25 @@ class LoanController: UIViewController, UICollectionViewDelegate, UICollectionVi
             confirmationButton.setTitleColor(.gray, for: .normal)
             currentButton.setTitleColor(.gray, for: .normal)
             historyButton.setTitleColor(.gray, for: .normal)
-            view.backgroundColor = .red
+            view.backgroundColor = UIColor.rgb(255, 255, 255)
             getData()
         } else if (sender.titleLabel!.text == "CURRENT"){
             confirmationButton.setTitleColor(.gray, for: .normal)
             publishedButton.setTitleColor(.gray, for: .normal)
             historyButton.setTitleColor(.gray, for: .normal)
-            view.backgroundColor = .orange
+            view.backgroundColor = UIColor.rgb(255, 255, 255)
             getCurrent()
         } else if (sender.titleLabel!.text == "CONFIRM"){
             currentButton.setTitleColor(.gray, for: .normal)
             publishedButton.setTitleColor(.gray, for: .normal)
             historyButton.setTitleColor(.gray, for: .normal)
-            view.backgroundColor = .yellow
+            view.backgroundColor = UIColor.rgb(255, 255, 255)
             getConfirmation()
         }else if (sender.titleLabel!.text == "HISTORY"){
             confirmationButton.setTitleColor(.gray, for: .normal)
             currentButton.setTitleColor(.gray, for: .normal)
             publishedButton.setTitleColor(.gray, for: .normal)
-            view.backgroundColor = .green
+            view.backgroundColor = UIColor.rgb(255, 255, 255)
             getHistory()
         }
  

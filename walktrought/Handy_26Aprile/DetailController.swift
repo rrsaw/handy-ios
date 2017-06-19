@@ -38,10 +38,6 @@ class DetailController: UIViewController, UICollectionViewDelegate, UICollection
     let labTime = UILabel()
     let cellReuseIdentifierDetail = "cell"
     var tableView: UITableView!
-    //    let cellId = "Item"
-    //    let reviewsCellId = "Reviews"
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -49,27 +45,14 @@ class DetailController: UIViewController, UICollectionViewDelegate, UICollection
         
         self.view.backgroundColor = .white
 
-        
-        //        self.navigationController!.navigationBar.isTranslucent = false
-        
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: UIBarMetrics.default)
         self.navigationController?.navigationBar.shadowImage = UIImage()
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = UIColor.clear
         
-        
-        // Initialize the collection views, set the desired frames
-        
         collectionViewA.register(UICollectionViewCell.self, forCellWithReuseIdentifier: collectionViewAIdentifier)
         
-        
-//        collectionViewA.delegate = self
-//        collectionViewA.backgroundColor = UIColor.rgb(247, 248, 250)
-//        collectionViewA.dataSource = self
-//        collectionViewA.isScrollEnabled = true
-//        collectionViewA.clipsToBounds = true
-        
-        // Register the table view cell class and its reuse id
+
         
         self.tableView = UITableView(frame: CGRect(x: 0, y: 500, width: self.view.frame.width, height: 150))
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifierDetail)
@@ -347,7 +330,7 @@ class DetailController: UIViewController, UICollectionViewDelegate, UICollection
         
         
         
-        _ = itemLabel.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: 40, leftConstant: 20, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+        _ = itemLabel.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: 80, leftConstant: 20, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
     
         _ = categoryItemLabel.anchor(itemLabel.bottomAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: 2, leftConstant: 20, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         

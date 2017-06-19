@@ -68,7 +68,7 @@ class ProfileController: UIViewController, UICollectionViewDelegate, UICollectio
         
         // Register the table view cell class and its reuse id
         
-        self.tableView = UITableView(frame: CGRect(x: 0, y: 500, width: self.view.frame.width, height: 150))
+        self.tableView = UITableView(frame: CGRect(x: 0, y: 450, width: self.view.frame.width, height: HEIGHT*30))
         self.tableView.register(UITableViewCell.self, forCellReuseIdentifier: cellReuseIdentifier)
         
 
@@ -118,7 +118,7 @@ class ProfileController: UIViewController, UICollectionViewDelegate, UICollectio
         placeLabel.text = "Milano"
         placeLabel.font = UIFont(name: "VarelaRound-Regular", size: 18)
         placeLabel.textColor = .white
-        placeLabel.frame = CGRect(x: 170, y: 200, width: 80, height: 20)
+//        placeLabel.frame = CGRect(x: 170, y: 200, width: 80, height: 20)
         
         
         let locMarkerButton = UIButton()
@@ -293,7 +293,7 @@ class ProfileController: UIViewController, UICollectionViewDelegate, UICollectio
         _ = itemsNumbersLabel.anchor(backgroundProfileImage.bottomAnchor, left: lentNumbersLabel.rightAnchor, bottom: nil, right: view.rightAnchor, topConstant: 20, leftConstant: 0, bottomConstant: 0, rightConstant: 00, widthConstant: 0, heightConstant: 0)
         _ = itemsLabel.anchor(lentNumbersLabel.bottomAnchor, left: lentLabel.rightAnchor, bottom: nil, right: view.rightAnchor, topConstant: 10, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         
-        _ = collectionViewA.anchor(lentLabel.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 20, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: WIDTH*100, heightConstant: HEIGHT*15)
+        _ = collectionViewA.anchor(lentLabel.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 20, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: WIDTH*100, heightConstant: HEIGHT*10)
         
         _ = settingsButton.anchor(collectionViewA.bottomAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: 10, leftConstant: WIDTH*7, bottomConstant: 0, rightConstant: 20, widthConstant: 0, heightConstant: 0)
 
