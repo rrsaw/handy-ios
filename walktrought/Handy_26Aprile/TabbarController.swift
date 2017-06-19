@@ -13,26 +13,30 @@ class TabbarController: UITabBarController{
         super.viewDidLoad()
         
         view.backgroundColor = .white
-        
+        self.tabBar.isTranslucent = false
+        self.tabBar.barTintColor =  UIColor.rgb(247, 248, 250)
+        self.tabBar.tintColor = UIColor.rgb(59, 201, 219)
+
         
         let layout = UICollectionViewFlowLayout()
         let exploreController = ExploreController()
         let thirdNavigationController = UINavigationController(rootViewController: exploreController)
         thirdNavigationController.title = "Explore"
-//        thirdNavigationController.tabBarItem.image = UIImage(named: "items")
+        thirdNavigationController.tabBarItem.image = UIImage(named: "explore")
         
-//        let mapsController = ExploreController(collectionViewLayout : layout)
-        let loanController = LoanController()
-        let navigationController = UINavigationController(rootViewController: loanController)
+        
+//        let mapsContro/Users/fc/Desktop/explore2.pngller = ExploreController(collectionViewLayout : layout)
+        let mapsController = ExploreController()
+        let navigationController = UINavigationController(rootViewController: mapsController)
         navigationController.title = "Loans"
-//        navigationController.tabBarItem.image = UIImage(named: "loanIcon")
+        navigationController.tabBarItem.image = UIImage(named: "loans")
         
         //        let profileController = ExploreController()
 //        let profileController = ReviewsController()
         let profileController = DetailController()
         let secondNavigationController = UINavigationController(rootViewController: profileController)
         secondNavigationController.title = "Profile"
-//        secondNavigationController.tabBarItem.image = UIImage(named: "user")
+        secondNavigationController.tabBarItem.image = UIImage(named: "profile")
         
         viewControllers = [thirdNavigationController, navigationController, secondNavigationController]
         
@@ -54,6 +58,8 @@ class TabbarController: UITabBarController{
         
     }
     
+
+    
     fileprivate func isLoggedIn() -> Bool {
         return false
     }
@@ -62,5 +68,11 @@ class TabbarController: UITabBarController{
         let loginController = LoginController()
         present(loginController, animated: true, completion: nil )
     }
+    
         
-    }
+}
+
+
+
+
+

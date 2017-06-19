@@ -371,7 +371,7 @@
 				TargetAttributes = {
 					45FB564A1EB11C8B00899C92 = {
 						CreatedOnToolsVersion = 8.3.2;
-						DevelopmentTeam = 4KQ6PWXH29;
+						DevelopmentTeam = 72QJZ463KT;
 						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
@@ -757,11 +757,11 @@
 			baseConfigurationReference = 4D2FB85B0F1CD60BDFCEB8A3 /* Pods-Handy_26Aprile.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4KQ6PWXH29;
+				DEVELOPMENT_TEAM = 72QJZ463KT;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Handy_26Aprile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "federico.Handy-26Aprile";
+				PRODUCT_BUNDLE_IDENTIFIER = "federico.Handy-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -772,11 +772,11 @@
 			baseConfigurationReference = B5813AE30ADEC4322CA7B732 /* Pods-Handy_26Aprile.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 4KQ6PWXH29;
+				DEVELOPMENT_TEAM = 72QJZ463KT;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = Handy_26Aprile/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "federico.Handy-26Aprile";
+				PRODUCT_BUNDLE_IDENTIFIER = "federico.Handy-test";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

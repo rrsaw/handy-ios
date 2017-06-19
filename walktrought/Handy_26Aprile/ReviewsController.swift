@@ -277,15 +277,18 @@ class ReviewsController: UIViewController, UICollectionViewDelegate, UICollectio
         
         let immagine = UIImageView(frame: cellUno.frame)
         immagine.image = itemsPicture[indexPath.row]
-//        immagine.layer.cornerRadius = 10
-        
-//        cellUno.layer.cornerRadius = 5.0
-        cellUno.layer.masksToBounds = false
 
+        cellUno.layer.masksToBounds = false
+        
+//        cellUno.layer.cornerRadius = cellUno.frame.size.height / 2
+//        cellUno.layer.borderWidth = 3.0
+        
         cellUno.clipsToBounds = false
 //        immagine.layer.cornerRadius = 25
 
         cellUno.addSubview(immagine)
+        
+        
         
         
         

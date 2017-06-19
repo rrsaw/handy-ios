@@ -17,7 +17,7 @@ class ReviewsCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
     }
-    
+
     func setComponents(index:Int){
         
         let cellHeight = self.frame.height/100
@@ -25,7 +25,7 @@ class ReviewsCell: UITableViewCell {
         
         self.userLabel = UILabel(frame: CGRect(x: cellWidth*2, y: cellHeight*5, width: cellWidth*50, height: cellHeight*50))
         self.userLabel.text = users[index]
-        self.userLabel.font = UIFont(name: "DINPro-Bold", size: 15)
+        self.userLabel.font = UIFont(name: "DINPro-Regular", size: 15)
         self.userLabel.textColor = UIColor.rgb(0, 145, 234)
 
         

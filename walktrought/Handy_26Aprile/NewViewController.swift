@@ -21,29 +21,43 @@ class NewViewController: ReviewsController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let backToProfile = UIButton()
-        backToProfile.setImage(#imageLiteral(resourceName: "angle-pointing-to-left"), for: .normal)
-        backToProfile.frame = CGRect(x: 0, y: 30, width: 24, height: 24)
-        backToProfile.addTarget(self, action: #selector(changeView), for: .touchUpInside)
-        
+        self.title = "First View"
 
-        self.photoGallery = UIImageView(frame: self.view.frame)
+        
+        self.photoGallery = UIImageView()
         self.photoGallery.image = itemsPicture[index]
-        self.view.addSubview(self.photoGallery)
-        // Do any additional setup after loading the view.
+        self.photoGallery.contentMode = .scaleAspectFill
         
-        self.view.addSubview(backToProfile)
-    
+        let itemNameLabel = UILabel()
+        itemNameLabel.text = "Canon EOS 3D"
+        itemNameLabel.font = UIFont(name: "DINPro-Regular", size: 40)
+        itemNameLabel.textColor = UIColor.rgb(255, 255, 255)
+        
+        let exitButton  = UIButton(type: .system)
+        exitButton.setTitle("Close", for: .normal)
+        exitButton.setTitleColor(.white, for: .normal)
+        exitButton.backgroundColor = UIColor.rgb(252, 196, 25)
+        exitButton.layer.cornerRadius = HEIGHT*3
+        exitButton.titleLabel!.font = UIFont(name: "DINPro-Bold", size: 14)
+        exitButton.addTarget(self, action: #selector(changeView), for: .touchUpInside)
+        
+        exitButton.layer.shadowColor = UIColor.rgb(252, 196, 25).cgColor
+        exitButton.layer.shadowOffset = CGSize(width: 0, height: 8.0)
+        exitButton.layer.shadowOpacity = 0.3
+        exitButton.layer.shadowRadius = 13
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+
+        self.view.addSubview(self.photoGallery)
+        self.view.addSubview(itemNameLabel)
+        self.view.addSubview(exitButton)
+        
+        _ = photoGallery.anchor(view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: WIDTH*100, heightConstant: HEIGHT*100)
+        
+        _ = itemNameLabel.anchor(nil, left: view.leftAnchor, bottom: exitButton.topAnchor, right: nil, topConstant: 0, leftConstant: 20, bottomConstant: 20, rightConstant: 0, widthConstant: 0, heightConstant: 0)
+        
+        _ = exitButton.anchor(nil, left: view.leftAnchor, bottom: view.bottomAnchor, right: nil, topConstant: 0, leftConstant: 20, bottomConstant: 60, rightConstant: 0, widthConstant: WIDTH*30, heightConstant: HEIGHT*6)
+
     }
 
 }
