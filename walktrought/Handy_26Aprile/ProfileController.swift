@@ -69,7 +69,7 @@ class ProfileController: UIViewController, UICollectionViewDelegate, UICollectio
         
         
         let backgroundProfileImage = UIImageView()
-        backgroundProfileImage.image = #imageLiteral(resourceName: "photocamera")
+        backgroundProfileImage.image = #imageLiteral(resourceName: "tech")
         
         let profileImageView = UIImageView()
         profileImageView.image = #imageLiteral(resourceName: "profileImg")

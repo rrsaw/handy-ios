@@ -21,7 +21,7 @@ class CreateAccountController: UICollectionViewController, UICollectionViewDeleg
         let iv = UIButton()
         iv.contentMode = .scaleAspectFill
         iv.layer.cornerRadius = 50
-        iv.setImage(#imageLiteral(resourceName: "logo"), for: .normal)
+        iv.setImage(#imageLiteral(resourceName: "upload"), for: .normal)
         iv.clipsToBounds = true
         iv.translatesAutoresizingMaskIntoConstraints = false
         iv.addTarget(self, action: #selector(profileImageHandler), for: .touchUpInside)

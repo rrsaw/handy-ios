@@ -19,7 +19,8 @@ class ExploreController: UIViewController, UICollectionViewDelegateFlowLayout, U
         super.viewDidLoad()
 
         navigationItem.title = "Explore"
-        navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "VarelaRound-Regular", size: 18)!]
+
         
         tableData.delegate = self
         tableData.dataSource = self

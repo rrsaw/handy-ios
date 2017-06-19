@@ -234,7 +234,6 @@ class DetailController: UIViewController, UICollectionViewDelegate, UICollection
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
                 self.jsonData = JSON as! Array<Dictionary<String, AnyObject>>
             }
-            
         }
         
         self.view.addSubview(itemLabel)
@@ -258,7 +257,7 @@ class DetailController: UIViewController, UICollectionViewDelegate, UICollection
         _ = backgroundProfileImage.anchor(categoryItemLabel.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 20, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: WIDTH*100, heightConstant: HEIGHT*35)
         backgroundProfileImage.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         
-        _ = priceLabel.anchor(view.topAnchor, left: nil, bottom: nil, right: view.rightAnchor, topConstant: 40, leftConstant: 0, bottomConstant: 0, rightConstant: 20, widthConstant: 0, heightConstant: 0)
+        _ = priceLabel.anchor(view.topAnchor, left: nil, bottom: nil, right: view.rightAnchor, topConstant: 80, leftConstant: 0, bottomConstant: 0, rightConstant: 20, widthConstant: 0, heightConstant: 0)
         
         _ = distanceLabel.anchor(priceLabel.bottomAnchor, left: nil, bottom: nil, right: view.rightAnchor, topConstant: 2, leftConstant: 0, bottomConstant: 0, rightConstant: 20, widthConstant: 0, heightConstant: 0)
         

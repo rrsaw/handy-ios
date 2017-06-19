@@ -60,8 +60,6 @@ class LoanController: UIViewController, UICollectionViewDelegate, UICollectionVi
         return historyButton
     }()
     
-    //    MyTableView.scrollEnabled =  Table_rowcount * rowheight > tableview.frame.size.height;
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -72,6 +70,7 @@ class LoanController: UIViewController, UICollectionViewDelegate, UICollectionVi
         tableView.dataSource = self
         tableView.rowHeight = CGFloat(30)
         self.navigationItem.title = "Loans"
+        self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "VarelaRound-Regular", size: 18)!]
 
 
         self.view.addSubview(tableView)
@@ -79,7 +78,6 @@ class LoanController: UIViewController, UICollectionViewDelegate, UICollectionVi
         self.view.addSubview(currentButton)
         self.view.addSubview(confirmationButton)
         self.view.addSubview(historyButton)
-        
         
         
         _ = publishedButton.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: 50, leftConstant: 2, bottomConstant: 0, rightConstant: 0, widthConstant: WIDTH*25, heightConstant: HEIGHT*10)
