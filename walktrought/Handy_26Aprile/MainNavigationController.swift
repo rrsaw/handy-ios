@@ -32,7 +32,8 @@ class MainNavigationController: UINavigationController {
     }
     
     fileprivate func isLoggedIn() -> Bool {
-        return false
+//        return UserDefaults.standard.isLoggedIn()
+        return Constant.defaults.bool(forKey: "isLoggedIn")
     }
     
     func showLoginController() {

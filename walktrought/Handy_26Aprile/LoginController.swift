@@ -56,7 +56,6 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
         button.layer.cornerRadius = 10
         button.contentHorizontalAlignment = .center
         button.addTarget(self, action: #selector(showCreateAccount), for: .touchUpInside)
-
         return button
     }()
     
@@ -110,29 +109,29 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
         return cv
     }()
     
-//    lazy var pageControl: UIPageControl = {
-//        let pc = UIPageControl()
-//        pc.pageIndicatorTintColor = .lightGray
-//        pc.currentPageIndicatorTintColor = UIColor(red: 247/255, green: 154/255, blue: 27/255, alpha: 1)
-//        pc.numberOfPages = self.pages.count + 1
-//        return pc
-//    }()
-//    
-//    lazy var skipButton: UIButton = {
-//        let button = UIButton(type: .system)
-//        button.setTitle("Skip", for: .normal)
-//        button.setTitleColor(UIColor(red: 247/255, green: 154/255, blue: 27/255, alpha: 1), for: .normal)
-////        button.addTarget(self, action: #selector(skip), for: .touchUpInside)
-//        return button
-//    }()
-//    
-//    lazy var nextButton: UIButton = {
-//        let button = UIButton(type: .system)
-//        button.setTitle("Next", for: .normal)
-//        button.setTitleColor(UIColor(red: 247/255, green: 154/255, blue: 27/255, alpha: 1), for: .normal)
-//        button.addTarget(self, action: #selector(nextPage), for: .touchUpInside)
-//        return button
-//    }()
+    //    lazy var pageControl: UIPageControl = {
+    //        let pc = UIPageControl()
+    //        pc.pageIndicatorTintColor = .lightGray
+    //        pc.currentPageIndicatorTintColor = UIColor(red: 247/255, green: 154/255, blue: 27/255, alpha: 1)
+    //        pc.numberOfPages = self.pages.count + 1
+    //        return pc
+    //    }()
+    //
+    //    lazy var skipButton: UIButton = {
+    //        let button = UIButton(type: .system)
+    //        button.setTitle("Skip", for: .normal)
+    //        button.setTitleColor(UIColor(red: 247/255, green: 154/255, blue: 27/255, alpha: 1), for: .normal)
+    ////        button.addTarget(self, action: #selector(skip), for: .touchUpInside)
+    //        return button
+    //    }()
+    //
+    //    lazy var nextButton: UIButton = {
+    //        let button = UIButton(type: .system)
+    //        button.setTitle("Next", for: .normal)
+    //        button.setTitleColor(UIColor(red: 247/255, green: 154/255, blue: 27/255, alpha: 1), for: .normal)
+    //        button.addTarget(self, action: #selector(nextPage), for: .touchUpInside)
+    //        return button
+    //    }()
     
     let pages: [Page] = {
         let firstPage = Page(title: "Share a great listen", message: "It's free to send your books to the people in your life. Every recipient's first book is on us.", imageName: "page1")
@@ -157,13 +156,13 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
         
         
     }
-
     
-//    func skip() {
-//        // we only need to lines to do this
-//        pageControl.currentPage = pages.count - 1
-//        nextPage()
-//    }
+    
+    //    func skip() {
+    //        // we only need to lines to do this
+    //        pageControl.currentPage = pages.count - 1
+    //        nextPage()
+    //    }
     
     func gotoExplore(sender: UIButton) {
         let mails = emailTextField
@@ -176,53 +175,53 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
         // Gestisco la richiesta
         print(parameters)
         
-//        print("WWWWWWWWWW \(mails)")
-//        
-//        let parameters: Parameters = [
-//            "email" : mails,
-//            "password" : password
-//        ]
-//        // Gestisco la richiesta
-//        print(parameters)
-//        
-//        // Gestisco la risposta
-//        Alamofire.request("http://handy-db.dev/api/v1/login", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON(completionHandler: { response in
-//            
-//            if let json = response.result.value as? [String: Any] {
-//                self.dismiss(animated: true, completion: nil)
-//            } else{
-//                print("scemocoglione non fotti con il MOB")
-//            }
-//        })
+        //        print("WWWWWWWWWW \(mails)")
+        //
+        //        let parameters: Parameters = [
+        //            "email" : mails,
+        //            "password" : password
+        //        ]
+        //        // Gestisco la richiesta
+        //        print(parameters)
+        //
+        //        // Gestisco la risposta
+        //        Alamofire.request("http://handy-db.dev/api/v1/login", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON(completionHandler: { response in
+        //
+        //            if let json = response.result.value as? [String: Any] {
+        //                self.dismiss(animated: true, completion: nil)
+        //            } else{
+        //                print("scemocoglione non fotti con il MOB")
+        //            }
+        //        })
         
     }
     
-   
-//    
-//    func nextPage() {
-//        //we are on the last page
-//        if pageControl.currentPage == pages.count {
-//            return
-//        }
-//        
-//        //second last page
-//        if pageControl.currentPage == pages.count - 1 {
-//            moveControlConstraintsOffScreen()
-//            
-//            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
-//                self.view.layoutIfNeeded()
-//            }, completion: nil)
-//        }
-//        
-//        let indexPath = IndexPath(item: pageControl.currentPage + 3, section: 0)
-//        collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-//        pageControl.currentPage += 1
-//    }
     
-//    var pageControlBottomAnchor: NSLayoutConstraint?
+    //
+    //    func nextPage() {
+    //        //we are on the last page
+    //        if pageControl.currentPage == pages.count {
+    //            return
+    //        }
+    //
+    //        //second last page
+    //        if pageControl.currentPage == pages.count - 1 {
+    //            moveControlConstraintsOffScreen()
+    //
+    //            UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
+    //                self.view.layoutIfNeeded()
+    //            }, completion: nil)
+    //        }
+    //
+    //        let indexPath = IndexPath(item: pageControl.currentPage + 3, section: 0)
+    //        collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+    //        pageControl.currentPage += 1
+    //    }
+    
+    //    var pageControlBottomAnchor: NSLayoutConstraint?
     var skipButtonTopAnchor: NSLayoutConstraint?
     var nextButtonTopAnchor: NSLayoutConstraint?
-
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -232,9 +231,9 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
         observeKeyboardNotifications()
         
         view.addSubview(collectionView)
-//        view.addSubview(pageControl)
-//        view.addSubview(skipButton)
-//        view.addSubview(nextButton)
+        //        view.addSubview(pageControl)
+        //        view.addSubview(skipButton)
+        //        view.addSubview(nextButton)
         view.addSubview(logoImageView)
         view.addSubview(emailTextField)
         view.addSubview(passwordTextField)
@@ -244,12 +243,12 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
         view.addSubview(createAccountButton)
         
         
-//        pageControlBottomAnchor = pageControl.anchor(nil, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 40)[1]
+        //        pageControlBottomAnchor = pageControl.anchor(nil, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 40)[1]
         
-//        skipButtonTopAnchor = skipButton.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: 16, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 60, heightConstant: 50).first
-//        
-//        nextButtonTopAnchor = nextButton.anchor(view.topAnchor, left: nil, bottom: nil, right: view.rightAnchor, topConstant: 16, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 60, heightConstant: 50).first
-//        
+        //        skipButtonTopAnchor = skipButton.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: 16, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 60, heightConstant: 50).first
+        //
+        //        nextButtonTopAnchor = nextButton.anchor(view.topAnchor, left: nil, bottom: nil, right: view.rightAnchor, topConstant: 16, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 60, heightConstant: 50).first
+        //
         _ = logoImageView.anchor(view.centerYAnchor, left: nil, bottom: nil, right: nil, topConstant: -230, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 100, heightConstant: 100)
         logoImageView.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         
@@ -264,8 +263,8 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
         _ = facebookButton.anchor(forgotPasswordButton.bottomAnchor, left: loginButton.rightAnchor, bottom: nil, right: nil, topConstant: 25, leftConstant: 15, bottomConstant: 0, rightConstant: 0, widthConstant: 50, heightConstant: 50)
         
         _ = createAccountButton.anchor(nil, left: nil, bottom: view.bottomAnchor, right: nil, topConstant: 0, leftConstant: 32, bottomConstant: 70, rightConstant: 32, widthConstant: WIDTH*60, heightConstant: HEIGHT*9)
-            createAccountButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-
+        createAccountButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        
         
         //use autolayout instead
         collectionView.anchorToTop(view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor)
@@ -303,14 +302,14 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
     func scrollViewWillEndDragging(_ scrollView: UIScrollView, withVelocity velocity: CGPoint, targetContentOffset: UnsafeMutablePointer<CGPoint>) {
         
         let pageNumber = Int(targetContentOffset.pointee.x / view.frame.width)
-//        pageControl.currentPage = pageNumber
+        //        pageControl.currentPage = pageNumber
         
         //we are on the last page
         if pageNumber == pages.count {
             moveControlConstraintsOffScreen()
         } else {
             //back on regular pages
-//            pageControlBottomAnchor?.constant = 0
+            //            pageControlBottomAnchor?.constant = 0
             skipButtonTopAnchor?.constant = 16
             nextButtonTopAnchor?.constant = 16
         }
@@ -321,29 +320,29 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
     }
     
     fileprivate func moveControlConstraintsOffScreen() {
-//        pageControlBottomAnchor?.constant = 40
+        //        pageControlBottomAnchor?.constant = 40
         skipButtonTopAnchor?.constant = -40
         nextButtonTopAnchor?.constant = -40
     }
     
     fileprivate func registerCells() {
         collectionView.register(PageCell.self, forCellWithReuseIdentifier: cellId)
-//        collectionView.register(LoginCell.self, forCellWithReuseIdentifier: loginCellId)
+        //        collectionView.register(LoginCell.self, forCellWithReuseIdentifier: loginCellId)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return pages.count + 1
     }
     
-//    func collectionView(_ collectionView: UICollectionView, canFocusItemAt indexPath: IndexPath) -> Bool {
-
-//    }
+    //    func collectionView(_ collectionView: UICollectionView, canFocusItemAt indexPath: IndexPath) -> Bool {
+    
+    //    }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.item == pages.count {
             let loginCell = collectionView.dequeueReusableCell(withReuseIdentifier: loginCellId, for: indexPath)
             print("la cella è \(indexPath.item)")
-//            return true
+            //            return true
             return loginCell
         }
         
@@ -352,19 +351,34 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
         let page = pages[(indexPath as NSIndexPath).item]
         cell.page = page
         
-//        return true
+        //        return true
         return cell
         
     }
     
+    func finishLoggingIn() {
+        //we'll perhaps implement the home controller a little later
+        let rootViewController = UIApplication.shared.keyWindow?.rootViewController
+        guard let mainNavigationController = rootViewController as? MainNavigationController else { return }
+        
+        mainNavigationController.viewControllers = [HomeController()]
+        
+        Constant.defaults.set(true, forKey: "isLoggedIn")
+        Constant.defaults.synchronize()
+        
+//        Constant.defaults.bool(forKey: "isLoggedIn")
+
+        dismiss(animated: true, completion: nil)
+    }
+    
     func pressButton(sender: UIButton){
         
-//        print("WWWWWWWWWW \(pageControl.currentPage)")
+        //        print("WWWWWWWWWW \(pageControl.currentPage)")
         
-//         I Parametri da inviare
+        //         I Parametri da inviare
         let mails = emailTextField.text!
         let password = passwordTextField.text!
-//        print("WWWWWWWWWW \(mails)")
+        //        print("WWWWWWWWWW \(mails)")
         
         let parameters: Parameters = [
             "email" : mails,
@@ -393,18 +407,18 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
         return CGSize(width: view.frame.width, height: view.frame.height)
     }
     
-//    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
-//        //        print(UIDevice.current.orientation.isLandscape)
-//        
-//        collectionView.collectionViewLayout.invalidateLayout()
-//        
-////        let indexPath = IndexPath(item: pageControl.currentPage, section: 0)
-//        //scroll to indexPath after the rotation is going
-//        DispatchQueue.main.async {
-//            self.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
-//            self.collectionView.reloadData()
-//        }
-//    }
+    //    override func willTransition(to newCollection: UITraitCollection, with coordinator: UIViewControllerTransitionCoordinator) {
+    //        //        print(UIDevice.current.orientation.isLandscape)
+    //
+    //        collectionView.collectionViewLayout.invalidateLayout()
+    //
+    ////        let indexPath = IndexPath(item: pageControl.currentPage, section: 0)
+    //        //scroll to indexPath after the rotation is going
+    //        DispatchQueue.main.async {
+    //            self.collectionView.scrollToItem(at: indexPath, at: .centeredHorizontally, animated: true)
+    //            self.collectionView.reloadData()
+    //        }
+    //    }
     
 }
 
