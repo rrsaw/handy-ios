@@ -22,10 +22,10 @@ class TabbarController: UITabBarController{
 //        thirdNavigationController.tabBarItem.image = UIImage(named: "items")
         
 //        let mapsController = ExploreController(collectionViewLayout : layout)
-        let mapsController = ExploreController()
-        let navigationController = UINavigationController(rootViewController: mapsController)
-        navigationController.title = "Items"
-//        navigationController.tabBarItem.image = UIImage(named: "mapsIcon")
+        let loanController = LoanController()
+        let navigationController = UINavigationController(rootViewController: loanController)
+        navigationController.title = "Loans"
+//        navigationController.tabBarItem.image = UIImage(named: "loanIcon")
         
         //        let profileController = ExploreController()
 //        let profileController = ReviewsController()

@@ -238,6 +238,17 @@
 				45FB565A1EB11C8B00899C92 /* Info.plist */,
 				45FB564E1EB11C8B00899C92 /* AppDelegate.swift */,
 				45B44AC31EF6DD4500D5661E /* Helpers */,
+				45FB567C1EB126EB00899C92 /* PageCell.swift */,
+				45FB56801EB152C500899C92 /* Page.swift */,
+				45F05F3F1EB23BF8000F44C6 /* Extensions.swift */,
+				14B996FC1EE75293003A8D91 /* ExploreController.swift */,
+				14E686931EF2A4B2009180A4 /* TabbarController.swift */,
+				146F89811EE8583300F00836 /* ExploreCell.swift */,
+				14A2BCF11EF685DD00976A0D /* LoanCell.swift */,
+				14A2BCF51EF688A300976A0D /* LoanCollection.swift */,
+				14A2BCF31EF6867A00976A0D /* LoanController.swift */,
+				14E686951EF2C9DF009180A4 /* Explore.swift */,
+				45A1FCDD1EC70B45008CEF45 /* MainNavigationController.swift */,
 			);
 			path = Handy_26Aprile;
 			sourceTree = "<group>";

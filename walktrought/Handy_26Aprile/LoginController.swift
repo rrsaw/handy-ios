@@ -10,6 +10,8 @@ import UIKit
 import Alamofire
 //var loginCell = LoginCell()
 
+let defaults = UserDefaults.standard
+
 class LoginController: UIViewController, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UITextFieldDelegate {
     
     let cellId = "cellId"
@@ -361,6 +363,9 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
         Alamofire.request("http://handyshare.me/api/v1/login", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON(completionHandler: { response in
             
             if let json = response.result.value as? [String: Any] {
+                let idUser = json["id"]!
+                defaults.set(idUser, forKey: "Id")
+                
                 self.dismiss(animated: true, completion: nil)
             } else{
                 print("scemocoglione non fotti con il MOB")

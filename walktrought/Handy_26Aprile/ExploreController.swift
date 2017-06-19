@@ -33,7 +33,6 @@ class ExploreController: UIViewController, UICollectionViewDelegateFlowLayout, U
             
             if let JSON = response.result.value {
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
-                print("invece questo è \(JSON)")
                 self.jsonData = JSON as! Array<Dictionary<String, AnyObject>>
                 self.tableData.reloadData()
             }
@@ -53,23 +52,20 @@ class ExploreController: UIViewController, UICollectionViewDelegateFlowLayout, U
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-//        if indexPath.item == jsonData.count {
-//            
-//        }
         
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! ExploreCell
         let name = self.jsonData[indexPath.row]["user"]!["name"] as? String
         let surname = self.jsonData[indexPath.row]["user"]!["surname"] as? String
         let completeName = "\(name!) \(surname!)"
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellId", for: indexPath) as! ExploreCell
+        let imageName = (self.jsonData[indexPath.row]["image"]?["name"] as? String)!
+        let urlString = "http://handyshare.me/images/items/\(imageName)"
+        let url = URL(string: urlString)
+        
         cell.titleItem.text = self.jsonData[indexPath.row]["name"] as? String
         cell.distanceItem.text = self.jsonData[indexPath.row]["distance"] as? String
         cell.priceItem.text = self.jsonData[indexPath.row]["price"] as? String
         cell.distanceItem.text = self.jsonData[indexPath.row]["address"]?["city"] as? String
         cell.profileText.text = completeName
-        let imageName = (self.jsonData[indexPath.row]["image"]?["name"] as? String)!
-        let urlString = "http://handyshare.me/images/items/\(imageName)"
-        
-        let url = URL(string: urlString)
         
         cell.thumbnailImageView.kf.setImage(with: url, placeholder: nil, options: nil, progressBlock: nil, completionHandler: { completation in
             cell.layoutSubviews()

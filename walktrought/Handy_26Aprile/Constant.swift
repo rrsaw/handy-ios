@@ -19,6 +19,7 @@ class Constant: NSObject {
         
     }
     
+    static let defaults = UserDefaults.standard
 }
 
 extension UIColor {
