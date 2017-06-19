@@ -1,3 +1,4 @@
+
 //
 //  LoanController.swift
 //  Handy_26Aprile
@@ -13,7 +14,9 @@ var loanCollection = LoanCollection()
 
 class LoanController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
     
-    
+    fileprivate var jsonData: Array<Dictionary<String, AnyObject>> = []
+    fileprivate var jsonDataItem: Array<Dictionary<String, AnyObject>> = []
+
     var tableView: UITableView!
     fileprivate var jsonDataTable: Array<Dictionary<String, AnyObject>> = []
     fileprivate var jsonDataCollection: Array<Dictionary<String, AnyObject>> = []
@@ -75,10 +78,11 @@ class LoanController: UIViewController, UICollectionViewDelegate, UICollectionVi
         
         
         
-        _ = publishedButton.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 2, bottomConstant: 0, rightConstant: 0, widthConstant: WIDTH*25, heightConstant: HEIGHT*25)
-        _ = currentButton.anchor(view.topAnchor, left: publishedButton.rightAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 2, bottomConstant: 0, rightConstant: 0, widthConstant: WIDTH*25, heightConstant: HEIGHT*25)
-        _ = confirmationButton.anchor(view.topAnchor, left: currentButton.rightAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 2, bottomConstant: 0, rightConstant: 0, widthConstant: WIDTH*25, heightConstant: HEIGHT*25)
-         _ = historyButton.anchor(view.topAnchor, left: confirmationButton.rightAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 2, bottomConstant: 0, rightConstant: 0, widthConstant: WIDTH*25, heightConstant: HEIGHT*25)
+        _ = publishedButton.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: nil, topConstant: 50, leftConstant: 2, bottomConstant: 0, rightConstant: 0, widthConstant: WIDTH*25, heightConstant: HEIGHT*10)
+        _ = currentButton.anchor(view.topAnchor, left: publishedButton.rightAnchor, bottom: nil, right: nil, topConstant: 50, leftConstant: 2, bottomConstant: 0, rightConstant: 0, widthConstant: WIDTH*25, heightConstant: HEIGHT*10)
+        _ = confirmationButton.anchor(view.topAnchor, left: currentButton.rightAnchor, bottom: nil, right: nil, topConstant: 50, leftConstant: 2, bottomConstant: 0, rightConstant: 0, widthConstant: WIDTH*25, heightConstant: HEIGHT*10)
+         _ = historyButton.anchor(view.topAnchor, left: confirmationButton.rightAnchor, bottom: nil, right: nil, topConstant: 50, leftConstant: 2, bottomConstant: 0, rightConstant: 0, widthConstant: WIDTH*25, heightConstant: HEIGHT*10)
+        
         getData()
         
     }
@@ -89,58 +93,73 @@ class LoanController: UIViewController, UICollectionViewDelegate, UICollectionVi
             confirmationButton.setTitleColor(.gray, for: .normal)
             currentButton.setTitleColor(.gray, for: .normal)
             historyButton.setTitleColor(.gray, for: .normal)
+            view.backgroundColor = .red
             getData()
         } else if (sender.titleLabel!.text == "CURRENT"){
             confirmationButton.setTitleColor(.gray, for: .normal)
             publishedButton.setTitleColor(.gray, for: .normal)
             historyButton.setTitleColor(.gray, for: .normal)
-            getConfirmation()
+            view.backgroundColor = .orange
+            getCurrent()
         } else if (sender.titleLabel!.text == "CONFIRM"){
             currentButton.setTitleColor(.gray, for: .normal)
             publishedButton.setTitleColor(.gray, for: .normal)
             historyButton.setTitleColor(.gray, for: .normal)
             view.backgroundColor = .yellow
+            getConfirmation()
         }else if (sender.titleLabel!.text == "HISTORY"){
             confirmationButton.setTitleColor(.gray, for: .normal)
             currentButton.setTitleColor(.gray, for: .normal)
             publishedButton.setTitleColor(.gray, for: .normal)
             view.backgroundColor = .green
+            getHistory()
         }
  
     }
     
     func getData(){
-        Alamofire.request("http://handyshare.me/api/v1/loans").responseJSON { response in
-            if let JSON = response.result.value
-            {
+        let idUser = Constant.defaults.string(forKey: "Id")!
+        Alamofire.request("http://handyshare.me/api/v1/userloans/\(idUser)").responseJSON { response in
+            if let JSON = response.result.value {
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
-                var arrayView = [] as! Array<Dictionary<String, AnyObject>>
-                let loans = JSON as! Array<Dictionary<String, AnyObject>>
-                for loan in loans{
-                    let owner = "\(String(describing: loan["id_owner"]))"
-                    if  owner == Constant.defaults.string(forKey: "Id")! {
-                        arrayView.append(loan)
-                    }
-                }
-                self.jsonDataTable = arrayView 
-                print("nell'array c'è \(arrayView)")
-                print("nell'id user c'è \(Constant.defaults.string(forKey: "Id")!)")
+                self.jsonData = JSON as! Array<Dictionary<String, AnyObject>>
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
+    func getCurrent(){
+        let idUser = Constant.defaults.string(forKey: "Id")!
+        Alamofire.request("http://handyshare.me/api/v1/currentloans/\(idUser)").responseJSON { response in
+            if let JSON = response.result.value {
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                self.jsonData = JSON as! Array<Dictionary<String, AnyObject>>
                 self.tableView.reloadData()
             }
         }
     }
     
     func getConfirmation(){
-        Alamofire.request("http://handyshare.me/api/v1/loans/30").responseJSON { response in
-            if let JSON = response.result.value
-            {
+        let idUser = Constant.defaults.string(forKey: "Id")!
+        Alamofire.request("http://handyshare.me/api/v1/confirmationloans/\(idUser)").responseJSON { response in
+            if let JSON = response.result.value {
                 UIApplication.shared.isNetworkActivityIndicatorVisible = false
-                self.jsonDataTable = JSON as! Array<Dictionary<String, AnyObject>>
+                self.jsonData = JSON as! Array<Dictionary<String, AnyObject>>
                 self.tableView.reloadData()
             }
         }
     }
     
+    func getHistory(){
+        let idUser = Constant.defaults.string(forKey: "Id")!
+        Alamofire.request("http://handyshare.me/api/v1/historyloans/\(idUser)").responseJSON { response in
+            if let JSON = response.result.value {
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                self.jsonData = JSON as! Array<Dictionary<String, AnyObject>>
+                self.tableView.reloadData()
+            }
+        }
+    }
     /* Collection */
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -155,19 +174,24 @@ class LoanController: UIViewController, UICollectionViewDelegate, UICollectionVi
 extension LoanController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return jsonDataTable.count
+
+            return jsonData.count
+
     }
     
     func numberOfSections(in tableView: UITableView) -> Int{
         return 1
     }
+    
+   
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         
-//        let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as! LoanCell
         let cell = LoanCell(style: UITableViewCellStyle.default, reuseIdentifier: cellReuseIdentifier)
         let dateFormatter = DateFormatter()
-        let start = (self.jsonDataTable[indexPath.row]["start_date"]?["date"] as? String)!
-        let end = (self.jsonDataTable[indexPath.row]["end_date"]?["date"] as? String)!
+        
+        let start = (self.jsonData[indexPath.row]["start_date"]?["date"] as? String)!
+        let end = (self.jsonData[indexPath.row]["end_date"]?["date"] as? String)!
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm:ss.SSS"
         
         let start_format = dateFormatter.date(from: start)
@@ -178,9 +202,8 @@ extension LoanController: UITableViewDelegate, UITableViewDataSource{
         let end_date = dateFormatter.string(from: end_format!)
         let period = "\(start_date) - \(end_date)"
         cell.setComponents(index: indexPath.row)
-        cell.nameItem?.text = (self.jsonDataTable[indexPath.row]["item"]?["name"] as? String)!
+        cell.nameItem?.text = (self.jsonData[indexPath.row]["item"]?["name"] as? String)!
         cell.dateLoan?.text = period
-        
         
         return cell
     }
@@ -188,5 +211,6 @@ extension LoanController: UITableViewDelegate, UITableViewDataSource{
         // Return NO if you do not want the item to be re-orderable.
         return true
     }
+    
     
 }
