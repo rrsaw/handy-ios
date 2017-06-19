@@ -82,6 +82,16 @@ class ExploreController: UIViewController, UICollectionViewDelegateFlowLayout, U
         return 0
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let testDetailViewController = DetailController()
+        
+        self.navigationController?.pushViewController(testDetailViewController, animated: true)
+        
+        print("You tapped cell number \(indexPath.row).")
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

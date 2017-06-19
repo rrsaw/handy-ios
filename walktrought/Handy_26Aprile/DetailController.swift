@@ -7,16 +7,19 @@
 //
 
 import UIKit
+import Alamofire
 
 let detailUsers: [String] = ["Bertie Fernandez", "Randall Morgan", "Roy Davis"]
 
 let detailComments: [String] = ["Excellent seller, order came quickly. Excellent product, very beautiful jacket good quality but very small size, take at least 2 above size!", "I received the product in good condition!", "By far the best jacket I've ever had! Excellent quality. Very well made, I recommend this seller.","ciao ciao ciao", "due due due", "tre tre tre"]
 
 
-
 let detailItemsPicture: [UIImage] = [#imageLiteral(resourceName: "photocamera"), #imageLiteral(resourceName: "fotocamera"), #imageLiteral(resourceName: "photocamera"), #imageLiteral(resourceName: "fotocamera"), #imageLiteral(resourceName: "photocamera"), #imageLiteral(resourceName: "fotocamera"), #imageLiteral(resourceName: "photocamera"), #imageLiteral(resourceName: "fotocamera"), #imageLiteral(resourceName: "photocamera")]
 
 class DetailController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    fileprivate var jsonData: Array<Dictionary<String, AnyObject>> = []
+
     
     let collectionViewA: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -26,6 +29,7 @@ class DetailController: UIViewController, UICollectionViewDelegate, UICollection
         cv.backgroundColor = .white
         return cv
     }()
+    
     
     
     let collectionViewAIdentifier = "CollectionViewACell"
@@ -42,6 +46,9 @@ class DetailController: UIViewController, UICollectionViewDelegate, UICollection
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        self.view.backgroundColor = .white
+
         
         //        self.navigationController!.navigationBar.isTranslucent = false
         
@@ -178,12 +185,6 @@ class DetailController: UIViewController, UICollectionViewDelegate, UICollection
         rentButton.layer.shadowOffset = CGSize(width: 0, height: 8.0)
         rentButton.layer.shadowOpacity = 0.3
         rentButton.layer.shadowRadius = 13
-
-        
-        
-        
-        
-        
         
         
         let userLabel = UILabel()
@@ -287,6 +288,20 @@ class DetailController: UIViewController, UICollectionViewDelegate, UICollection
             view.backgroundColor = .rgb(241, 241, 241)
             return view
         }()
+
+        let itemId = (Constant.defaults.string(forKey: "Id"))!
+
+        
+        Alamofire.request("http://handyshare.me/api/v1/items").responseJSON { response in
+            
+            if let JSON = response.result.value {
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                self.jsonData = JSON as! Array<Dictionary<String, AnyObject>>
+            }
+            
+        }
+        
+        
         //        reviewsButton.frame = CGRect(x: 220, y: 470, width: 100, height: 20)
         //        reviewsButton.addTarget(self, action: Selector(("buttonTouched:")), for: UIControlEvents.touchUpInside)
         

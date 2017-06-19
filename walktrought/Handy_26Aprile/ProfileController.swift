@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 let users: [String] = ["Bertie Fernandez", "Randall Morgan", "Roy Davis"]
 
@@ -17,6 +18,9 @@ let comments: [String] = ["Excellent seller, order came quickly. Excellent produ
 let itemsPicture: [UIImage] = [#imageLiteral(resourceName: "photocamera"), #imageLiteral(resourceName: "fotocamera"), #imageLiteral(resourceName: "photocamera"), #imageLiteral(resourceName: "fotocamera"), #imageLiteral(resourceName: "photocamera"), #imageLiteral(resourceName: "fotocamera"), #imageLiteral(resourceName: "photocamera"), #imageLiteral(resourceName: "fotocamera"), #imageLiteral(resourceName: "photocamera")]
 
 class ProfileController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    fileprivate var jsonData: Array<Dictionary<String, AnyObject>> = []
+
     
     let collectionViewA: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
@@ -50,7 +54,7 @@ class ProfileController: UIViewController, UICollectionViewDelegate, UICollectio
         self.navigationController?.navigationBar.isTranslucent = true
         self.navigationController?.view.backgroundColor = UIColor.clear
 
-
+        
         // Initialize the collection views, set the desired frames
         
         collectionViewA.register(UICollectionViewCell.self, forCellWithReuseIdentifier: collectionViewAIdentifier)
@@ -98,6 +102,9 @@ class ProfileController: UIViewController, UICollectionViewDelegate, UICollectio
         
         let profileImageView = UIImageView()
         profileImageView.image = #imageLiteral(resourceName: "profileImg")
+        profileImageView.layer.cornerRadius = 50.0
+        profileImageView.clipsToBounds = true
+        
 //        profileImageView.frame = CGRect(x: 140, y: 80, width: 90, height: 90)
         
         let userLabel = UILabel()
@@ -188,6 +195,7 @@ class ProfileController: UIViewController, UICollectionViewDelegate, UICollectio
         detailsButton.setTitle("DETAILS", for: .normal)
         detailsButton.setTitleColor(.black, for: .normal)
         detailsButton.titleLabel?.font = UIFont(name: "VarelaRound-Regular", size: 15)
+        
 
 //        detailsButton.frame = CGRect(x: 135, y: 470, width: 100, height: 20)
         //        detailsButton.addTarget(self, action: Selector(("buttonTouched:")), for: UIControlEvents.touchUpInside)
@@ -202,6 +210,36 @@ class ProfileController: UIViewController, UICollectionViewDelegate, UICollectio
             view.backgroundColor = .rgb(241, 241, 241)
             return view
         }()
+        
+        let userId = (Constant.defaults.string(forKey: "Id"))!
+        
+        
+        Alamofire.request("http://handyshare.me/api/v1/users/\(userId)").responseJSON { response in
+            
+            if let JSON = response.result.value {
+                
+                UIApplication.shared.isNetworkActivityIndicatorVisible = false
+                self.jsonData = JSON as! Array<Dictionary<String, AnyObject>>
+                let name = self.jsonData[0]["name"]!
+                let surname = self.jsonData[0]["surname"]
+                let completeName = "\(name) \(surname!)"
+                let id_address = self.jsonData[0]["address"]?["city"]
+                let imageName = (self.jsonData[0]["profile_image"]?["name"])!
+                let urlStringProfile = "http://handyshare.me/images/personal-images/\(imageName!)"
+                print("http://handyshare.me/images/personal-images/\(imageName!)")
+                let urlProfile = URL(string: urlStringProfile)
+
+
+                //                print("invece questo è \(name)")
+                userLabel.text = completeName
+                placeLabel.text = id_address as? String
+                profileImageView.kf.setImage(with: urlProfile, placeholder: nil, options: nil, progressBlock: nil, completionHandler: { completation in
+                profileImageView.layoutSubviews()
+                })
+
+            }
+            
+        }
 //        reviewsButton.frame = CGRect(x: 220, y: 470, width: 100, height: 20)
         //        reviewsButton.addTarget(self, action: Selector(("buttonTouched:")), for: UIControlEvents.touchUpInside)
         
@@ -225,7 +263,7 @@ class ProfileController: UIViewController, UICollectionViewDelegate, UICollectio
         self.view.addSubview(tableView)
         self.view.addSubview(placeLabel)
 
-
+        getData()
         
         _ = backgroundProfileImage.anchor(view.topAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: WIDTH*100, heightConstant: HEIGHT*35)
             backgroundProfileImage.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
@@ -264,10 +302,14 @@ class ProfileController: UIViewController, UICollectionViewDelegate, UICollectio
         _ = reviewsButton.anchor(collectionViewA.bottomAnchor, left: detailsButton.rightAnchor, bottom: nil, right: nil, topConstant: 10, leftConstant: 20, bottomConstant: 0, rightConstant: 20, widthConstant: 0, heightConstant: 0)
         
         _ = separatorView.anchor(reviewsButton.bottomAnchor, left: view.leftAnchor, bottom: nil, right: view.rightAnchor, topConstant: 10, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: 0, heightConstant: 1)
-
-
         
 
+    }
+    
+    func getData() {
+
+        
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell
@@ -288,10 +330,7 @@ class ProfileController: UIViewController, UICollectionViewDelegate, UICollectio
 
         cellUno.addSubview(immagine)
         
-        
-        
-        
-        
+
         immagine.center = CGPoint(x: 0, y: 25)
         
         
@@ -354,6 +393,9 @@ extension ProfileController: UITableViewDelegate, UITableViewDataSource {
         print("You tapped cell number \(indexPath.row).")
     }
 }
+
+
+
 
 
 
