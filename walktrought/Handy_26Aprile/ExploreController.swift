@@ -36,7 +36,6 @@ class ExploreController: UIViewController, UICollectionViewDelegateFlowLayout, U
                 print("invece questo è \(JSON)")
                 self.jsonData = JSON as! Array<Dictionary<String, AnyObject>>
                 self.tableData.reloadData()
-                
             }
             
         }

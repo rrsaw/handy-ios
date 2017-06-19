@@ -137,7 +137,7 @@ class DetailController: UIViewController, UICollectionViewDelegate, UICollection
         shareButtonLabel.font = UIFont(name: "DINPro-Regular", size: 14)
         shareButtonLabel.textColor = UIColor.rgb(252, 196, 25)
         
-        let startDateButton  = UIButton(type: .custom)
+        let startDateButton  = UIButton(type: .system)
         startDateButton.setTitle("9 Mar", for: .normal)
         startDateButton.setTitleColor(.white, for: .normal)
         startDateButton.backgroundColor = UIColor.rgb(252, 196, 25)
@@ -155,7 +155,7 @@ class DetailController: UIViewController, UICollectionViewDelegate, UICollection
         toButton.textColor = .black
         toButton.textAlignment = .right
 
-        let endDateButton  = UIButton(type: .custom)
+        let endDateButton  = UIButton(type: .system)
         endDateButton.setTitle("12 Mar", for: .normal)
         endDateButton.setTitleColor(.white, for: .normal)
         endDateButton.backgroundColor = UIColor.rgb(252, 196, 25)
@@ -167,7 +167,7 @@ class DetailController: UIViewController, UICollectionViewDelegate, UICollection
         endDateButton.layer.shadowOpacity = 0.3
         endDateButton.layer.shadowRadius = 13
         
-        let rentButton  = UIButton(type: .custom)
+        let rentButton  = UIButton(type: .system)
         rentButton.setTitle("RENT", for: .normal)
         rentButton.setTitleColor(.white, for: .normal)
         rentButton.backgroundColor = UIColor.rgb(59, 201, 219)

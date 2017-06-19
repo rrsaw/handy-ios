@@ -17,8 +17,7 @@ class ExploreCell: UICollectionViewCell {
     let thumbnailImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFill
-        imageView.layer.cornerRadius = 25
-        imageView.image = UIImage(named: "mac")
+        imageView.layer.cornerRadius = 15
         imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
@@ -26,9 +25,8 @@ class ExploreCell: UICollectionViewCell {
     
     let titleItem: UILabel = {
         let uilabel = UILabel()
-//        uilabel.backgroundColor = .green
         uilabel.text = "Macbook Pro 2017"
-        uilabel.font = UIFont(name: "VarelaRound-Regular", size: 20)
+        uilabel.font = UIFont(name: "VarelaRound-Regular", size: 18)
         return uilabel
     }()
     
@@ -40,9 +38,10 @@ class ExploreCell: UICollectionViewCell {
     
     let distanceItem: UILabel = {
         let uilabel = UILabel()
-//        uilabel.backgroundColor = .red
         uilabel.text = "Cusano"
-        uilabel.font = UIFont(name: "DINPro-Bold", size: 18)
+        uilabel.font = UIFont(name: "DINPro-Bold", size: 16)
+        uilabel.textColor = UIColor.rgb(183, 196, 203)
+
         return uilabel
     }()
     
@@ -55,8 +54,9 @@ class ExploreCell: UICollectionViewCell {
     let priceItem: UILabel = {
         let uilabel = UILabel()
 //        uilabel.backgroundColor = UIColor.yellow
-        uilabel.text = "100€"
-        uilabel.font = UIFont(name: "DINPro-Bold", size: 18)
+        uilabel.font = UIFont(name: "DINPro-Bold", size: 16)
+        uilabel.textColor = UIColor.rgb(183, 196, 203)
+
         return uilabel
     }()
     
@@ -64,6 +64,7 @@ class ExploreCell: UICollectionViewCell {
         let uilabel = UILabel()
         uilabel.text = "Maurizio Lucci"
         uilabel.font = UIFont(name: "VarelaRound-Regular", size: 15)
+        uilabel.textColor = UIColor.rgb(0, 145, 234)
         return uilabel
     }()
     
@@ -84,13 +85,20 @@ class ExploreCell: UICollectionViewCell {
         addSubview(profileText)
 
         _ = thumbnailImageView.anchor(nil, left: leftAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 20, bottomConstant: 0, rightConstant: 15, widthConstant: WIDTH*27, heightConstant: HEIGHT*15)
+        
         _ = separatorView.anchor(thumbnailImageView.bottomAnchor, left: nil, bottom: nil, right: nil, topConstant: 25, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: WIDTH*100, heightConstant: 1)
-        _ = titleItem.anchor(nil, left: thumbnailImageView.rightAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 15, bottomConstant: 0, rightConstant: 0, widthConstant: WIDTH*50, heightConstant: 45)
-        _ = distanceImageView.anchor(titleItem.bottomAnchor, left: thumbnailImageView.rightAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 15, bottomConstant: 0, rightConstant: 0, widthConstant: WIDTH*5, heightConstant: 25)
-        _ = distanceItem.anchor(titleItem.bottomAnchor, left: distanceImageView.rightAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 10, bottomConstant: 0, rightConstant: 0, widthConstant: WIDTH*20, heightConstant: 25)
-        _ = priceImageView.anchor(titleItem.bottomAnchor, left: distanceItem.rightAnchor, bottom: nil, right: priceItem.leftAnchor, topConstant: 0, leftConstant: 15, bottomConstant: 0, rightConstant: 10, widthConstant: WIDTH*5, heightConstant: 25)
-        _ = priceItem.anchor(titleItem.bottomAnchor, left: priceImageView.rightAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 0, bottomConstant: 0, rightConstant: 0, widthConstant: WIDTH*25, heightConstant: 25)
-        _ = profileText.anchor(priceItem.bottomAnchor, left: thumbnailImageView.rightAnchor, bottom: nil, right: nil, topConstant: 10, leftConstant: 5, bottomConstant: 0, rightConstant: 0, widthConstant: WIDTH*40, heightConstant: WIDTH*6)
+        
+        _ = titleItem.anchor(nil, left: thumbnailImageView.rightAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 20, bottomConstant: 0, rightConstant: 0, widthConstant: WIDTH*50, heightConstant: 45)
+        
+        _ = distanceImageView.anchor(titleItem.bottomAnchor, left: thumbnailImageView.rightAnchor, bottom: nil, right: nil, topConstant: 3, leftConstant: 20, bottomConstant: 0, rightConstant: 0, widthConstant: WIDTH*4, heightConstant: WIDTH*6)
+        
+        _ = distanceItem.anchor(titleItem.bottomAnchor, left: distanceImageView.rightAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 15, bottomConstant: 0, rightConstant: 0, widthConstant: WIDTH*20, heightConstant: 25)
+        
+        _ = priceImageView.anchor(titleItem.bottomAnchor, left: distanceItem.rightAnchor, bottom: nil, right: priceItem.leftAnchor, topConstant: 3, leftConstant: 0, bottomConstant: 0, rightConstant: 20, widthConstant: WIDTH*4, heightConstant: WIDTH*5)
+        
+        _ = priceItem.anchor(titleItem.bottomAnchor, left: priceImageView.rightAnchor, bottom: nil, right: nil, topConstant: 0, leftConstant: 10, bottomConstant: 0, rightConstant: 0, widthConstant: WIDTH*25, heightConstant: 25)
+        
+        _ = profileText.anchor(priceItem.bottomAnchor, left: thumbnailImageView.rightAnchor, bottom: nil, right: nil, topConstant: 10, leftConstant: 20, bottomConstant: 0, rightConstant: 0, widthConstant: WIDTH*40, heightConstant: WIDTH*6)
         
         
 //        addConstraintsWithFormat(format: "H:|-16-[v0]-16-|", views: thumbnailImageView)

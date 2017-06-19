@@ -24,15 +24,17 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
     let forgotPasswordButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Forgot your password?", for: .normal)
-        button.setTitleColor(.lightGray, for: .normal)
+        button.titleLabel!.font = UIFont(name: "DINPro-Regular", size: 16)
+        button.setTitleColor(UIColor.rgb(117, 134, 146), for: .normal)
         return button
     }()
     
     let facebookButton: UIButton = {
         let button = UIButton(type: .system)
+        button.setImage(UIImage(named: "fb.png"), for: .normal)
         button.backgroundColor = UIColor.rgb(50, 69, 184)
-        button.setTitle("FB", for: .normal)
-        button.setTitleColor(.white, for: .normal)
+        button.imageEdgeInsets = UIEdgeInsetsMake(14, 20, 14, 20)
+        button.tintColor = UIColor.white
         button.layer.cornerRadius = 25
         button.layer.shadowColor = UIColor.rgb(50, 69, 184).cgColor
         button.layer.shadowOffset = CGSize(width: 0, height: 8.0)
@@ -44,11 +46,14 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
     let createAccountButton: UIButton = {
         let button = UIButton(type: .system)
         button.setTitle("Do not have an account? \n Create Account", for: .normal)
+        button.titleLabel!.font = UIFont(name: "DINPro-Regular", size: 14)
         button.titleLabel?.numberOfLines = 2
         button.setTitleColor(.lightGray, for: .normal)
         button.layer.borderColor = UIColor.lightGray.cgColor
         button.layer.borderWidth = 1
+        button.layer.cornerRadius = 10
         button.contentHorizontalAlignment = .center
+
         //        button.addTarget(self, action: #selector(showMainNavigation), for: .touchUpInside)
         return button
     }()
@@ -56,7 +61,8 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
     let loginButton: UIButton = {
         let button = UIButton(type: .system)
         button.backgroundColor = UIColor.rgb(59, 201, 219)
-        button.setTitle("Log in", for: .normal)
+        button.setTitle("Login", for: .normal)
+        button.titleLabel!.font = UIFont(name: "DINPro-Bold", size: 16)
         button.setTitleColor(.white, for: .normal)
         button.layer.cornerRadius = 25
         button.layer.shadowColor = UIColor.rgb(59, 201, 219).cgColor
@@ -70,6 +76,7 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
     let emailTextField: LeftPaddedTextField = {
         let textFieldM = LeftPaddedTextField()
         textFieldM.placeholder = "Enter email"
+        textFieldM.font = UIFont(name: "VarelaRound-Regular", size: 18)
         textFieldM.layer.borderColor = UIColor.rgb(212, 220, 225).cgColor
         textFieldM.layer.backgroundColor = UIColor.rgb(247, 248, 250).cgColor
         textFieldM.layer.borderWidth = 1
@@ -81,6 +88,7 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
     let passwordTextField: LeftPaddedTextField = {
         let textFieldP = LeftPaddedTextField()
         textFieldP.placeholder = "Enter password"
+        textFieldP.font = UIFont(name: "VarelaRound-Regular", size: 18)
         textFieldP.layer.borderColor = UIColor.rgb(212, 220, 225).cgColor
         textFieldP.layer.backgroundColor = UIColor.rgb(247, 248, 250).cgColor
         textFieldP.layer.borderWidth = 1
@@ -239,7 +247,9 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
         
         _ = facebookButton.anchor(forgotPasswordButton.bottomAnchor, left: loginButton.rightAnchor, bottom: nil, right: nil, topConstant: 25, leftConstant: 15, bottomConstant: 0, rightConstant: 0, widthConstant: 50, heightConstant: 50)
         
-        _ = createAccountButton.anchor(nil, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, topConstant: 0, leftConstant: 32, bottomConstant: 70, rightConstant: 32, widthConstant: 0, heightConstant: 0)
+        _ = createAccountButton.anchor(nil, left: nil, bottom: view.bottomAnchor, right: nil, topConstant: 0, leftConstant: 32, bottomConstant: 70, rightConstant: 32, widthConstant: WIDTH*60, heightConstant: HEIGHT*9)
+            createAccountButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+
         
         //use autolayout instead
         collectionView.anchorToTop(view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor)
