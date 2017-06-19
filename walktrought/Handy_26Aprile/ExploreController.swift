@@ -20,10 +20,10 @@ class ExploreController: UIViewController, UICollectionViewDelegateFlowLayout, U
 
         navigationItem.title = "Explore"
         self.navigationController?.navigationBar.titleTextAttributes = [ NSFontAttributeName: UIFont(name: "VarelaRound-Regular", size: 18)!]
-
         
         tableData.delegate = self
         tableData.dataSource = self
+
         tableData.register(ExploreCell.self, forCellWithReuseIdentifier: "cellId")
         
         self.view.addSubview(tableData)

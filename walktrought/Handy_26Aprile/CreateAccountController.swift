@@ -20,7 +20,7 @@ class CreateAccountController: UICollectionViewController, UICollectionViewDeleg
     let logoImageView: UIButton = {
         let iv = UIButton()
         iv.contentMode = .scaleAspectFill
-        iv.layer.cornerRadius = 50
+        iv.layer.cornerRadius = HEIGHT*8.5
         iv.setImage(#imageLiteral(resourceName: "upload"), for: .normal)
         iv.clipsToBounds = true
         iv.translatesAutoresizingMaskIntoConstraints = false
@@ -31,7 +31,7 @@ class CreateAccountController: UICollectionViewController, UICollectionViewDeleg
     let selectedImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
-        imageView.layer.cornerRadius = 50
+        imageView.layer.cornerRadius = HEIGHT*8.5
         imageView.clipsToBounds = true
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView

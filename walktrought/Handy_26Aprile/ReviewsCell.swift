@@ -27,8 +27,6 @@ class ReviewsCell: UITableViewCell {
         self.userLabel.text = users[index]
         self.userLabel.font = UIFont(name: "DINPro-Regular", size: 15)
         self.userLabel.textColor = UIColor.rgb(0, 145, 234)
-
-        
         
         self.commentLabel = UITextView(frame: CGRect(x: cellWidth*1, y: cellHeight*55, width: cellWidth*100, height: cellHeight*160))
             
@@ -36,19 +34,11 @@ class ReviewsCell: UITableViewCell {
         self.commentLabel.font = UIFont(name: "DINPro-Regular", size: 14)
         self.commentLabel.textColor = UIColor.rgb(50, 62, 70)
 
-        
-        
         commentLabel.isEditable = false
         commentLabel.isScrollEnabled = false
-        
         
         self.addSubview(userLabel)
         self.addSubview(commentLabel)
         
     }
-    
-
-    
-    
-    
 }

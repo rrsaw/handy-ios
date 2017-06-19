@@ -18,15 +18,13 @@ class TabBarController: UITabBarController{
         self.tabBar.tintColor = UIColor.rgb(59, 201, 219)
 
         
-        let layout = UICollectionViewFlowLayout()
         let exploreController = ExploreController()
         let thirdNavigationController = UINavigationController(rootViewController: exploreController)
         thirdNavigationController.title = "Explore"
         thirdNavigationController.tabBarItem.image = UIImage(named: "explore")
-        
-        
-        let mapsController = LoanController()
-        let navigationController = UINavigationController(rootViewController: mapsController)
+                
+        let loanController = LoanController()
+        let navigationController = UINavigationController(rootViewController: loanController)
         navigationController.title = "Loans"
         navigationController.tabBarItem.image = UIImage(named: "loans")
         
@@ -45,7 +43,6 @@ class TabBarController: UITabBarController{
         }
     }
     
-
     
     fileprivate func isLoggedIn() -> Bool {
         return false

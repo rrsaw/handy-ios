@@ -108,15 +108,6 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
         return cv
     }()
     
-    let pages: [Page] = {
-        let firstPage = Page(title: "Share a great listen", message: "It's free to send your books to the people in your life. Every recipient's first book is on us.", imageName: "page1")
-        
-        let secondPage = Page(title: "Send from your library", message: "Tap the More menu next to any book. Choose \"Send this Book\"", imageName: "page2")
-        
-        let thirdPage = Page(title: "Send from the player", message: "Tap the More menu in the upper corner. Choose \"Send this Book\"", imageName: "page3")
-        
-        return [firstPage, secondPage, thirdPage]
-    }()
     
     func showCreateAccount(sender: UIButton){
         let layout = UICollectionViewFlowLayout()
@@ -213,14 +204,7 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
         
         let pageNumber = Int(targetContentOffset.pointee.x / view.frame.width)
 
-        if pageNumber == pages.count {
-            moveControlConstraintsOffScreen()
-        } else {
-
-            skipButtonTopAnchor?.constant = 16
-            nextButtonTopAnchor?.constant = 16
-        }
-        
+                
         UIView.animate(withDuration: 0.5, delay: 0, usingSpringWithDamping: 1, initialSpringVelocity: 1, options: .curveEaseOut, animations: {
             self.view.layoutIfNeeded()
         }, completion: nil)
@@ -237,24 +221,9 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
 
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return pages.count + 1
-    }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if indexPath.item == pages.count {
-            let loginCell = collectionView.dequeueReusableCell(withReuseIdentifier: loginCellId, for: indexPath)
-            print("la cella è \(indexPath.item)")
-            return loginCell
-        }
-        
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! PageCell
-        
-        let page = pages[(indexPath as NSIndexPath).item]
-        cell.page = page
-        return cell
-        
-    }
+    
+    
     
     func finishLoggingIn() {
         let rootViewController = UIApplication.shared.keyWindow?.rootViewController
@@ -277,7 +246,6 @@ class LoginController: UIViewController, UICollectionViewDelegate, UICollectionV
             "email" : mails,
             "password" : password
         ]
-        print(parameters)
         
         Alamofire.request("http://handyshare.me/api/v1/login", method: .post, parameters: parameters, encoding: JSONEncoding.default).responseJSON(completionHandler: { response in
             

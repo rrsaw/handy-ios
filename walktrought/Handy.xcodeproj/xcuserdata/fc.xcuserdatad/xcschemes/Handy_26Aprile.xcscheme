@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "45FB564A1EB11C8B00899C92"
-               BuildableName = "Handy_26Aprile.app"
-               BlueprintName = "Handy_26Aprile"
-               ReferencedContainer = "container:Handy_26Aprile.xcodeproj">
+               BuildableName = "Handy.app"
+               BlueprintName = "Handy"
+               ReferencedContainer = "container:Handy.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "45FB565E1EB11C8B00899C92"
-               BuildableName = "Handy_26AprileTests.xctest"
-               BlueprintName = "Handy_26AprileTests"
-               ReferencedContainer = "container:Handy_26Aprile.xcodeproj">
+               BuildableName = "HandyTests.xctest"
+               BlueprintName = "HandyTests"
+               ReferencedContainer = "container:Handy.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "45FB56691EB11C8B00899C92"
-               BuildableName = "Handy_26AprileUITests.xctest"
-               BlueprintName = "Handy_26AprileUITests"
-               ReferencedContainer = "container:Handy_26Aprile.xcodeproj">
+               BuildableName = "HandyUITests.xctest"
+               BlueprintName = "HandyUITests"
+               ReferencedContainer = "container:Handy.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "45FB564A1EB11C8B00899C92"
-            BuildableName = "Handy_26Aprile.app"
-            BlueprintName = "Handy_26Aprile"
-            ReferencedContainer = "container:Handy_26Aprile.xcodeproj">
+            BuildableName = "Handy.app"
+            BlueprintName = "Handy"
+            ReferencedContainer = "container:Handy.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "45FB564A1EB11C8B00899C92"
-            BuildableName = "Handy_26Aprile.app"
-            BlueprintName = "Handy_26Aprile"
-            ReferencedContainer = "container:Handy_26Aprile.xcodeproj">
+            BuildableName = "Handy.app"
+            BlueprintName = "Handy"
+            ReferencedContainer = "container:Handy.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "45FB564A1EB11C8B00899C92"
-            BuildableName = "Handy_26Aprile.app"
-            BlueprintName = "Handy_26Aprile"
-            ReferencedContainer = "container:Handy_26Aprile.xcodeproj">
+            BuildableName = "Handy.app"
+            BlueprintName = "Handy"
+            ReferencedContainer = "container:Handy.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

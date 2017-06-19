@@ -10,9 +10,8 @@
 import UIKit
 import Alamofire
 
-var loanCollection = LoanCollection()
 
-class LoanController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class LoanController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     fileprivate var jsonData: Array<Dictionary<String, AnyObject>> = []
     fileprivate var jsonDataItem: Array<Dictionary<String, AnyObject>> = []
@@ -162,30 +161,18 @@ class LoanController: UIViewController, UICollectionViewDelegate, UICollectionVi
             }
         }
     }
-    /* Collection */
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 8
-    }
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        return loanCollection
-    }
-    
-}
-
-extension LoanController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-
-            return jsonData.count
-
+        
+        return jsonData.count
+        
     }
     
     func numberOfSections(in tableView: UITableView) -> Int{
         return 1
     }
     
-   
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
         
@@ -213,5 +200,5 @@ extension LoanController: UITableViewDelegate, UITableViewDataSource{
         return true
     }
     
-    
 }
+

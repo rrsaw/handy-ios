@@ -11,7 +11,6 @@
 		146F89821EE8583300F00836 /* ExploreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146F89811EE8583300F00836 /* ExploreCell.swift */; };
 		14A2BCF21EF685DD00976A0D /* LoanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A2BCF11EF685DD00976A0D /* LoanCell.swift */; };
 		14A2BCF41EF6867A00976A0D /* LoanController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A2BCF31EF6867A00976A0D /* LoanController.swift */; };
-		14A2BCF61EF688A300976A0D /* LoanCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14A2BCF51EF688A300976A0D /* LoanCollection.swift */; };
 		14B996FD1EE75294003A8D91 /* ExploreController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14B996FC1EE75293003A8D91 /* ExploreController.swift */; };
 		14C74C8D1EF54272005D83D1 /* FullImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C74C891EF54272005D83D1 /* FullImageController.swift */; };
 		14C74C8E1EF54272005D83D1 /* ProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14C74C8A1EF54272005D83D1 /* ProfileController.swift */; };
@@ -64,7 +63,6 @@
 		146F89811EE8583300F00836 /* ExploreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreCell.swift; sourceTree = "<group>"; };
 		14A2BCF11EF685DD00976A0D /* LoanCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoanCell.swift; sourceTree = "<group>"; };
 		14A2BCF31EF6867A00976A0D /* LoanController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoanController.swift; sourceTree = "<group>"; };
-		14A2BCF51EF688A300976A0D /* LoanCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoanCollection.swift; sourceTree = "<group>"; };
 		14B996FC1EE75293003A8D91 /* ExploreController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreController.swift; sourceTree = "<group>"; };
 		14C74C891EF54272005D83D1 /* FullImageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullImageController.swift; sourceTree = "<group>"; };
 		14C74C8A1EF54272005D83D1 /* ProfileController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileController.swift; sourceTree = "<group>"; };
@@ -82,16 +80,16 @@
 		45B44AC51EF6DE4A00D5661E /* DetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCell.swift; sourceTree = "<group>"; };
 		45B44AC71EF6DE5700D5661E /* DetailController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailController.swift; sourceTree = "<group>"; };
 		45F05F3F1EB23BF8000F44C6 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		45FB564B1EB11C8B00899C92 /* Handy_26Aprile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Handy_26Aprile.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		45FB564B1EB11C8B00899C92 /* Handy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Handy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45FB564E1EB11C8B00899C92 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45FB56531EB11C8B00899C92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		45FB56551EB11C8B00899C92 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45FB56581EB11C8B00899C92 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45FB565A1EB11C8B00899C92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		45FB565F1EB11C8B00899C92 /* Handy_26AprileTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Handy_26AprileTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		45FB565F1EB11C8B00899C92 /* HandyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HandyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		45FB56631EB11C8B00899C92 /* Handy_26AprileTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Handy_26AprileTests.swift; sourceTree = "<group>"; };
 		45FB56651EB11C8B00899C92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		45FB566A1EB11C8B00899C92 /* Handy_26AprileUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Handy_26AprileUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		45FB566A1EB11C8B00899C92 /* HandyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HandyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		45FB566E1EB11C8B00899C92 /* Handy_26AprileUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Handy_26AprileUITests.swift; sourceTree = "<group>"; };
 		45FB56701EB11C8B00899C92 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		45FB567C1EB126EB00899C92 /* PageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageCell.swift; sourceTree = "<group>"; };
@@ -170,7 +168,6 @@
 				45B44AC51EF6DE4A00D5661E /* DetailCell.swift */,
 				146F89811EE8583300F00836 /* ExploreCell.swift */,
 				14A2BCF11EF685DD00976A0D /* LoanCell.swift */,
-				14A2BCF51EF688A300976A0D /* LoanCollection.swift */,
 				45FB567C1EB126EB00899C92 /* PageCell.swift */,
 			);
 			name = Views;
@@ -208,9 +205,9 @@
 		45FB564C1EB11C8B00899C92 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				45FB564B1EB11C8B00899C92 /* Handy_26Aprile.app */,
-				45FB565F1EB11C8B00899C92 /* Handy_26AprileTests.xctest */,
-				45FB566A1EB11C8B00899C92 /* Handy_26AprileUITests.xctest */,
+				45FB564B1EB11C8B00899C92 /* Handy.app */,
+				45FB565F1EB11C8B00899C92 /* HandyTests.xctest */,
+				45FB566A1EB11C8B00899C92 /* HandyUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -219,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				45FB564E1EB11C8B00899C92 /* AppDelegate.swift */,
+				45B44AC31EF6DD4500D5661E /* Helpers */,
 				45736E781EF2A1FC0072DB63 /* Resources */,
 				45B44AC11EF6DD0900D5661E /* Controllers */,
 				45B44AC41EF6DD7E00D5661E /* Models */,
@@ -227,7 +225,6 @@
 				45FB56551EB11C8B00899C92 /* Assets.xcassets */,
 				45FB56571EB11C8B00899C92 /* LaunchScreen.storyboard */,
 				45FB565A1EB11C8B00899C92 /* Info.plist */,
-				45B44AC31EF6DD4500D5661E /* Helpers */,
 				45A1FCDD1EC70B45008CEF45 /* MainNavigationController.swift */,
 			);
 			path = Handy_26Aprile;
@@ -277,9 +274,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		45FB564A1EB11C8B00899C92 /* Handy_26Aprile */ = {
+		45FB564A1EB11C8B00899C92 /* Handy */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 45FB56731EB11C8B00899C92 /* Build configuration list for PBXNativeTarget "Handy_26Aprile" */;
+			buildConfigurationList = 45FB56731EB11C8B00899C92 /* Build configuration list for PBXNativeTarget "Handy" */;
 			buildPhases = (
 				5CAA0A5B37E60714A241E23B /* [CP] Check Pods Manifest.lock */,
 				45FB56471EB11C8B00899C92 /* Sources */,
@@ -292,14 +289,14 @@
 			);
 			dependencies = (
 			);
-			name = Handy_26Aprile;
+			name = Handy;
 			productName = Handy_26Aprile;
-			productReference = 45FB564B1EB11C8B00899C92 /* Handy_26Aprile.app */;
+			productReference = 45FB564B1EB11C8B00899C92 /* Handy.app */;
 			productType = "com.apple.product-type.application";
 		};
-		45FB565E1EB11C8B00899C92 /* Handy_26AprileTests */ = {
+		45FB565E1EB11C8B00899C92 /* HandyTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 45FB56761EB11C8B00899C92 /* Build configuration list for PBXNativeTarget "Handy_26AprileTests" */;
+			buildConfigurationList = 45FB56761EB11C8B00899C92 /* Build configuration list for PBXNativeTarget "HandyTests" */;
 			buildPhases = (
 				A9360E4DE25A373F88472CB8 /* [CP] Check Pods Manifest.lock */,
 				45FB565B1EB11C8B00899C92 /* Sources */,
@@ -313,14 +310,14 @@
 			dependencies = (
 				45FB56611EB11C8B00899C92 /* PBXTargetDependency */,
 			);
-			name = Handy_26AprileTests;
+			name = HandyTests;
 			productName = Handy_26AprileTests;
-			productReference = 45FB565F1EB11C8B00899C92 /* Handy_26AprileTests.xctest */;
+			productReference = 45FB565F1EB11C8B00899C92 /* HandyTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		45FB56691EB11C8B00899C92 /* Handy_26AprileUITests */ = {
+		45FB56691EB11C8B00899C92 /* HandyUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 45FB56791EB11C8B00899C92 /* Build configuration list for PBXNativeTarget "Handy_26AprileUITests" */;
+			buildConfigurationList = 45FB56791EB11C8B00899C92 /* Build configuration list for PBXNativeTarget "HandyUITests" */;
 			buildPhases = (
 				497208993F7A0F53AEB3A3E0 /* [CP] Check Pods Manifest.lock */,
 				45FB56661EB11C8B00899C92 /* Sources */,
@@ -334,9 +331,9 @@
 			dependencies = (
 				45FB566C1EB11C8B00899C92 /* PBXTargetDependency */,
 			);
-			name = Handy_26AprileUITests;
+			name = HandyUITests;
 			productName = Handy_26AprileUITests;
-			productReference = 45FB566A1EB11C8B00899C92 /* Handy_26AprileUITests.xctest */;
+			productReference = 45FB566A1EB11C8B00899C92 /* HandyUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -367,7 +364,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 45FB56461EB11C8B00899C92 /* Build configuration list for PBXProject "Handy_26Aprile" */;
+			buildConfigurationList = 45FB56461EB11C8B00899C92 /* Build configuration list for PBXProject "Handy" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -380,9 +377,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				45FB564A1EB11C8B00899C92 /* Handy_26Aprile */,
-				45FB565E1EB11C8B00899C92 /* Handy_26AprileTests */,
-				45FB56691EB11C8B00899C92 /* Handy_26AprileUITests */,
+				45FB564A1EB11C8B00899C92 /* Handy */,
+				45FB565E1EB11C8B00899C92 /* HandyTests */,
+				45FB56691EB11C8B00899C92 /* HandyUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -565,7 +562,6 @@
 			files = (
 				14A2BCF41EF6867A00976A0D /* LoanController.swift in Sources */,
 				45B44AC81EF6DE5700D5661E /* DetailController.swift in Sources */,
-				14A2BCF61EF688A300976A0D /* LoanCollection.swift in Sources */,
 				45F05F401EB23BF8000F44C6 /* Extensions.swift in Sources */,
 				14C74C8F1EF54272005D83D1 /* ReviewsCell.swift in Sources */,
 				14E686941EF2A4B2009180A4 /* TabBarController.swift in Sources */,
@@ -606,12 +602,12 @@
 /* Begin PBXTargetDependency section */
 		45FB56611EB11C8B00899C92 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 45FB564A1EB11C8B00899C92 /* Handy_26Aprile */;
+			target = 45FB564A1EB11C8B00899C92 /* Handy */;
 			targetProxy = 45FB56601EB11C8B00899C92 /* PBXContainerItemProxy */;
 		};
 		45FB566C1EB11C8B00899C92 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 45FB564A1EB11C8B00899C92 /* Handy_26Aprile */;
+			target = 45FB564A1EB11C8B00899C92 /* Handy */;
 			targetProxy = 45FB566B1EB11C8B00899C92 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -770,7 +766,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "federico.Handy-26AprileTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Handy_26Aprile.app/Handy_26Aprile";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Handy.app/Handy";
 			};
 			name = Debug;
 		};
@@ -785,7 +781,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "federico.Handy-26AprileTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Handy_26Aprile.app/Handy_26Aprile";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Handy.app/Handy";
 			};
 			name = Release;
 		};
@@ -820,7 +816,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		45FB56461EB11C8B00899C92 /* Build configuration list for PBXProject "Handy_26Aprile" */ = {
+		45FB56461EB11C8B00899C92 /* Build configuration list for PBXProject "Handy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				45FB56711EB11C8B00899C92 /* Debug */,
@@ -829,7 +825,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		45FB56731EB11C8B00899C92 /* Build configuration list for PBXNativeTarget "Handy_26Aprile" */ = {
+		45FB56731EB11C8B00899C92 /* Build configuration list for PBXNativeTarget "Handy" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				45FB56741EB11C8B00899C92 /* Debug */,
@@ -838,7 +834,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		45FB56761EB11C8B00899C92 /* Build configuration list for PBXNativeTarget "Handy_26AprileTests" */ = {
+		45FB56761EB11C8B00899C92 /* Build configuration list for PBXNativeTarget "HandyTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				45FB56771EB11C8B00899C92 /* Debug */,
@@ -847,7 +843,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		45FB56791EB11C8B00899C92 /* Build configuration list for PBXNativeTarget "Handy_26AprileUITests" */ = {
+		45FB56791EB11C8B00899C92 /* Build configuration list for PBXNativeTarget "HandyUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				45FB567A1EB11C8B00899C92 /* Debug */,
